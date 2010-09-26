@@ -1,0 +1,523 @@
+Release 9.1.02i - libgen Xilinx EDK 9.1.02
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -mhs system.mhs -p xc2vp100ff1704-6 system.mss 
+
+Output Directory (-od)		: C:\Baseline_9_Working_Folder\K-new-base\
+Part (-p)			: virtex2p
+
+Software Specification file	: system.mss
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_emc_v2_00_a/data/plb_emc_v2_1_0.tcl
+...
+
+Overriding IP level properties ...
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\modified_plb_ddr_controller_v1
+   _00_c\data\modified_plb_ddr_controller_v2_1_0.mpd line 50 -
+   plb_ddr_controller_i (modified_plb_ddr_controller) tool is overriding
+   PARAMETER C_FAMILY value to virtex2p
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 41 - bram (bram_block) tool is overriding PARAMETER C_FAMILY
+   value to virtex2p
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.m
+   pd line 38 - opb_intc_i (opb_intc) tool is overriding PARAMETER C_FAMILY
+   value to virtex2p
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2_1_0.mpd
+   line 45 - ppc405_ppcjtag_chain (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2_1_0.mpd
+   line 47 - ppc405_ppcjtag_chain (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntl
+   r_v2_1_0.mpd line 35 - jtagppc_0 (jtagppc_cntlr) tool is overriding PARAMETER
+   C_DEVICE value to 2vp100
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.m
+   pd line 40 - opb_gpio_0 (opb_gpio) tool is overriding PARAMETER C_FAMILY
+   value to virtex2p
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b\data\opb_timer_v2_1_0
+   .mpd line 34 - opb_timer_0 (opb_timer) tool is overriding PARAMETER C_FAMILY
+   value to virtex2p
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_if_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/emc_common_v2_00_a/data/emc_common_v2_1_0.
+tcl ...
+Address Map for Processor ppc405_i
+  (0b0000000000-0b0011111111) plb_bus	dcr_bus
+  (0b0100000000-0b0111111111) plb2opb_bridge_i	dcr_bus
+  (0b1000010000-0b1000010011) ppc405_i	
+  (0b1000100000-0b1000100011) ppc405_i	
+  (0000000000-0x1fffffff) plb_ddr_controller_i	plb_bus
+  (0x29000000-0x29ffffff) opb_gpio_0	plb_bus->plb2opb_bridge_i->opb_bus
+  (0x40000000-0x4000ffff) hwrtos_0	plb_bus
+  (0x4c000000-0x4c00ffff) RS232_1	plb_bus->plb2opb_bridge_i->opb_bus
+  (0x4d000000-0x4dffffff) opb_intc_i	plb_bus->plb2opb_bridge_i->opb_bus
+  (0x4fff0000-0x4fffffff) opb_timer_0	plb_bus->plb2opb_bridge_i->opb_bus
+  (0x50000000-0x50ffffff) plb_emc_0	plb_bus
+  (0xffff0000-0xffffffff) plb_bram_if_cntlr_i	plb_bus
+Address Map for Processor ppc405_ppcjtag_chain
+  (0b0000010000-0b0000010011) ppc405_ppcjtag_chain	
+  (0b0000100000-0b0000100011) ppc405_ppcjtag_chain	
+
+Check platform address map ...
+
+Overriding system level properties ...
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 41 - plb_bus (plb_v34) tool is overriding PARAMETER C_PLB_NUM_MASTERS
+   value to 4
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 43 - plb_bus (plb_v34) tool is overriding PARAMETER C_PLB_MID_WIDTH
+   value to 2
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 44 - plb_bus (plb_v34) tool is overriding PARAMETER C_PLB_AWIDTH value
+   to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 45 - plb_bus (plb_v34) tool is overriding PARAMETER C_PLB_DWIDTH value
+   to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 49 - plb_bus (plb_v34) tool is overriding PARAMETER C_DCR_AWIDTH value
+   to 10
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 50 - plb_bus (plb_v34) tool is overriding PARAMETER C_DCR_DWIDTH value
+   to 32
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\modified_plb_ddr_controller_v1
+   _00_c\data\modified_plb_ddr_controller_v2_1_0.mpd line 53 -
+   plb_ddr_controller_i (modified_plb_ddr_controller) tool is overriding
+   PARAMETER C_PLB_NUM_MASTERS value to 4
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\modified_plb_ddr_controller_v1
+   _00_c\data\modified_plb_ddr_controller_v2_1_0.mpd line 54 -
+   plb_ddr_controller_i (modified_plb_ddr_controller) tool is overriding
+   PARAMETER C_PLB_MID_WIDTH value to 2
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\modified_plb_ddr_controller_v1
+   _00_c\data\modified_plb_ddr_controller_v2_1_0.mpd line 55 -
+   plb_ddr_controller_i (modified_plb_ddr_controller) tool is overriding
+   PARAMETER C_PLB_AWIDTH value to 32
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\modified_plb_ddr_controller_v1
+   _00_c\data\modified_plb_ddr_controller_v2_1_0.mpd line 56 -
+   plb_ddr_controller_i (modified_plb_ddr_controller) tool is overriding
+   PARAMETER C_PLB_DWIDTH value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 42 - plb_bram_if_cntlr_i (plb_bram_if_cntlr) tool
+   is overriding PARAMETER c_num_masters value to 4
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 46 - plb_bram_if_cntlr_i (plb_bram_if_cntlr) tool
+   is overriding PARAMETER c_plb_dwidth value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 47 - plb_bram_if_cntlr_i (plb_bram_if_cntlr) tool
+   is overriding PARAMETER c_plb_awidth value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 49 - plb_bram_if_cntlr_i (plb_bram_if_cntlr) tool
+   is overriding PARAMETER c_plb_mid_width value to 2
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 38 - bram (bram_block) tool is overriding PARAMETER C_PORT_DWIDTH
+   value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 39 - bram (bram_block) tool is overriding PARAMETER C_PORT_AWIDTH
+   value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 40 - bram (bram_block) tool is overriding PARAMETER C_NUM_WE
+   value to 8
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 48 - plb2opb_bridge_i (plb2opb_bridge) tool is overriding
+   PARAMETER C_PLB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 49 - plb2opb_bridge_i (plb2opb_bridge) tool is overriding
+   PARAMETER C_PLB_DWIDTH value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 50 - plb2opb_bridge_i (plb2opb_bridge) tool is overriding
+   PARAMETER C_PLB_NUM_MASTERS value to 4
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 51 - plb2opb_bridge_i (plb2opb_bridge) tool is overriding
+   PARAMETER C_PLB_MID_WIDTH value to 2
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 52 - plb2opb_bridge_i (plb2opb_bridge) tool is overriding
+   PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 53 - plb2opb_bridge_i (plb2opb_bridge) tool is overriding
+   PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 56 - plb2opb_bridge_i (plb2opb_bridge) tool is overriding
+   PARAMETER C_DCR_AWIDTH value to 10
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 57 - plb2opb_bridge_i (plb2opb_bridge) tool is overriding
+   PARAMETER C_DCR_DWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 36 - opb_bus (opb_v20) tool is overriding PARAMETER C_OPB_AWIDTH value
+   to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 37 - opb_bus (opb_v20) tool is overriding PARAMETER C_OPB_DWIDTH value
+   to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 38 - opb_bus (opb_v20) tool is overriding PARAMETER C_NUM_MASTERS value
+   to 1
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 39 - opb_bus (opb_v20) tool is overriding PARAMETER C_NUM_SLAVES value
+   to 5
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.m
+   pd line 42 - opb_intc_i (opb_intc) tool is overriding PARAMETER C_OPB_AWIDTH
+   value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.m
+   pd line 43 - opb_intc_i (opb_intc) tool is overriding PARAMETER C_OPB_DWIDTH
+   value to 32
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core_v2_1_0.tc
+l ...
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.m
+   pd line 46 - opb_intc_i (opb_intc) tcl is overriding PARAMETER
+   C_NUM_INTR_INPUTS value to 21
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core_v2_1_0.tc
+l ...
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.m
+   pd line 47 - opb_intc_i (opb_intc) tcl is overriding PARAMETER C_KIND_OF_INTR
+   value to 0b00000000000000000000000001000000
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core_v2_1_0.tc
+l ...
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.m
+   pd line 48 - opb_intc_i (opb_intc) tcl is overriding PARAMETER C_KIND_OF_EDGE
+   value to 0b00000000000000000000000001000000
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core_v2_1_0.tc
+l ...
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.m
+   pd line 49 - opb_intc_i (opb_intc) tcl is overriding PARAMETER C_KIND_OF_LVL
+   value to 0b00000000000000000000000000000001
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\data\opb_uartlite_
+   v2_1_0.mpd line 37 - RS232_1 (opb_uartlite) tool is overriding PARAMETER
+   C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_uartlite_v1_00_b\data\opb_uartlite_
+   v2_1_0.mpd line 38 - RS232_1 (opb_uartlite) tool is overriding PARAMETER
+   C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\opbslave_ext_bridge_v3_10_a\da
+   ta\opbslave_ext_bridge_v2_1_0.mpd line 20 - opbslave_ext_bridge_i
+   (opbslave_ext_bridge) tool is overriding PARAMETER C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\opbslave_ext_bridge_v3_10_a\da
+   ta\opbslave_ext_bridge_v2_1_0.mpd line 21 - opbslave_ext_bridge_i
+   (opbslave_ext_bridge) tool is overriding PARAMETER C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a\data\pl
+   b_psb_bridge_v2_1_0.mpd line 87 - plb_psb_bridge_i (plb_psb_bridge) tool is
+   overriding PARAMETER C_PLB_NUM_MASTERS value to 4
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a\data\pl
+   b_psb_bridge_v2_1_0.mpd line 88 - plb_psb_bridge_i (plb_psb_bridge) tool is
+   overriding PARAMETER C_PLB_MID_WIDTH value to 2
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a\data\pl
+   b_psb_bridge_v2_1_0.mpd line 93 - plb_psb_bridge_i (plb_psb_bridge) tool is
+   overriding PARAMETER C_PLB_AWIDTH value to 32
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a\data\pl
+   b_psb_bridge_v2_1_0.mpd line 94 - plb_psb_bridge_i (plb_psb_bridge) tool is
+   overriding PARAMETER C_PLB_DWIDTH value to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\dcr_v29_v1_00_a\data\dcr_v29_v2_1_0.mpd
+   line 38 - dcr_bus (dcr_v29) tool is overriding PARAMETER C_DCR_NUM_SLAVES
+   value to 2
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\dcr_v29_v1_00_a\data\dcr_v29_v2_1_0.mpd
+   line 39 - dcr_bus (dcr_v29) tool is overriding PARAMETER C_DCR_AWIDTH value
+   to 10
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\dcr_v29_v1_00_a\data\dcr_v29_v2_1_0.mpd
+   line 40 - dcr_bus (dcr_v29) tool is overriding PARAMETER C_DCR_DWIDTH value
+   to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_emc_v2_00_a\data\plb_emc_v2_1_0.mpd
+   line 38 - plb_emc_0 (plb_emc) tool is overriding PARAMETER C_NUM_MASTERS
+   value to 4
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_emc_v2_00_a\data\plb_emc_v2_1_0.mpd
+   line 92 - plb_emc_0 (plb_emc) tool is overriding PARAMETER C_PLB_DWIDTH value
+   to 64
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_emc_v2_00_a\data\plb_emc_v2_1_0.mpd
+   line 93 - plb_emc_0 (plb_emc) tool is overriding PARAMETER C_PLB_AWIDTH value
+   to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_emc_v2_00_a\data\plb_emc_v2_1_0.mpd
+   line 96 - plb_emc_0 (plb_emc) tool is overriding PARAMETER C_PLB_MID_WIDTH
+   value to 2
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.m
+   pd line 38 - opb_gpio_0 (opb_gpio) tool is overriding PARAMETER C_OPB_AWIDTH
+   value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.m
+   pd line 39 - opb_gpio_0 (opb_gpio) tool is overriding PARAMETER C_OPB_DWIDTH
+   value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b\data\opb_timer_v2_1_0
+   .mpd line 41 - opb_timer_0 (opb_timer) tool is overriding PARAMETER
+   C_OPB_AWIDTH value to 32
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b\data\opb_timer_v2_1_0
+   .mpd line 42 - opb_timer_0 (opb_timer) tool is overriding PARAMETER
+   C_OPB_DWIDTH value to 32
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\hwrtos_v1_00_a\data\hwrtos_v2_
+   1_0.mpd line 25 - hwrtos_0 (hwrtos) tool is overriding PARAMETER C_PLB_AWIDTH
+   value to 32
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\hwrtos_v1_00_a\data\hwrtos_v2_
+   1_0.mpd line 26 - hwrtos_0 (hwrtos) tool is overriding PARAMETER C_PLB_DWIDTH
+   value to 64
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\hwrtos_v1_00_a\data\hwrtos_v2_
+   1_0.mpd line 27 - hwrtos_0 (hwrtos) tool is overriding PARAMETER
+   C_PLB_NUM_MASTERS value to 4
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-new-base\pcores\hwrtos_v1_00_a\data\hwrtos_v2_
+   1_0.mpd line 28 - hwrtos_0 (hwrtos) tool is overriding PARAMETER
+   C_PLB_MID_WIDTH value to 2
+
+Running system level Update ...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core_v2_1_0.tc
+l ...
+
+Check platform configuration ...
+INFO:MDT - IPNAME:modified_plb_ddr_controller INSTANCE:plb_ddr_controller_i -
+   C:\Baseline_9_Working_Folder\K-new-base\system.mhs line 143 - An example UCF
+   for this core is available and must be modified for use in the system. Please
+   refer to the EDK Getting Started guide for the location of this file.
+IPNAME:plb_v34 INSTANCE:plb_bus -
+C:\Baseline_9_Working_Folder\K-new-base\system.mhs line 129 - 4 master(s) : 6
+slave(s)
+IPNAME:opb_v20 INSTANCE:opb_bus -
+C:\Baseline_9_Working_Folder\K-new-base\system.mhs line 205 - 1 master(s) : 5
+slave(s)
+IPNAME:dcr_v29 INSTANCE:dcr_bus -
+C:\Baseline_9_Working_Folder\K-new-base\system.mhs line 338 - 1 master(s) : 2
+slave(s)
+
+Check port drivers...
+
+Performing Clock DRCs...
+
+WARNING:MDT - No Top-level Input clock for the design. 
+INFO:MDT - The following PARAMETERs of os uCOS-II are ignored as their category
+   selection PARAMETER uC-Probe is set to "false" in MSS 
+WARNING:MDT - C:\Baseline_9_Working_Folder\K-new-base\system.mss line 20 -
+   Ignoring PARAMETER uC-Probe  ...
+WARNING:MDT - C:\Baseline_9_Working_Folder\K-new-base\system.mss line 54 -
+   PARAMETER use_dcr is deprecated !. The parameter USE_DCR for the intc driver
+   has been deprecated.  Any reference to this parameter in the MSS file will be
+   ignored..
+   To avoid seeing this Warning again, please remove PARAMETER use_dcr.
+INFO:MDT - List of peripherals addressable from processor instance ppc405_i : 
+  - plb_bus
+  - plb2opb_bridge_i
+  - plb_ddr_controller_i
+WARNING:MDT - C:\Baseline_9_Working_Folder\K-new-base\system.mhs line 143 - No
+   Driver Found for instance plb_ddr_controller_i. To avoid seeing this warning,
+   assign the appropriate driver or driver "generic 1.00.a " to instance
+   plb_ddr_controller_i
+
+  - plb_bram_if_cntlr_i
+WARNING:MDT - C:\Baseline_9_Working_Folder\K-new-base\system.mhs line 169 - No
+   Driver Found for instance plb_bram_if_cntlr_i. To avoid seeing this warning,
+   assign the appropriate driver or driver "generic 1.00.a " to instance
+   plb_bram_if_cntlr_i
+
+  - opb_bus
+  - opb_gpio_0
+  - opb_intc_i
+  - RS232_1
+  - opb_timer_0
+  - plb_psb_bridge_i
+WARNING:MDT - C:\Baseline_9_Working_Folder\K-new-base\system.mhs line 306 - No
+   Driver Found for instance plb_psb_bridge_i. To avoid seeing this warning,
+   assign the appropriate driver or driver "generic 1.00.a " to instance
+   plb_psb_bridge_i
+
+  - plb_emc_0
+  - hwrtos_0
+INFO:MDT - List of peripherals addressable from processor instance
+   ppc405_ppcjtag_chain : 
+
+Building Directory Structure for ppc405_i
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os uCOS-II_v2_86_a from
+C:\edk_user_repository\Micrium\bsp\uCOS-II_v2_86_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\uCOS-II_v2_86_a\ ...
+
+Copying files for driver plbarb_v1_01_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\plbarb_v1_01_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\plbarb_v1_01_a\ ...
+
+Copying files for driver plb2opb_v1_00_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\plb2opb_v1_00_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\plb2opb_v1_00_a\ ...
+
+Copying files for driver opbarb_v1_02_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\opbarb_v1_02_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\opbarb_v1_02_a\ ...
+
+Copying files for driver gpio_v2_01_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\gpio_v2_01_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\gpio_v2_01_a\ ...
+
+Copying files for driver intc_v1_00_c from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\intc_v1_00_c\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\intc_v1_00_c\ ...
+
+Copying files for driver uartlite_v1_01_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v1_01_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\uartlite_v1_01_a\ ...
+
+Copying files for driver tmrctr_v1_00_b from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\tmrctr_v1_00_b\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\tmrctr_v1_00_b\ ...
+
+Copying files for driver hwrtos_v1_00_a from
+C:\Baseline_9_Working_Folder\K-new-base\drivers\hwrtos_v1_00_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\hwrtos_v1_00_a\ ...
+
+Copying files for driver cpu_ppc405_v1_00_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\libsrc\cpu_ppc405_v1_00_a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Libraries generated in C:\Baseline_9_Working_Folder\K-new-base\ppc405_i\lib\
+directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+Building Directory Structure for ppc405_ppcjtag_chain
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os standalone_v1_00_a from
+C:\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_ppcjtag_chain\libsrc\standalone_v
+1_00_a\ ...
+
+Copying files for driver cpu_ppc405_v1_00_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_ppcjtag_chain\libsrc\cpu_ppc405_v
+1_00_a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Libraries generated in
+C:\Baseline_9_Working_Folder\K-new-base\ppc405_ppcjtag_chain\lib\ directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+LibGen Done. 

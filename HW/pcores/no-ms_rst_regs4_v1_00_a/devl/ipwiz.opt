@@ -1,0 +1,12 @@
+-batch 
+-create ms_rst_regs4 
+-ver 1.00.a 
+-dir C:\solmaz\CMC\AP1100_design\baseline-ap1100_CMC 
+-lang vhdl 
+-bus opb ms 
+-rstmir 
+-ipmst 
+-regn 4 32 
+-xps 
+-ise 
+-driver 

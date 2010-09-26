@@ -1,0 +1,12 @@
+run
+-opt_mode speed
+-opt_level 1
+-p xc2vp100ff1704-6
+-top plb_psb_bridge_i_wrapper
+-ifmt MIXED
+-ifn plb_psb_bridge_i_wrapper_xst.prj
+-ofn ../implementation/plb_psb_bridge_i_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"C:\Baseline_9_Working_Folder\K-new-base\pcores\" "C:\EDK\hw\XilinxProcessorIPLib\pcores\" "C:\EDK\hw\XilinxReferenceDesigns\pcores\" }

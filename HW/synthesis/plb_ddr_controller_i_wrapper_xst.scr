@@ -1,0 +1,11 @@
+run
+-opt_mode speed
+-opt_level 1
+-p xc2vp100ff1704-6
+-top plb_ddr_controller_i_wrapper
+-ifmt MIXED
+-ifn plb_ddr_controller_i_wrapper_xst.prj
+-ofn ../implementation/plb_ddr_controller_i_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}

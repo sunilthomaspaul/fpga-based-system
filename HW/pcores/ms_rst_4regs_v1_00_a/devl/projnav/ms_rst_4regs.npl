@@ -1,0 +1,77 @@
+JDF G
+// Created by Project Navigator ver 1.0
+PROJECT ms_rst_4regs
+DESIGN ms_rst_4regs
+DEVFAM virtex2p
+DEVFAMTIME 0
+DEVICE xc2vp4
+DEVICETIME 0
+DEVPKG fg456
+DEVPKGTIME 0
+DEVSPEED -6
+DEVSPEEDTIME 0
+DEVTOPLEVELMODULETYPE HDL
+TOPLEVELMODULETYPETIME 0
+DEVSYNTHESISTOOL XST (VHDL/Verilog)
+SYNTHESISTOOLTIME 0
+DEVSIMULATOR Modelsim
+SIMULATORTIME 0
+DEVGENERATEDSIMULATIONMODEL VHDL
+GENERATEDSIMULATIONMODELTIME 0
+SUBLIB ms_rst_4regs_v1_00_a VhdlLibrary vhdl
+LIBFILE C:\test\baseline_CMC_WL_uartlite\pcores\ms_rst_4regs_v1_00_a\hdl\vhdl\ms_rst_4regs.vhd ms_rst_4regs_v1_00_a vhdl
+LIBFILE C:\test\baseline_CMC_WL_uartlite\pcores\ms_rst_4regs_v1_00_a\hdl\vhdl\user_logic.vhd ms_rst_4regs_v1_00_a vhdl
+SUBLIB proc_common_v1_00_b VhdlLibrary vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\proc_common_pkg.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\direct_path_cntr.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\srl_fifo.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\srl_fifo_rbu.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\pselect.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\ld_arith_reg.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\ld_arith_reg2.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\down_counter.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\inferred_lut4.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\or_muxcy.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\or_gate.vhd proc_common_v1_00_b vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\family.vhd proc_common_v1_00_b vhdl
+SUBLIB ipif_common_v1_00_d VhdlLibrary vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\ipif_common_v1_00_d\hdl\vhdl\ipif_pkg.vhd ipif_common_v1_00_d vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\ipif_common_v1_00_d\hdl\vhdl\interrupt_control.vhd ipif_common_v1_00_d vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\ipif_common_v1_00_d\hdl\vhdl\ipif_steer.vhd ipif_common_v1_00_d vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\ipif_common_v1_00_d\hdl\vhdl\dma_sg_pkg.vhd ipif_common_v1_00_d vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\ipif_common_v1_00_d\hdl\vhdl\dma_sg_cmp.vhd ipif_common_v1_00_d vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\ipif_common_v1_00_d\hdl\vhdl\ctrl_reg.vhd ipif_common_v1_00_d vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\ipif_common_v1_00_d\hdl\vhdl\burst_size_calc.vhd ipif_common_v1_00_d vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\ipif_common_v1_00_d\hdl\vhdl\dma_sg.vhd ipif_common_v1_00_d vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\ipif_common_v1_00_d\hdl\vhdl\dma_sg_sim.vhd ipif_common_v1_00_d vhdl
+SUBLIB opb_ipif_v2_00_h VhdlLibrary vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\address_decoder.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\slave_attachment.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\pf_counter_bit.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\pf_counter.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\pf_counter_top.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\pf_occ_counter.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\pf_occ_counter_top.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\pf_adder_bit.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\pf_adder.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\pf_dpram_select.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\srl16_fifo.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\pf_dly1_mux.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\rdpfifo_dp_cntl.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\ipif_control_rd.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\rdpfifo_top.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\wrpfifo_dp_cntl.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\ipif_control_wr.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\wrpfifo_top.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\bus2ip_amux.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\ip2bus_dmux.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\ip2bus_dmux_blk.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\ip2bus_srmux.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\ip2bus_srmux_blk.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\ipif_reset.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\reset_control.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\addr_load_and_incr.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\master_attachment.vhd opb_ipif_v2_00_h vhdl
+LIBFILE C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_ipif_v2_00_h\hdl\vhdl\opb_ipif.vhd opb_ipif_v2_00_h vhdl
+[STRATEGY-LIST]
+Normal=True

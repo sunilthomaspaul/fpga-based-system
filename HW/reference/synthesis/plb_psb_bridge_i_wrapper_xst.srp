@@ -1,0 +1,1363 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "plb_psb_bridge_i_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\Baseline_9_Working_Folder\K-new-base\pcores\" "C:\EDK\hw\XilinxProcessorIPLib\pcores\" "C:\EDK\hw\XilinxReferenceDesigns\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc2vp100ff1704-6
+Output File Name                   : "../implementation/plb_psb_bridge_i_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : plb_psb_bridge_i_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb_psb_bridge_fpga_reg.v" in library plb_psb_bridge_v1_00_a
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb_psb_bridge_fpga_reg_wrapper.v" in library plb_psb_bridge_v1_00_a
+Module <plb_psb_bridge_fpga_reg> compiled
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb2psb_plbside.v" in library plb_psb_bridge_v1_00_a
+Module <plb_psb_bridge_fpga_reg_wrapper> compiled
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb2psb_psbside.v" in library plb_psb_bridge_v1_00_a
+Module <plb2psb_plbside> compiled
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb2psb_bridge.v" in library plb_psb_bridge_v1_00_a
+Module <plb2psb_psbside> compiled
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/psb2plb_psbside.v" in library plb_psb_bridge_v1_00_a
+Module <plb2psb_bridge> compiled
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/psb2plb_plbside.v" in library plb_psb_bridge_v1_00_a
+Module <psb2plb_psbside> compiled
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/psb2plb_bridge.v" in library plb_psb_bridge_v1_00_a
+Module <psb2plb_plbside> compiled
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb_psb_bridge.v" in library plb_psb_bridge_v1_00_a
+Module <psb2plb_bridge> compiled
+Module <plb_psb_bridge> compiled
+Compiling verilog file "C:\Baseline_9_Working_Folder\K-new-base\pcores\/../hdl/plb_psb_bridge_i_wrapper.v" in library work
+Module <plb_psb_bridge_i_wrapper> compiled
+No errors in compilation
+Analysis of file <"plb_psb_bridge_i_wrapper_xst.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <plb_psb_bridge_i_wrapper> in library <work>.
+
+Analyzing hierarchy for module <plb_psb_bridge> in library <plb_psb_bridge_v1_00_a> with parameters.
+	C_BASEADDR = "00110000000000000000000000000000"
+	C_FAMILY = "virtex2p"
+	C_HIGHADDR = "00111111111111111111111111111111"
+	C_PLB_AWIDTH = "00000000000000000000000000100000"
+	C_PLB_DWIDTH = "00000000000000000000000001000000"
+	C_PLB_MID_WIDTH = "00000000000000000000000000000010"
+	C_PLB_NUM_MASTERS = "00000000000000000000000000000100"
+	C_PLB_PRIORITY = "00000000000000000000000000000000"
+	PLB_MASTER_BASEADDR1 = "00000000000000000000000000000000"
+	PLB_MASTER_BASEADDR2 = "00100000000000000000000000000000"
+	PLB_MASTER_LSB_DECODE1 = "00000000000000000000000000000010"
+	PLB_MASTER_LSB_DECODE2 = "00000000000000000000000000000011"
+	PLB_PSB_FPGA_REG_BASEADDR = "00110000000000000010000000000000"
+	PLB_PSB_FPGA_REG_LSB_DECODE = "00000000000000000000000000010010"
+	PLB_SLAVE_LSB_DECODE = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <plb_psb_bridge_fpga_reg_wrapper> in library <plb_psb_bridge_v1_00_a> with parameters.
+	PLB_PSB_FPGA_REG_LSB_DECODE = "00000000000000000000000000010010"
+
+Analyzing hierarchy for module <psb2plb_bridge> in library <plb_psb_bridge_v1_00_a> with parameters.
+	C_PLB_AWIDTH = "00000000000000000000000000100000"
+	C_PLB_DWIDTH = "00000000000000000000000001000000"
+	C_PLB_PRIORITY = "00000000000000000000000000000000"
+	PLB_MASTER_BASEADDR1 = "00000000000000000000000000000000"
+	PLB_MASTER_BASEADDR2 = "00100000000000000000000000000000"
+	PLB_MASTER_LSB_DECODE1 = "00000000000000000000000000000010"
+	PLB_MASTER_LSB_DECODE2 = "00000000000000000000000000000011"
+	PLB_PSB_FPGA_REG_BASEADDR = "00110000000000000010000000000000"
+	PLB_PSB_FPGA_REG_LSB_DECODE = "00000000000000000000000000010010"
+
+Analyzing hierarchy for module <plb2psb_bridge> in library <plb_psb_bridge_v1_00_a> with parameters.
+	C_BASEADDR = "00110000000000000000000000000000"
+	C_PLB_AWIDTH = "00000000000000000000000000100000"
+	C_PLB_DWIDTH = "00000000000000000000000001000000"
+	C_PLB_MID_WIDTH = "00000000000000000000000000000010"
+	C_PLB_NUM_MASTERS = "00000000000000000000000000000100"
+	PLB_PSB_FPGA_REG_BASEADDR = "00110000000000000010000000000000"
+	PLB_PSB_FPGA_REG_LSB_DECODE = "00000000000000000000000000010010"
+	PLB_SLAVE_LSB_DECODE = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <plb_psb_bridge_fpga_reg> in library <plb_psb_bridge_v1_00_a> with parameters.
+	PLB_PSB_FPGA_REG_LSB_DECODE = "00000000000000000000000000010010"
+	UART_0_DLL_REG = "00000000000000000001000000000000"
+	UART_0_DLM_REG = "00000000000000000001000000000100"
+	UART_0_FCR_REG = "00000000000000000001000000001000"
+	UART_0_IER_REG = "00000000000000000001000000000100"
+	UART_0_IIR_REG = "00000000000000000001000000001000"
+	UART_0_LCR_REG = "00000000000000000001000000001100"
+	UART_0_LSR_REG = "00000000000000000001000000010100"
+	UART_0_MCR_REG = "00000000000000000001000000010000"
+	UART_0_MSR_REG = "00000000000000000001000000011000"
+	UART_0_RBR_REG = "00000000000000000001000000000000"
+	UART_0_SCR_REG = "00000000000000000001000000011100"
+	UART_0_THR_REG = "00000000000000000001000000000000"
+	UART_1_DLL_REG = "00000000000000000011000000000000"
+	UART_1_DLM_REG = "00000000000000000011000000000100"
+	UART_1_FCR_REG = "00000000000000000011000000001000"
+	UART_1_IER_REG = "00000000000000000011000000000100"
+	UART_1_IIR_REG = "00000000000000000011000000001000"
+	UART_1_LCR_REG = "00000000000000000011000000001100"
+	UART_1_LSR_REG = "00000000000000000011000000010100"
+	UART_1_MCR_REG = "00000000000000000011000000010000"
+	UART_1_MSR_REG = "00000000000000000011000000011000"
+	UART_1_RBR_REG = "00000000000000000011000000000000"
+	UART_1_SCR_REG = "00000000000000000011000000011100"
+	UART_1_THR_REG = "00000000000000000011000000000000"
+
+Analyzing hierarchy for module <psb2plb_psbside> in library <plb_psb_bridge_v1_00_a> with parameters.
+	PLB_MASTER_BASEADDR1 = "00000000000000000000000000000000"
+	PLB_MASTER_BASEADDR2 = "00100000000000000000000000000000"
+	PLB_MASTER_LSB_DECODE1 = "00000000000000000000000000000010"
+	PLB_MASTER_LSB_DECODE2 = "00000000000000000000000000000011"
+	PLB_PSB_FPGA_REG_BASEADDR = "00110000000000000010000000000000"
+	PLB_PSB_FPGA_REG_LSB_DECODE = "00000000000000000000000000010010"
+	PSB2PLB_MCSR_VUART0_BITS_DECODE = "00000000000000000000000000010011"
+	PSB2PLB_MCSR_VUART1_BITS_DECODE = "00000000000000000000000000010010"
+	PSBA_ACCEPT = "00001000"
+	PSBA_DIP_ACCEPT = "01000000"
+	PSBA_DIP_ACCEPT_IDLE = "10000000"
+	PSBA_DIP_IDLE = "00010000"
+	PSBA_DIP_RETRY = "00100000"
+	PSBA_IDLE = "00000001"
+	PSBA_RETRY = "00000100"
+	PSBA_WAIT_BEFORE_AACK = "00000010"
+	PSBD_AHIT = "010"
+	PSBD_DATA_PHASE = "100"
+	PSBD_IDLE = "001"
+	PSBR_DEASSERT_TA_TEA = "0100000"
+	PSBR_IDLE = "0000001"
+	PSBR_WAIT_FOR_DBB_HIGH = "1000000"
+	PSBR_WAIT_FOR_RD1 = "0000010"
+	PSBR_WAIT_FOR_RD2 = "0000100"
+	PSBR_WAIT_FOR_RD3 = "0001000"
+	PSBR_WAIT_FOR_RD4 = "0010000"
+	VUART_PRESENT = "00000000000000000000000000000000"
+
+Analyzing hierarchy for module <psb2plb_plbside> in library <plb_psb_bridge_v1_00_a> with parameters.
+	C_PLB_AWIDTH = "00000000000000000000000000100000"
+	C_PLB_DWIDTH = "00000000000000000000000001000000"
+	C_PLB_PRIORITY = "00000000000000000000000000000000"
+	PLBM_APHASE = "0000010"
+	PLBM_COMPLETE_BURST = "1000000"
+	PLBM_DPHASE_RBURST = "0001000"
+	PLBM_DPHASE_RSINGLE = "0100000"
+	PLBM_DPHASE_WBURST = "0000100"
+	PLBM_DPHASE_WSINGLE = "0010000"
+	PLBM_RDY_FOR_REQ = "0000001"
+
+Analyzing hierarchy for module <plb2psb_plbside> in library <plb_psb_bridge_v1_00_a> with parameters.
+	C_BASEADDR = "00110000000000000000000000000000"
+	C_PLB_AWIDTH = "00000000000000000000000000100000"
+	C_PLB_DWIDTH = "00000000000000000000000001000000"
+	C_PLB_MID_WIDTH = "00000000000000000000000000000010"
+	C_PLB_NUM_MASTERS = "00000000000000000000000000000100"
+	PLB_PSB_FPGA_REG_BASEADDR = "00110000000000000010000000000000"
+	PLB_PSB_FPGA_REG_LSB_DECODE = "00000000000000000000000000010010"
+	PLB_SLAVE_LSB_DECODE = "00000000000000000000000000000011"
+	SLAVE_SIZE = "01"
+	VUART0_UPPER_BIT_DECODE = "00000000000000000000000000010011"
+	VUART1_UPPER_BIT_DECODE = "00000000000000000000000000010010"
+
+Analyzing hierarchy for module <plb2psb_psbside> in library <plb_psb_bridge_v1_00_a>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <plb_psb_bridge_i_wrapper>.
+Module <plb_psb_bridge_i_wrapper> is correct for synthesis.
+ 
+Analyzing module <plb_psb_bridge> in library <plb_psb_bridge_v1_00_a>.
+	C_BASEADDR = 32'b00110000000000000000000000000000
+	C_FAMILY = "virtex2p"
+	C_HIGHADDR = 32'b00111111111111111111111111111111
+	C_PLB_AWIDTH = 32'sb00000000000000000000000000100000
+	C_PLB_DWIDTH = 32'sb00000000000000000000000001000000
+	C_PLB_MID_WIDTH = 32'sb00000000000000000000000000000010
+	C_PLB_NUM_MASTERS = 32'sb00000000000000000000000000000100
+	C_PLB_PRIORITY = 32'b00000000000000000000000000000000
+	PLB_MASTER_BASEADDR1 = 32'b00000000000000000000000000000000
+	PLB_MASTER_BASEADDR2 = 32'b00100000000000000000000000000000
+	PLB_MASTER_LSB_DECODE1 = 32'sb00000000000000000000000000000010
+	PLB_MASTER_LSB_DECODE2 = 32'sb00000000000000000000000000000011
+	PLB_PSB_FPGA_REG_BASEADDR = 32'b00110000000000000010000000000000
+	PLB_PSB_FPGA_REG_LSB_DECODE = 32'sb00000000000000000000000000010010
+	PLB_SLAVE_LSB_DECODE = 32'sb00000000000000000000000000000011
+Module <plb_psb_bridge> is correct for synthesis.
+ 
+    Set property "equivalent_register_removal = no" for signal <PSB_a_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_a_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_abb_n_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_abb_n_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_dbb_n_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_dbb_n_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_tbst_n_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_tbst_n_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_tsiz_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_tsiz_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_ts_n_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_ts_n_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_tt_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_tt_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_aack_n_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_aack_n_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_artry_n_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_artry_n_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_d_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_d_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_ta_n_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_ta_n_T> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_tea_n_O> in unit <plb_psb_bridge>.
+    Set property "equivalent_register_removal = no" for signal <PSB_tea_n_T> in unit <plb_psb_bridge>.
+Analyzing module <plb_psb_bridge_fpga_reg_wrapper> in library <plb_psb_bridge_v1_00_a>.
+	PLB_PSB_FPGA_REG_LSB_DECODE = 32'sb00000000000000000000000000010010
+Module <plb_psb_bridge_fpga_reg_wrapper> is correct for synthesis.
+ 
+Analyzing module <plb_psb_bridge_fpga_reg> in library <plb_psb_bridge_v1_00_a>.
+	PLB_PSB_FPGA_REG_LSB_DECODE = 32'sb00000000000000000000000000010010
+	UART_0_DLL_REG = 32'b00000000000000000001000000000000
+	UART_0_DLM_REG = 32'b00000000000000000001000000000100
+	UART_0_FCR_REG = 32'b00000000000000000001000000001000
+	UART_0_IER_REG = 32'b00000000000000000001000000000100
+	UART_0_IIR_REG = 32'b00000000000000000001000000001000
+	UART_0_LCR_REG = 32'b00000000000000000001000000001100
+	UART_0_LSR_REG = 32'b00000000000000000001000000010100
+	UART_0_MCR_REG = 32'b00000000000000000001000000010000
+	UART_0_MSR_REG = 32'b00000000000000000001000000011000
+	UART_0_RBR_REG = 32'b00000000000000000001000000000000
+	UART_0_SCR_REG = 32'b00000000000000000001000000011100
+	UART_0_THR_REG = 32'b00000000000000000001000000000000
+	UART_1_DLL_REG = 32'b00000000000000000011000000000000
+	UART_1_DLM_REG = 32'b00000000000000000011000000000100
+	UART_1_FCR_REG = 32'b00000000000000000011000000001000
+	UART_1_IER_REG = 32'b00000000000000000011000000000100
+	UART_1_IIR_REG = 32'b00000000000000000011000000001000
+	UART_1_LCR_REG = 32'b00000000000000000011000000001100
+	UART_1_LSR_REG = 32'b00000000000000000011000000010100
+	UART_1_MCR_REG = 32'b00000000000000000011000000010000
+	UART_1_MSR_REG = 32'b00000000000000000011000000011000
+	UART_1_RBR_REG = 32'b00000000000000000011000000000000
+	UART_1_SCR_REG = 32'b00000000000000000011000000011100
+	UART_1_THR_REG = 32'b00000000000000000011000000000000
+WARNING:Xst:883 - "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb_psb_bridge_fpga_reg.v" line 959: Ignored duplicate item in case statement. 
+Module <plb_psb_bridge_fpga_reg> is correct for synthesis.
+ 
+Analyzing module <psb2plb_bridge> in library <plb_psb_bridge_v1_00_a>.
+	C_PLB_AWIDTH = 32'sb00000000000000000000000000100000
+	C_PLB_DWIDTH = 32'sb00000000000000000000000001000000
+	C_PLB_PRIORITY = 32'b00000000000000000000000000000000
+	PLB_MASTER_BASEADDR1 = 32'b00000000000000000000000000000000
+	PLB_MASTER_BASEADDR2 = 32'b00100000000000000000000000000000
+	PLB_MASTER_LSB_DECODE1 = 32'sb00000000000000000000000000000010
+	PLB_MASTER_LSB_DECODE2 = 32'sb00000000000000000000000000000011
+	PLB_PSB_FPGA_REG_BASEADDR = 32'b00110000000000000010000000000000
+	PLB_PSB_FPGA_REG_LSB_DECODE = 32'sb00000000000000000000000000010010
+Module <psb2plb_bridge> is correct for synthesis.
+ 
+Analyzing module <psb2plb_psbside> in library <plb_psb_bridge_v1_00_a>.
+	PLB_MASTER_BASEADDR1 = 32'b00000000000000000000000000000000
+	PLB_MASTER_BASEADDR2 = 32'b00100000000000000000000000000000
+	PLB_MASTER_LSB_DECODE1 = 32'sb00000000000000000000000000000010
+	PLB_MASTER_LSB_DECODE2 = 32'sb00000000000000000000000000000011
+	PLB_PSB_FPGA_REG_BASEADDR = 32'b00110000000000000010000000000000
+	PLB_PSB_FPGA_REG_LSB_DECODE = 32'sb00000000000000000000000000010010
+	PSB2PLB_MCSR_VUART0_BITS_DECODE = 32'sb00000000000000000000000000010011
+	PSB2PLB_MCSR_VUART1_BITS_DECODE = 32'sb00000000000000000000000000010010
+	PSBA_ACCEPT = 8'b00001000
+	PSBA_DIP_ACCEPT = 8'b01000000
+	PSBA_DIP_ACCEPT_IDLE = 8'b10000000
+	PSBA_DIP_IDLE = 8'b00010000
+	PSBA_DIP_RETRY = 8'b00100000
+	PSBA_IDLE = 8'b00000001
+	PSBA_RETRY = 8'b00000100
+	PSBA_WAIT_BEFORE_AACK = 8'b00000010
+	PSBD_AHIT = 3'b010
+	PSBD_DATA_PHASE = 3'b100
+	PSBD_IDLE = 3'b001
+	PSBR_DEASSERT_TA_TEA = 7'b0100000
+	PSBR_IDLE = 7'b0000001
+	PSBR_WAIT_FOR_DBB_HIGH = 7'b1000000
+	PSBR_WAIT_FOR_RD1 = 7'b0000010
+	PSBR_WAIT_FOR_RD2 = 7'b0000100
+	PSBR_WAIT_FOR_RD3 = 7'b0001000
+	PSBR_WAIT_FOR_RD4 = 7'b0010000
+	VUART_PRESENT = 32'sb00000000000000000000000000000000
+WARNING:Xst:905 - "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/psb2plb_psbside.v" line 1026: The signals <psb_plb_burst> are missing in the sensitivity list of always block.
+Module <psb2plb_psbside> is correct for synthesis.
+ 
+Analyzing module <psb2plb_plbside> in library <plb_psb_bridge_v1_00_a>.
+	C_PLB_AWIDTH = 32'sb00000000000000000000000000100000
+	C_PLB_DWIDTH = 32'sb00000000000000000000000001000000
+	C_PLB_PRIORITY = 32'b00000000000000000000000000000000
+	PLBM_APHASE = 7'b0000010
+	PLBM_COMPLETE_BURST = 7'b1000000
+	PLBM_DPHASE_RBURST = 7'b0001000
+	PLBM_DPHASE_RSINGLE = 7'b0100000
+	PLBM_DPHASE_WBURST = 7'b0000100
+	PLBM_DPHASE_WSINGLE = 7'b0010000
+	PLBM_RDY_FOR_REQ = 7'b0000001
+Module <psb2plb_plbside> is correct for synthesis.
+ 
+Analyzing module <plb2psb_bridge> in library <plb_psb_bridge_v1_00_a>.
+	C_BASEADDR = 32'b00110000000000000000000000000000
+	C_PLB_AWIDTH = 32'sb00000000000000000000000000100000
+	C_PLB_DWIDTH = 32'sb00000000000000000000000001000000
+	C_PLB_MID_WIDTH = 32'sb00000000000000000000000000000010
+	C_PLB_NUM_MASTERS = 32'sb00000000000000000000000000000100
+	PLB_PSB_FPGA_REG_BASEADDR = 32'b00110000000000000010000000000000
+	PLB_PSB_FPGA_REG_LSB_DECODE = 32'sb00000000000000000000000000010010
+	PLB_SLAVE_LSB_DECODE = 32'sb00000000000000000000000000000011
+Module <plb2psb_bridge> is correct for synthesis.
+ 
+Analyzing module <plb2psb_plbside> in library <plb_psb_bridge_v1_00_a>.
+	C_BASEADDR = 32'b00110000000000000000000000000000
+	C_PLB_AWIDTH = 32'sb00000000000000000000000000100000
+	C_PLB_DWIDTH = 32'sb00000000000000000000000001000000
+	C_PLB_MID_WIDTH = 32'sb00000000000000000000000000000010
+	C_PLB_NUM_MASTERS = 32'sb00000000000000000000000000000100
+	PLB_PSB_FPGA_REG_BASEADDR = 32'b00110000000000000010000000000000
+	PLB_PSB_FPGA_REG_LSB_DECODE = 32'sb00000000000000000000000000010010
+	PLB_SLAVE_LSB_DECODE = 32'sb00000000000000000000000000000011
+	SLAVE_SIZE = 2'b01
+	VUART0_UPPER_BIT_DECODE = 32'sb00000000000000000000000000010011
+	VUART1_UPPER_BIT_DECODE = 32'sb00000000000000000000000000010010
+WARNING:Xst:905 - "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb2psb_plbside.v" line 375: The signals <mcsr_access, mcsr_vuart_access> are missing in the sensitivity list of always block.
+WARNING:Xst:905 - "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb2psb_plbside.v" line 409: The signals <non32_mcsr_access> are missing in the sensitivity list of always block.
+Module <plb2psb_plbside> is correct for synthesis.
+ 
+Analyzing module <plb2psb_psbside> in library <plb_psb_bridge_v1_00_a>.
+Module <plb2psb_psbside> is correct for synthesis.
+ 
+    Set property "equivalent_register_removal = no" for signal <PSBma_dbb_n_en_reg>.
+    Set property "equivalent_register_removal = no" for signal <PSBma_ts_n_en_reg>.
+    Set property "equivalent_register_removal = no" for signal <PSBma_dbb_n_o_s>.
+    Set property "equivalent_register_removal = no" for signal <PSBma_br_n_int>.
+    Set property "equivalent_register_removal = no" for signal <PSBma_abb_n_en_s>.
+    Set property "equivalent_register_removal = no" for signal <PSBma_d_o_reg>.
+    Set property "equivalent_register_removal = no" for signal <PSBma_d_en_reg>.
+    Set property "equivalent_register_removal = no" for signal <PSBma_abb_n_o_reg>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <mcsr_access_2> in unit <plb2psb_plbside> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <plb_psb_bridge_fpga_reg>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb_psb_bridge_fpga_reg.v".
+WARNING:Xst:647 - Input <uart_ppc1_lsr_pe> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_msr_ri> is never used.
+WARNING:Xst:647 - Input <uart_host1_msr_dcd> is never used.
+WARNING:Xst:647 - Input <uart_host1_lsr_temt> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_iir_intid2> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_lsr_thre> is never used.
+WARNING:Xst:647 - Input <uart_host1_rbr_rbr> is never used.
+WARNING:Xst:647 - Input <uart_host1_msr_cts> is never used.
+WARNING:Xst:647 - Input <uart_host1_lsr_err_in_rfifo> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_iir_intpend> is never used.
+WARNING:Xst:647 - Input <uart_host1_lsr_thre> is never used.
+WARNING:Xst:647 - Input <uart_host1_msr_dsr> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_msr_ddcd> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_msr_dcd> is never used.
+WARNING:Xst:647 - Input <uart_host1_msr_ddcd> is never used.
+WARNING:Xst:647 - Input <uart_host1_lsr_bi> is never used.
+WARNING:Xst:647 - Input <uart_host1_lsr_fe> is never used.
+WARNING:Xst:647 - Input <uart_host1_iir_fifoen> is never used.
+WARNING:Xst:647 - Input <uart_host1_iir_intpend> is never used.
+WARNING:Xst:647 - Input <uart_host1_lsr_dr> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_msr_dcts> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_rbr_rbr> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_msr_cts> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_lsr_err_in_rfifo> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_msr_ddsr> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_msr_dsr> is never used.
+WARNING:Xst:647 - Input <uart_host1_lsr_oe> is never used.
+WARNING:Xst:647 - Input <uart_host1_lsr_pe> is never used.
+WARNING:Xst:647 - Input <uart_host1_msr_dcts> is never used.
+WARNING:Xst:647 - Input <uart_host1_iir_intid2> is never used.
+WARNING:Xst:647 - Input <uart_host1_msr_ddsr> is never used.
+WARNING:Xst:647 - Input <uart_host1_msr_ri> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_lsr_bi> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_msr_teri> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_lsr_fe> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_lsr_dr> is never used.
+WARNING:Xst:647 - Input <write_data<0:23>> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_iir_fifoen> is never used.
+WARNING:Xst:647 - Input <uart_host1_msr_teri> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_lsr_temt> is never used.
+WARNING:Xst:647 - Input <uart_ppc1_lsr_oe> is never used.
+    Register <uart_host1_dlm_dlm> equivalent to <uart_host1_dll_dll> has been removed
+    Register <uart_host1_scr_scr> equivalent to <uart_host1_dll_dll> has been removed
+    Register <uart_ppc1_dll_dll> equivalent to <uart_host1_dll_dll> has been removed
+    Register <uart_ppc1_dlm_dlm> equivalent to <uart_host1_dll_dll> has been removed
+    Register <uart_ppc1_scr_scr> equivalent to <uart_host1_dll_dll> has been removed
+    Register <uart_host1_fcr_fifo_en> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_fcr_rfifo_reset> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_fcr_tfifo_reset> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_ier_edssi> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_ier_elsi> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_ier_erbfi> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_ier_etbei> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_lcr_dlab> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_lcr_eps> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_lcr_pen> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_lcr_set_break> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_lcr_stb> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_lcr_stick_parity> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_mcr_dtr> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_mcr_loop> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_mcr_out1> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_mcr_out2> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_mcr_rts> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_fcr_dma_mode_sel> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_fcr_fifo_en> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_fcr_rfifo_reset> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_fcr_tfifo_reset> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_ier_edssi> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_ier_elsi> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_ier_erbfi> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_ier_etbei> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_lcr_dlab> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_lcr_eps> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_lcr_pen> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_lcr_set_break> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_lcr_stb> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_lcr_stick_parity> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_mcr_dtr> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_mcr_loop> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_mcr_out1> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_mcr_out2> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_ppc1_mcr_rts> equivalent to <uart_host1_fcr_dma_mode_sel> has been removed
+    Register <uart_host1_lcr_wls> equivalent to <uart_host1_fcr_rfifo_tlevel> has been removed
+    Register <uart_ppc1_fcr_rfifo_tlevel> equivalent to <uart_host1_fcr_rfifo_tlevel> has been removed
+    Register <uart_ppc1_lcr_wls> equivalent to <uart_host1_fcr_rfifo_tlevel> has been removed
+    Register <uart_ppc1_thr_thr> equivalent to <uart_host1_thr_thr> has been removed
+    Found 1-bit register for signal <uart_ppc0_mcr_dtr>.
+    Found 1-bit register for signal <uart_ppc0_lcr_set_break>.
+    Found 8-bit register for signal <uart_host1_thr_thr>.
+    Found 1-bit register for signal <uart_host0_lcr_pen>.
+    Found 1-bit register for signal <uart_host0_ier_elsi>.
+    Found 1-bit register for signal <uart_host0_ier_erbfi>.
+    Found 2-bit register for signal <uart_host1_fcr_rfifo_tlevel>.
+    Found 8-bit register for signal <uart_ppc0_dll_dll>.
+    Found 1-bit register for signal <uart_host1_fcr_dma_mode_sel>.
+    Found 1-bit register for signal <uart_ppc0_ier_etbei>.
+    Found 2-bit register for signal <uart_ppc0_fcr_rfifo_tlevel>.
+    Found 1-bit register for signal <uart_ppc0_fcr_dma_mode_sel>.
+    Found 1-bit register for signal <uart_host0_fcr_fifo_en>.
+    Found 8-bit register for signal <uart_ppc0_thr_thr>.
+    Found 32-bit register for signal <read_data>.
+    Found 1-bit register for signal <uart_host0_fcr_tfifo_reset>.
+    Found 8-bit register for signal <uart_host0_dlm_dlm>.
+    Found 1-bit register for signal <uart_ppc0_ier_edssi>.
+    Found 1-bit register for signal <uart_ppc0_mcr_loop>.
+    Found 8-bit register for signal <uart_host0_scr_scr>.
+    Found 1-bit register for signal <uart_host0_lcr_stb>.
+    Found 1-bit register for signal <uart_host0_fcr_rfifo_reset>.
+    Found 1-bit register for signal <uart_host0_lcr_stick_parity>.
+    Found 1-bit register for signal <uart_ppc0_lcr_pen>.
+    Found 1-bit register for signal <uart_host0_mcr_loop>.
+    Found 1-bit register for signal <uart_host0_lcr_eps>.
+    Found 1-bit register for signal <uart_ppc0_ier_erbfi>.
+    Found 1-bit register for signal <uart_host0_mcr_rts>.
+    Found 1-bit register for signal <uart_ppc0_lcr_dlab>.
+    Found 2-bit register for signal <uart_host0_lcr_wls>.
+    Found 1-bit register for signal <uart_host0_mcr_dtr>.
+    Found 1-bit register for signal <uart_host0_lcr_dlab>.
+    Found 8-bit register for signal <uart_ppc0_dlm_dlm>.
+    Found 8-bit register for signal <uart_host0_dll_dll>.
+    Found 1-bit register for signal <uart_host0_ier_etbei>.
+    Found 1-bit register for signal <uart_ppc0_mcr_out1>.
+    Found 1-bit register for signal <uart_ppc0_mcr_out2>.
+    Found 1-bit register for signal <uart_ppc0_fcr_tfifo_reset>.
+    Found 8-bit register for signal <uart_ppc0_scr_scr>.
+    Found 1-bit register for signal <uart_ppc0_lcr_stb>.
+    Found 1-bit register for signal <uart_ppc0_lcr_stick_parity>.
+    Found 1-bit register for signal <uart_host0_mcr_out1>.
+    Found 1-bit register for signal <uart_host0_mcr_out2>.
+    Found 2-bit register for signal <uart_host0_fcr_rfifo_tlevel>.
+    Found 1-bit register for signal <uart_host0_fcr_dma_mode_sel>.
+    Found 1-bit register for signal <uart_host0_ier_edssi>.
+    Found 8-bit register for signal <uart_host0_thr_thr>.
+    Found 8-bit register for signal <uart_host1_dll_dll>.
+    Found 1-bit register for signal <uart_ppc0_lcr_eps>.
+    Found 1-bit register for signal <uart_ppc0_fcr_rfifo_reset>.
+    Found 1-bit register for signal <uart_ppc0_fcr_fifo_en>.
+    Found 1-bit register for signal <uart_ppc0_mcr_rts>.
+    Found 1-bit register for signal <uart_ppc0_ier_elsi>.
+    Found 1-bit register for signal <uart_host0_lcr_set_break>.
+    Found 2-bit register for signal <uart_ppc0_lcr_wls>.
+    Found 32-bit 4-to-1 multiplexer for signal <read_data$mux0000>.
+    Found 32-bit 8-to-1 multiplexer for signal <read_data$mux0001>.
+    Found 32-bit 4-to-1 multiplexer for signal <read_data$mux0007>.
+    Found 32-bit 4-to-1 multiplexer for signal <read_data$mux0008>.
+    Found 32-bit 4-to-1 multiplexer for signal <read_data$mux0009>.
+    Summary:
+	inferred 161 D-type flip-flop(s).
+	inferred 160 Multiplexer(s).
+Unit <plb_psb_bridge_fpga_reg> synthesized.
+
+
+Synthesizing Unit <psb2plb_psbside>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/psb2plb_psbside.v".
+WARNING:Xst:647 - Input <PSBsl_tt<0>> is never used.
+WARNING:Xst:647 - Input <PSBsl_tt<2>> is never used.
+WARNING:Xst:647 - Input <PSBsl_tt<4>> is never used.
+WARNING:Xst:646 - Signal <PSBsl_newest_a> is assigned but never used.
+WARNING:Xst:646 - Signal <PSBsl_newest_tsiz> is assigned but never used.
+WARNING:Xst:646 - Signal <PSBsl_newest_tbst_n> is assigned but never used.
+WARNING:Xst:646 - Signal <PSBsl_newest_tt_rnw> is assigned but never used.
+    Found finite state machine <FSM_0> for signal <psba_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 12                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000001                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <psbr_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 44                                             |
+    | Inputs             | 13                                             |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000001                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+    Found 1-bit register for signal <psb_plb_wdata3_val>.
+    Found 1-bit register for signal <psb_mcsr_rd_en_pulse>.
+    Found 1-bit register for signal <psb_plb_wdata4_val>.
+    Found 1-bit register for signal <PSBsl_artry_n_en>.
+    Found 1-bit register for signal <PSBsl_aack_n_en>.
+    Found 64-bit 8-to-1 multiplexer for signal <psb_plb_write_data>.
+    Found 1-bit register for signal <PSBsl_artry_n_o>.
+    Found 1-bit register for signal <accept_plb>.
+    Found 1-bit register for signal <psb_plb_wdata2_val>.
+    Found 1-bit register for signal <PSBsl_aack_n_o>.
+    Found 1-bit register for signal <psb_mcsr_wr_en_pulse>.
+    Found 1-bit register for signal <adv_psb_burst_wdata>.
+    Found 1-bit register for signal <adv_psb_burst_wdata_d1>.
+    Found 1-bit register for signal <adv_psb_burst_wdata_d2>.
+    Found 1-bit register for signal <db_ready_for_rdata_reg>.
+    Found 1-bit register for signal <deassert_aack_sig>.
+    Found 1-bit register for signal <deassert_artry_sig>.
+    Found 1-bit register for signal <deassert_rdata1_hold_val>.
+    Found 1-bit register for signal <deassert_rdata2_hold_val>.
+    Found 1-bit register for signal <deassert_rdata3_hold_val>.
+    Found 1-bit register for signal <deassert_rdata4_hold_val>.
+    Found 1-bit register for signal <deassert_read_tea_hold>.
+    Found 1-bit register for signal <mcsr_ahit_sticky_reg>.
+    Found 1-bit register for signal <mcsr_vuart>.
+    Found 1-bit register for signal <mcsr_vuart_ahit_sticky_reg>.
+    Found 1-bit register for signal <plb_ahit_sticky_reg>.
+    Found 1-bit register for signal <plb_nmcsr>.
+    Found 2-bit up counter for signal <plb_psb_read_data_val_counter>.
+    Found 1-bit register for signal <psb_mcsr_en_pulse_d1>.
+    Found 1-bit register for signal <psb_mcsr_en_pulse_d2>.
+    Found 1-bit register for signal <psb_mcsr_rd_wr_en_pulse_err>.
+    Found 1-bit register for signal <psb_mcsr_rd_wr_en_pulse_err_d1>.
+    Found 64-bit 8-to-1 multiplexer for signal <psb_plb_write_data$mux0000>.
+    Found 64-bit 8-to-1 multiplexer for signal <psb_plb_write_data$mux0001>.
+    Found 64-bit 4-to-1 multiplexer for signal <psb_plb_write_data$mux0002>.
+    Found 64-bit 4-to-1 multiplexer for signal <psb_plb_write_data$mux0003>.
+    Found 64-bit register for signal <psb_read_data>.
+    Found 1-bit register for signal <psb_read_data_frame>.
+    Found 1-bit register for signal <psb_read_ta>.
+    Found 1-bit register for signal <psb_read_tea>.
+    Found 32-bit register for signal <PSBsl_current_a>.
+    Found 8-bit register for signal <PSBsl_current_debug_cnt>.
+    Found 8-bit adder for signal <PSBsl_current_debug_cnt$add0000> created at line 740.
+    Found 1-bit register for signal <PSBsl_current_tbst_n>.
+    Found 3-bit register for signal <PSBsl_current_tsiz>.
+    Found 1-bit register for signal <PSBsl_current_tt_rnw>.
+    Found 1-bit register for signal <PSBsl_dbb_n_d1>.
+    Found 8-bit up counter for signal <PSBsl_newest_debug_cnt>.
+    Found 64-bit register for signal <rdata1_hold>.
+    Found 1-bit register for signal <rdata1_hold_val>.
+    Found 64-bit register for signal <rdata2_hold>.
+    Found 1-bit register for signal <rdata2_hold_val>.
+    Found 64-bit register for signal <rdata3_hold>.
+    Found 1-bit register for signal <rdata3_hold_val>.
+    Found 64-bit register for signal <rdata4_hold>.
+    Found 1-bit register for signal <rdata4_hold_val>.
+    Found 1-bit register for signal <read_tea_hold>.
+    Found 1-bit register for signal <start_mcsr_access>.
+    Found 1-bit register for signal <start_mcsr_access_sticky>.
+    Found 1-bit register for signal <start_mcsr_vuart_access>.
+    Found 1-bit register for signal <start_mcsr_vuart_access_sticky>.
+    Found 1-bit register for signal <start_plb_access>.
+    Found 1-bit register for signal <start_plb_access_sticky>.
+    Found 1-bit register for signal <start_plb_access_sticky_d1>.
+    Found 1-bit register for signal <ufpga_ahit_outstanding>.
+    Found 1-bit register for signal <ufpga_ahit_sticky_reg>.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred 413 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 320 Multiplexer(s).
+Unit <psb2plb_psbside> synthesized.
+
+
+Synthesizing Unit <psb2plb_plbside>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/psb2plb_plbside.v".
+WARNING:Xst:647 - Input <PLBma_RdWdAddr> is never used.
+WARNING:Xst:647 - Input <PLBma_reqPri> is never used.
+WARNING:Xst:647 - Input <PLBma_sSize> is never used.
+WARNING:Xst:647 - Input <PLBma_pendReq> is never used.
+WARNING:Xst:647 - Input <PLBma_rearbitrate> is never used.
+WARNING:Xst:647 - Input <PLBma_pendPri> is never used.
+    Found finite state machine <FSM_2> for signal <plbm_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 30                                             |
+    | Inputs             | 13                                             |
+    | Outputs            | 7                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000001                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+    Found 8x8-bit ROM for signal <single_access_be$mux0000>.
+    Found 4x16-bit ROM for signal <$rom0000>.
+    Found 64-bit register for signal <plb_psb_read_data>.
+    Found 1-bit register for signal <BGIma_rdBurst>.
+    Found 1-bit register for signal <plb_psb_read_data_val>.
+    Found 1-bit register for signal <BGIma_request>.
+    Found 64-bit register for signal <BGIma_wrDBus>.
+    Found 1-bit register for signal <BGIma_wrBurst>.
+    Found 2-bit register for signal <num_RdDAcks>.
+    Found 2-bit adder for signal <num_RdDAcks$addsub0000> created at line 615.
+    Found 2-bit register for signal <num_WrDAcks>.
+    Found 2-bit adder for signal <num_WrDAcks$addsub0000> created at line 586.
+    Found 1-bit register for signal <plb_psb_read_access_done>.
+    Found 1-bit register for signal <plb_psb_write_access_done>.
+    Found 1-bit register for signal <plb_read_timeout_error>.
+    Found 1-bit register for signal <plb_write_timeout_error>.
+    Found 1-bit register for signal <PLBma_Err_sticky>.
+    Found 1-bit register for signal <psb_plb_start_access_sticky>.
+    Found 1-bit register for signal <psb_plb_wdata1_val_d1>.
+    Found 1-bit register for signal <psb_plb_wdata1_val_sticky>.
+    Found 8-bit 8-to-1 multiplexer for signal <single_access_be>.
+    Found 64-bit register for signal <wdata_hold1>.
+    Found 64-bit register for signal <wdata_hold2>.
+    Found 64-bit register for signal <wdata_hold3>.
+    Found 64-bit register for signal <wdata_hold4>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 ROM(s).
+	inferred 400 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   8 Multiplexer(s).
+Unit <psb2plb_plbside> synthesized.
+
+
+Synthesizing Unit <plb2psb_plbside>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb2psb_plbside.v".
+WARNING:Xst:647 - Input <PLBsl_wrPrim> is never used.
+WARNING:Xst:647 - Input <PLBsl_type> is never used.
+WARNING:Xst:647 - Input <PLBsl_rdBurst> is never used.
+WARNING:Xst:647 - Input <PLBsl_SAValid> is never used.
+WARNING:Xst:647 - Input <PLBsl_guarded> is never used.
+WARNING:Xst:647 - Input <PLBsl_busLock> is never used.
+WARNING:Xst:647 - Input <PLBsl_compress> is never used.
+WARNING:Xst:647 - Input <PLBsl_rdPrim> is never used.
+WARNING:Xst:647 - Input <PLBsl_lockErr> is never used.
+WARNING:Xst:647 - Input <PLBsl_wrBurst> is never used.
+WARNING:Xst:647 - Input <PLBsl_ordered> is never used.
+WARNING:Xst:646 - Signal <master_id_1_s> is assigned but never used.
+WARNING:Xst:646 - Signal <C_BASEADDR_wire<4:31>> is assigned but never used.
+WARNING:Xst:646 - Signal <BGOsl_MErr_int<4:15>> is assigned but never used.
+WARNING:Xst:646 - Signal <BGOsl_rdComp_s> is assigned but never used.
+WARNING:Xst:646 - Signal <DAck_cnt_plus_addr1<0>> is assigned but never used.
+    Register <busy> equivalent to <BGOsl_MBusy_int> has been removed
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+    Found 64-bit register for signal <plb_psb_write_data1>.
+    Found 64-bit register for signal <plb_psb_write_data2>.
+    Found 64-bit register for signal <plb_psb_write_data3>.
+    Found 64-bit register for signal <plb_psb_write_data4>.
+    Found 1-bit register for signal <accept_psb_reg>.
+    Found 32-bit register for signal <addr_1>.
+    Found 32-bit 4-to-1 multiplexer for signal <addr_1$mux0000>.
+    Found 32-bit register for signal <addr_2>.
+    Found 8-bit register for signal <be_1>.
+    Found 8-bit register for signal <be_2>.
+    Found 16-bit register for signal <BGOsl_MBusy_int>.
+    Found 1-bit register for signal <burst_1>.
+    Found 1-bit register for signal <burst_2>.
+    Found 4-bit comparator equal for signal <busy_d$cmp_eq0000> created at line 679.
+    Found 2-bit up counter for signal <DAck_cnt>.
+    Found 2-bit adder carry out for signal <DAck_cnt_plus_addr1$addsub0000>.
+    Found 1-bit register for signal <master_64bit_1>.
+    Found 1-bit register for signal <master_64bit_2>.
+    Found 4-bit register for signal <master_id_1>.
+    Found 4-bit register for signal <master_id_2>.
+    Found 1-bit register for signal <mcsr_access_1>.
+    Found 1-bit register for signal <pa1_full>.
+    Found 1-bit register for signal <pa1_full_s>.
+    Found 1-bit register for signal <pa2_full>.
+    Found 1-bit register for signal <plb_mcsr_rd_en_pulse_d1>.
+    Found 1-bit register for signal <plb_mcsr_wr_en_pulse_d1>.
+    Found 32-bit register for signal <plb_psb_address_reg>.
+    Found 1-bit register for signal <plb_psb_burst_reg>.
+    Found 1-bit register for signal <plb_psb_rnw_reg>.
+    Found 1-bit register for signal <plb_psb_s_acc_d1>.
+    Found 1-bit register for signal <plb_psb_s_acc_d2>.
+    Found 1-bit register for signal <plb_psb_s_acc_d3>.
+    Found 1-bit register for signal <plb_psb_s_acc_d3_sticky>.
+    Found 3-bit register for signal <plb_psb_tsiz_reg>.
+    Found 64-bit 4-to-1 multiplexer for signal <psb_BGOsl_rdDBus>.
+    Found 1-bit register for signal <psb_plb_error_d1>.
+    Found 1-bit register for signal <psb_plb_error_sticky>.
+    Found 1-bit register for signal <rburst_err_rdAck1>.
+    Found 1-bit register for signal <rburst_err_rdAck2>.
+    Found 1-bit register for signal <rburst_err_rdAck3>.
+    Found 1-bit register for signal <rburst_err_rdAck4>.
+    Found 1-bit register for signal <rnw_1>.
+    Found 1-bit register for signal <rnw_2>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred 420 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  96 Multiplexer(s).
+Unit <plb2psb_plbside> synthesized.
+
+
+Synthesizing Unit <plb2psb_psbside>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb2psb_psbside.v".
+WARNING:Xst:647 - Input <PSBma_abb_n> is never used.
+WARNING:Xst:647 - Input <PSBma_bg_n> is never used.
+WARNING:Xst:646 - Signal <PSBma_aack_n_s> is assigned but never used.
+WARNING:Xst:646 - Signal <PSBma_dbg_n_s> is assigned but never used.
+    Found 1-bit register for signal <dont_aack_ps2>.
+    Found 1-bit register for signal <PSBma_br_n>.
+    Found 1-bit register for signal <deassert_dbb_no_error_reg>.
+    Found 1-bit register for signal <outward_access_frame>.
+    Found 1-bit register for signal <PSBma_abb_n_en_s>.
+    Found 1-bit register for signal <PSBma_abb_n_o_reg>.
+    Found 1-bit register for signal <PSBma_br_n_int>.
+    Found 1-bit register for signal <PSBma_d_en_reg>.
+    Found 64-bit 4-to-1 multiplexer for signal <PSBma_d_o_prereg>.
+    Found 64-bit register for signal <PSBma_d_o_reg>.
+    Found 1-bit register for signal <PSBma_dbb_n_en_reg>.
+    Found 1-bit register for signal <PSBma_dbb_n_o_s>.
+    Found 1-bit register for signal <PSBma_dbb_n_o_ss>.
+    Found 1-bit register for signal <PSBma_dbg_n_sticky>.
+    Found 2-bit up counter for signal <PSBma_ta_cnt>.
+    Found 2-bit up counter for signal <PSBma_ta_unreg_cnt>.
+    Found 1-bit register for signal <PSBma_ts_n_en_reg>.
+    Found 1-bit register for signal <qual_bg_s>.
+    Found 1-bit register for signal <retry_occured>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  79 D-type flip-flop(s).
+	inferred  64 Multiplexer(s).
+Unit <plb2psb_psbside> synthesized.
+
+
+Synthesizing Unit <plb_psb_bridge_fpga_reg_wrapper>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb_psb_bridge_fpga_reg_wrapper.v".
+Unit <plb_psb_bridge_fpga_reg_wrapper> synthesized.
+
+
+Synthesizing Unit <psb2plb_bridge>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/psb2plb_bridge.v".
+Unit <psb2plb_bridge> synthesized.
+
+
+Synthesizing Unit <plb2psb_bridge>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb2psb_bridge.v".
+Unit <plb2psb_bridge> synthesized.
+
+
+Synthesizing Unit <plb_psb_bridge>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\plb_psb_bridge_v1_00_a/hdl/verilog/plb_psb_bridge.v".
+WARNING:Xst:647 - Input <PSB_tsiz_I<0>> is never used.
+    Found 1-bit register for signal <PSB_tea_n_O>.
+    Found 1-bit register for signal <PSB_tea_n_T>.
+    Found 1-bit register for signal <PSB_aack_n_O>.
+    Found 32-bit register for signal <PSB_a_O>.
+    Found 1-bit register for signal <PSB_aack_n_T>.
+    Found 32-bit register for signal <PSB_a_T>.
+    Found 1-bit register for signal <PSB_ts_n_O>.
+    Found 1-bit register for signal <PSB_ts_n_T>.
+    Found 1-bit register for signal <PSB_tbst_n_O>.
+    Found 1-bit register for signal <PSB_tbst_n_T>.
+    Found 1-bit register for signal <PSB_dbb_n_O>.
+    Found 1-bit register for signal <PSB_dbb_n_T>.
+    Found 5-bit register for signal <PSB_tt_O>.
+    Found 5-bit register for signal <PSB_tt_T>.
+    Found 1-bit register for signal <PSB_abb_n_O>.
+    Found 64-bit register for signal <PSB_d_O>.
+    Found 1-bit register for signal <PSB_abb_n_T>.
+    Found 4-bit register for signal <PSB_tsiz_O>.
+    Found 64-bit register for signal <PSB_d_T>.
+    Found 4-bit register for signal <PSB_tsiz_T>.
+    Found 1-bit register for signal <PSB_ta_n_O>.
+    Found 1-bit register for signal <PSB_artry_n_O>.
+    Found 1-bit register for signal <PSB_ta_n_T>.
+    Found 1-bit register for signal <PSB_artry_n_T>.
+    Found 64-bit 4-to-1 multiplexer for signal <PSB_d_O$mux0000>.
+    Found 1-bit register for signal <PSBma_aack_n>.
+    Found 1-bit register for signal <PSBma_abb_n>.
+    Found 1-bit register for signal <PSBma_artry_n>.
+    Found 1-bit register for signal <PSBma_bg_n>.
+    Found 1-bit register for signal <PSBma_dbg_n>.
+    Found 1-bit register for signal <PSBma_ta_n>.
+    Found 1-bit register for signal <PSBma_tea_n>.
+    Found 32-bit register for signal <PSBsl_a>.
+    Found 1-bit register for signal <PSBsl_tbst_n>.
+    Found 1-bit register for signal <PSBsl_ts_n>.
+    Found 3-bit register for signal <PSBsl_tsiz>.
+    Found 5-bit register for signal <PSBsl_tt>.
+    Found 64-bit register for signal <PSBslma_d_i>.
+    Found 1-bit register for signal <PSBslma_dbb_n>.
+    Summary:
+	inferred 340 D-type flip-flop(s).
+	inferred  64 Multiplexer(s).
+Unit <plb_psb_bridge> synthesized.
+
+
+Synthesizing Unit <plb_psb_bridge_i_wrapper>.
+    Related source file is "C:\Baseline_9_Working_Folder\K-new-base\pcores\/../hdl/plb_psb_bridge_i_wrapper.v".
+Unit <plb_psb_bridge_i_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 4x16-bit ROM                                          : 1
+ 8x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 2-bit adder                                           : 2
+ 2-bit adder carry out                                 : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 4
+ 2-bit up counter                                      : 3
+ 8-bit up counter                                      : 1
+# Registers                                            : 225
+ 1-bit register                                        : 167
+ 16-bit register                                       : 1
+ 2-bit register                                        : 7
+ 3-bit register                                        : 3
+ 32-bit register                                       : 8
+ 4-bit register                                        : 4
+ 5-bit register                                        : 3
+ 64-bit register                                       : 19
+ 8-bit register                                        : 13
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+# Multiplexers                                         : 15
+ 32-bit 4-to-1 multiplexer                             : 5
+ 32-bit 8-to-1 multiplexer                             : 1
+ 64-bit 4-to-1 multiplexer                             : 5
+ 64-bit 8-to-1 multiplexer                             : 3
+ 8-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <plb_psb_bridge_i/psb2plb_bridge/psb2plb_plbside/plbm_state> on signal <plbm_state[1:7]> with speed1 encoding.
+---------------------
+ State   | Encoding
+---------------------
+ 0000001 | 1000000
+ 0000010 | 0100000
+ 0000100 | 0010000
+ 0001000 | 0001000
+ 0010000 | 0000100
+ 0100000 | 0000010
+ 1000000 | 0000001
+---------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/psbr_state> on signal <psbr_state[1:7]> with one-hot encoding.
+---------------------
+ State   | Encoding
+---------------------
+ 0000001 | 0000001
+ 0000010 | 0000010
+ 0100000 | 0000100
+ 0000100 | 0001000
+ 0001000 | 0010000
+ 0010000 | 0100000
+ 1000000 | 1000000
+---------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/psba_state> on signal <psba_state[1:3]> with sequential encoding.
+----------------------
+ State    | Encoding
+----------------------
+ 00000001 | 000
+ 00000010 | 001
+ 00001000 | 010
+ 00000100 | 011
+ 00010000 | 100
+----------------------
+WARNING:Xst:2404 -  FFs/Latches <uart_host1_fcr_rfifo_tlevel<1:0>> (without init value) have a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:2404 -  FFs/Latches <uart_host1_dll_dll<7:0>> (without init value) have a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:2404 -  FFs/Latches <master_id_2<0:1>> (without init value) have a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:2404 -  FFs/Latches <master_id_1<0:1>> (without init value) have a constant value of 0 in block <plb2psb_plbside>.
+Loading device for application Rf_Device from file '2vp100.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# ROMs                                                 : 2
+ 4x16-bit ROM                                          : 1
+ 8x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 2-bit adder                                           : 2
+ 2-bit adder carry out                                 : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 4
+ 2-bit up counter                                      : 3
+ 8-bit up counter                                      : 1
+# Registers                                            : 1816
+ Flip-Flops                                            : 1816
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+# Multiplexers                                         : 15
+ 32-bit 4-to-1 multiplexer                             : 5
+ 32-bit 8-to-1 multiplexer                             : 1
+ 64-bit 4-to-1 multiplexer                             : 5
+ 64-bit 8-to-1 multiplexer                             : 3
+ 8-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch  <uart_host1_thr_thr_0> (without init value) has a constant value of 1 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <uart_host1_thr_thr_1> (without init value) has a constant value of 1 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <uart_host1_thr_thr_2> (without init value) has a constant value of 1 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <uart_host1_thr_thr_3> (without init value) has a constant value of 1 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <uart_host1_thr_thr_4> (without init value) has a constant value of 1 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <uart_host1_thr_thr_5> (without init value) has a constant value of 1 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <uart_host1_thr_thr_6> (without init value) has a constant value of 1 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <uart_host1_thr_thr_7> (without init value) has a constant value of 1 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <uart_host1_fcr_dma_mode_sel> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1710 - FF/Latch  <mcsr_vuart> (without init value) has a constant value of 0 in block <psb2plb_psbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <mcsr_ahit_sticky_reg> (without init value) has a constant value of 0 in block <psb2plb_psbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <mcsr_vuart_ahit_sticky_reg> (without init value) has a constant value of 0 in block <psb2plb_psbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <start_mcsr_vuart_access> (without init value) has a constant value of 0 in block <psb2plb_psbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <start_mcsr_vuart_access_sticky> (without init value) has a constant value of 0 in block <psb2plb_psbside>.
+WARNING:Xst:1710 - FF/Latch  <mcsr_access_1> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_15> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_14> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_13> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_12> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_11> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_10> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_9> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_8> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_7> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_6> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_5> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <BGOsl_MBusy_int_4> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_mcsr_rd_en_pulse_d1> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1710 - FF/Latch  <plb_mcsr_wr_en_pulse_d1> (without init value) has a constant value of 0 in block <plb2psb_plbside>.
+WARNING:Xst:1710 - FF/Latch  <read_data_0> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_1> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_2> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_3> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_4> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_5> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_6> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_7> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_8> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_9> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_10> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_11> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_12> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_13> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_14> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_15> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_16> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_17> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_18> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_19> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_20> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_21> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_22> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <read_data_23> (without init value) has a constant value of 0 in block <plb_psb_bridge_fpga_reg>.
+
+Optimizing unit <plb_psb_bridge_i_wrapper> ...
+
+Optimizing unit <plb_psb_bridge_fpga_reg> ...
+
+Optimizing unit <psb2plb_psbside> ...
+
+Optimizing unit <psb2plb_plbside> ...
+
+Optimizing unit <plb2psb_plbside> ...
+
+Optimizing unit <plb2psb_psbside> ...
+
+Optimizing unit <plb_psb_bridge_fpga_reg_wrapper> ...
+
+Optimizing unit <plb_psb_bridge> ...
+WARNING:Xst:1710 - FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_lcr_wls_0> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_lcr_stb> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_lcr_pen> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_lcr_stick_parity> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_lcr_set_break> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_lcr_eps> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_lcr_dlab> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_fcr_fifo_en> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_fcr_rfifo_reset> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_fcr_tfifo_reset> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_fcr_dma_mode_sel> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_fcr_rfifo_tlevel_1> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_fcr_rfifo_tlevel_0> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_ier_erbfi> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_ier_etbei> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_ier_elsi> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_ier_edssi> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_thr_thr_7> (without init value) has a constant value of 1 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_thr_thr_6> (without init value) has a constant value of 1 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_thr_thr_5> (without init value) has a constant value of 1 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_thr_thr_4> (without init value) has a constant value of 1 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_thr_thr_3> (without init value) has a constant value of 1 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_thr_thr_2> (without init value) has a constant value of 1 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_thr_thr_1> (without init value) has a constant value of 1 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_thr_thr_0> (without init value) has a constant value of 1 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/PSB_tt_O_0> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/PSB_tt_O_2> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/PSB_tt_O_4> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/PSB_tsiz_O_0> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dlm_dlm_7> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dlm_dlm_6> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dlm_dlm_5> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dlm_dlm_4> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dlm_dlm_3> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dlm_dlm_2> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dlm_dlm_1> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dlm_dlm_0> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dll_dll_7> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dll_dll_6> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dll_dll_5> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dll_dll_4> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dll_dll_3> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dll_dll_2> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dll_dll_1> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_dll_dll_0> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_scr_scr_7> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_scr_scr_6> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_scr_scr_5> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_scr_scr_4> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_scr_scr_3> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_scr_scr_2> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_scr_scr_1> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_scr_scr_0> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_mcr_dtr> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_mcr_out1> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_mcr_out2> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_mcr_rts> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_mcr_loop> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <plb_psb_bridge_i/plb_psb_bridge_fpga_reg_wrapper/plb_psb_bridge_fpga_reg/uart_ppc0_lcr_wls_1> (without init value) has a constant value of 0 in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:2677 - Node <plb_psb_bridge_i/PSBsl_tt_0> of sequential type is unconnected in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:2677 - Node <plb_psb_bridge_i/PSBsl_tt_2> of sequential type is unconnected in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:2677 - Node <plb_psb_bridge_i/PSBsl_tt_4> of sequential type is unconnected in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:2677 - Node <plb_psb_bridge_i/PSB_tt_O_0> of sequential type is unconnected in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:2677 - Node <plb_psb_bridge_i/PSB_tt_O_2> of sequential type is unconnected in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:2677 - Node <plb_psb_bridge_i/PSB_tt_O_4> of sequential type is unconnected in block <plb_psb_bridge_i_wrapper>.
+WARNING:Xst:2677 - Node <plb_psb_bridge_i/PSB_tsiz_O_0> of sequential type is unconnected in block <plb_psb_bridge_i_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <plb_psb_bridge_i/psb2plb_bridge/psb2plb_plbside/psb_plb_wdata1_val_d1> in Unit <plb_psb_bridge_i_wrapper> is equivalent to the following FF/Latch, which will be removed : <plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/adv_psb_burst_wdata_d1> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/PSB_d_T_0> in Unit <plb_psb_bridge_i_wrapper> is equivalent to the following 63 FFs/Latches : <plb_psb_bridge_i/PSB_d_T_1> <plb_psb_bridge_i/PSB_d_T_2> <plb_psb_bridge_i/PSB_d_T_3> <plb_psb_bridge_i/PSB_d_T_4> <plb_psb_bridge_i/PSB_d_T_5> <plb_psb_bridge_i/PSB_d_T_6> <plb_psb_bridge_i/PSB_d_T_7> <plb_psb_bridge_i/PSB_d_T_8> <plb_psb_bridge_i/PSB_d_T_9> <plb_psb_bridge_i/PSB_d_T_10> <plb_psb_bridge_i/PSB_d_T_11> <plb_psb_bridge_i/PSB_d_T_12> <plb_psb_bridge_i/PSB_d_T_13> <plb_psb_bridge_i/PSB_d_T_14> <plb_psb_bridge_i/PSB_d_T_15> <plb_psb_bridge_i/PSB_d_T_16> <plb_psb_bridge_i/PSB_d_T_17> <plb_psb_bridge_i/PSB_d_T_18> <plb_psb_bridge_i/PSB_d_T_19> <plb_psb_bridge_i/PSB_d_T_20> <plb_psb_bridge_i/PSB_d_T_21> <plb_psb_bridge_i/PSB_d_T_22> <plb_psb_bridge_i/PSB_d_T_23> <plb_psb_bridge_i/PSB_d_T_24> <plb_psb_bridge_i/PSB_d_T_25> <plb_psb_bridge_i/PSB_d_T_26> <plb_psb_bridge_i/PSB_d_T_27> <plb_psb_bridge_i/PSB_d_T_28> <plb_psb_bridge_i/PSB_d_T_29>
+   <plb_psb_bridge_i/PSB_d_T_30> <plb_psb_bridge_i/PSB_d_T_31> <plb_psb_bridge_i/PSB_d_T_32> <plb_psb_bridge_i/PSB_d_T_33> <plb_psb_bridge_i/PSB_d_T_34> <plb_psb_bridge_i/PSB_d_T_35> <plb_psb_bridge_i/PSB_d_T_36> <plb_psb_bridge_i/PSB_d_T_37> <plb_psb_bridge_i/PSB_d_T_38> <plb_psb_bridge_i/PSB_d_T_39> <plb_psb_bridge_i/PSB_d_T_40> <plb_psb_bridge_i/PSB_d_T_41> <plb_psb_bridge_i/PSB_d_T_42> <plb_psb_bridge_i/PSB_d_T_43> <plb_psb_bridge_i/PSB_d_T_44> <plb_psb_bridge_i/PSB_d_T_45> <plb_psb_bridge_i/PSB_d_T_46> <plb_psb_bridge_i/PSB_d_T_47> <plb_psb_bridge_i/PSB_d_T_48> <plb_psb_bridge_i/PSB_d_T_49> <plb_psb_bridge_i/PSB_d_T_50> <plb_psb_bridge_i/PSB_d_T_51> <plb_psb_bridge_i/PSB_d_T_52> <plb_psb_bridge_i/PSB_d_T_53> <plb_psb_bridge_i/PSB_d_T_54> <plb_psb_bridge_i/PSB_d_T_55> <plb_psb_bridge_i/PSB_d_T_56> <plb_psb_bridge_i/PSB_d_T_57> <plb_psb_bridge_i/PSB_d_T_58> <plb_psb_bridge_i/PSB_d_T_59> <plb_psb_bridge_i/PSB_d_T_60> <plb_psb_bridge_i/PSB_d_T_61> <plb_psb_bridge_i/PSB_d_T_62> <plb_psb_bridge_i/PSB_d_T_63> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_br_n> in Unit <plb_psb_bridge_i_wrapper> is equivalent to the following FF/Latch : <plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_br_n_int> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_abb_n_o_reg> in Unit <plb_psb_bridge_i_wrapper> is equivalent to the following 42 FFs/Latches : <plb_psb_bridge_i/PSB_tt_T_0> <plb_psb_bridge_i/PSB_tt_T_1> <plb_psb_bridge_i/PSB_tt_T_2> <plb_psb_bridge_i/PSB_tt_T_3> <plb_psb_bridge_i/PSB_tt_T_4> <plb_psb_bridge_i/PSB_tsiz_T_0> <plb_psb_bridge_i/PSB_tsiz_T_1> <plb_psb_bridge_i/PSB_tsiz_T_2> <plb_psb_bridge_i/PSB_tsiz_T_3> <plb_psb_bridge_i/PSB_tbst_n_T> <plb_psb_bridge_i/PSB_a_T_0> <plb_psb_bridge_i/PSB_a_T_1> <plb_psb_bridge_i/PSB_a_T_2> <plb_psb_bridge_i/PSB_a_T_3> <plb_psb_bridge_i/PSB_a_T_4> <plb_psb_bridge_i/PSB_a_T_5> <plb_psb_bridge_i/PSB_a_T_6> <plb_psb_bridge_i/PSB_a_T_7> <plb_psb_bridge_i/PSB_a_T_8> <plb_psb_bridge_i/PSB_a_T_9> <plb_psb_bridge_i/PSB_a_T_10> <plb_psb_bridge_i/PSB_a_T_11> <plb_psb_bridge_i/PSB_a_T_12> <plb_psb_bridge_i/PSB_a_T_13> <plb_psb_bridge_i/PSB_a_T_14> <plb_psb_bridge_i/PSB_a_T_15> <plb_psb_bridge_i/PSB_a_T_16> <plb_psb_bridge_i/PSB_a_T_17>
+   <plb_psb_bridge_i/PSB_a_T_18> <plb_psb_bridge_i/PSB_a_T_19> <plb_psb_bridge_i/PSB_a_T_20> <plb_psb_bridge_i/PSB_a_T_21> <plb_psb_bridge_i/PSB_a_T_22> <plb_psb_bridge_i/PSB_a_T_23> <plb_psb_bridge_i/PSB_a_T_24> <plb_psb_bridge_i/PSB_a_T_25> <plb_psb_bridge_i/PSB_a_T_26> <plb_psb_bridge_i/PSB_a_T_27> <plb_psb_bridge_i/PSB_a_T_28> <plb_psb_bridge_i/PSB_a_T_29> <plb_psb_bridge_i/PSB_a_T_30> <plb_psb_bridge_i/PSB_a_T_31> 
+FlipFlop plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full has been replicated 1 time(s)
+FlipFlop plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_s has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1716
+ Flip-Flops                                            : 1716
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/plb_psb_bridge_i_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 1446
+
+Cell Usage :
+# BELS                             : 3089
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 71
+#      LUT2                        : 115
+#      LUT2_D                      : 2
+#      LUT2_L                      : 5
+#      LUT3                        : 635
+#      LUT3_D                      : 41
+#      LUT3_L                      : 21
+#      LUT4                        : 1558
+#      LUT4_D                      : 51
+#      LUT4_L                      : 110
+#      MUXCY                       : 17
+#      MUXF5                       : 365
+#      MUXF6                       : 83
+#      VCC                         : 1
+#      XORCY                       : 7
+# FlipFlops/Latches                : 1716
+#      FDC                         : 419
+#      FDCE                        : 1144
+#      FDP                         : 141
+#      FDPE                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp100ff1704-6 
+
+ Number of Slices:                    1481  out of  44096     3%  
+ Number of Slice Flip Flops:          1716  out of  88192     1%  
+ Number of 4 input LUTs:              2615  out of  88192     2%  
+ Number of IOs:                       1446
+ Number of bonded IOBs:                  0  out of   1040     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                               | Load  |
+-----------------------------------+---------------------------------------------------------------------+-------+
+clk                                | NONE(plb_psb_bridge_i/psb2plb_bridge/psb2plb_plbside/wdata_hold1_19)| 1716  |
+-----------------------------------+---------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+debug_bus<0>                       | NONE                   | 1716  |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: 5.827ns (Maximum Frequency: 171.622MHz)
+   Minimum input arrival time before clock: 5.996ns
+   Maximum output required time after clock: 5.048ns
+   Maximum combinational path delay: 3.107ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.827ns (frequency: 171.622MHz)
+  Total number of paths / destination ports: 37188 / 2502
+-------------------------------------------------------------------------
+Delay:               5.827ns (Levels of Logic = 5)
+  Source:            plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_dbb_n_o_ss (FF)
+  Destination:       plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/burst_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_dbb_n_o_ss to plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/burst_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             11   0.374   0.756  plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_dbb_n_o_ss (plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_dbb_n_o_ss)
+     LUT2:I0->O            2   0.313   0.495  plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/psb_plb_access_done1 (debug_bus<87>)
+     LUT4:I3->O            2   0.313   0.473  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/psb_BGOsl_wrComp_SW1 (N6810)
+     LUT4:I2->O            6   0.313   0.574  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/psb_BGOsl_wrComp (BGOsl_wrComp)
+     LUT4:I3->O            1   0.313   0.440  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_not0000_SW1 (N8880)
+     LUT4:I3->O           47   0.313   0.815  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_not0000 (plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_not0000)
+     FDCE:CE                   0.335          plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/burst_1
+    ----------------------------------------
+    Total                      5.827ns (2.274ns logic, 3.553ns route)
+                                       (39.0% logic, 61.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 7263 / 1267
+-------------------------------------------------------------------------
+Offset:              5.996ns (Levels of Logic = 6)
+  Source:            PLBsl_ABus<2> (PAD)
+  Destination:       plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/PSBsl_current_a_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: PLBsl_ABus<2> to plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/PSBsl_current_a_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            2   0.313   0.588  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/accept_access_cmp_eq00001 (plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/accept_access_cmp_eq0000)
+     LUT3:I0->O            2   0.313   0.495  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/BGOsl_rearbitrate_and0000_SW0 (N128)
+     LUT4:I3->O           10   0.313   0.629  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/BGOsl_addrAck_and00001 (BGOsl_SSize<1>)
+     LUT4:I2->O           14   0.313   0.699  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/accept_psb44 (debug_bus<84>)
+     LUT4:I3->O            1   0.313   0.418  plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/PSBsl_current_a_not0001_SW0 (N6614)
+     LUT4:I2->O           45   0.313   0.811  plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/PSBsl_current_a_not0001 (plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/PSBsl_current_a_not0001)
+     FDCE:CE                   0.335          plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/PSBsl_current_a_31
+    ----------------------------------------
+    Total                      5.996ns (2.356ns logic, 3.640ns route)
+                                       (39.3% logic, 60.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 3146 / 768
+-------------------------------------------------------------------------
+Offset:              5.048ns (Levels of Logic = 4)
+  Source:            plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/rnw_1 (FF)
+  Destination:       BGOsl_rdDBus<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/rnw_1 to BGOsl_rdDBus<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            24   0.374   0.774  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/rnw_1 (plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/rnw_1)
+     LUT4_D:I2->O         23   0.313   0.779  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/plb_psb_rnw1 (plb_psb_bridge_i/plb2psb_bridge/plb_psb_rnw)
+     LUT4:I2->O           34   0.313   0.936  plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/psb_plb_read_data_val1 (debug_bus<66>)
+     LUT3:I0->O           32   0.313   0.933  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/Mmux_psb_BGOsl_rdDBus1111 (plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/N17)
+     LUT4:I0->O            0   0.313   0.000  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/Mmux_psb_BGOsl_rdDBus91 (BGOsl_rdDBus<17>)
+    ----------------------------------------
+    Total                      5.048ns (1.626ns logic, 3.422ns route)
+                                       (32.2% logic, 67.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 286 / 95
+-------------------------------------------------------------------------
+Delay:               3.107ns (Levels of Logic = 4)
+  Source:            PLBsl_ABus<2> (PAD)
+  Destination:       debug_bus<153> (PAD)
+
+  Data Path: PLBsl_ABus<2> to debug_bus<153>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            2   0.313   0.588  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/accept_access_cmp_eq00001 (plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/accept_access_cmp_eq0000)
+     LUT3:I0->O            2   0.313   0.495  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/BGOsl_rearbitrate_and0000_SW0 (N128)
+     LUT4:I3->O           10   0.313   0.629  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/BGOsl_addrAck_and00001 (BGOsl_SSize<1>)
+     LUT4:I2->O           14   0.313   0.000  plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/accept_psb44 (debug_bus<84>)
+    ----------------------------------------
+    Total                      3.107ns (1.395ns logic, 1.712ns route)
+                                       (44.9% logic, 55.1% route)
+
+=========================================================================
+CPU : 54.55 / 54.63 s | Elapsed : 55.00 / 55.00 s
+ 
+--> 
+
+Total memory usage is 310964 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  205 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
