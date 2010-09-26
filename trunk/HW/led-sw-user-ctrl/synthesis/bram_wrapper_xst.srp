@@ -1,0 +1,408 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "bram_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp100ff1704-6
+Output File Name                   : "../implementation/bram_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : bram_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" in Library bram_elaborate_v1_00_a.
+Entity <bram_elaborate> compiled.
+Entity <bram_elaborate> (Architecture <STRUCTURE>) compiled.
+Compiling vhdl file "C:/Baseline_9_Working_Folder/K-new-base/hdl/bram_wrapper.vhd" in Library work.
+Entity <bram_wrapper> compiled.
+Entity <bram_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <bram_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <bram_elaborate> in library <bram_elaborate_v1_00_a> (architecture <STRUCTURE>) with generics.
+	C_FAMILY = "virtex2p"
+	C_MEMSIZE = 65536
+	C_NUM_WE = 8
+	C_PORT_AWIDTH = 32
+	C_PORT_DWIDTH = 64
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <bram_wrapper> in library <work> (Architecture <STRUCTURE>).
+    Set user-defined property "KEEP_HIERARCHY =  yes" for unit <bram_wrapper>.
+    Set user-defined property "KEEP_HIERARCHY =  yes" for unit <bram_elaborate>.
+    Set user-defined property "X_CORE_INFO =  bram_elaborate_v1_00_a" for unit <bram_elaborate>.
+Entity <bram_wrapper> analyzed. Unit <bram_wrapper> generated.
+
+Analyzing generic Entity <bram_elaborate> in library <bram_elaborate_v1_00_a> (Architecture <STRUCTURE>).
+	C_FAMILY = "virtex2p"
+	C_MEMSIZE = 65536
+	C_NUM_WE = 8
+	C_PORT_AWIDTH = 32
+	C_PORT_DWIDTH = 64
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 81: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_0> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_0> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 103: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_1> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_1> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 125: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_2> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_2> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 147: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_3> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_3> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 169: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_4> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_4> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 191: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_5> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_5> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 213: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_6> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_6> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 235: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_7> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_7> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 257: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_8> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_8> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 279: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_9> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_9> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 301: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_10> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_10> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 323: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_11> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_11> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 345: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_12> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_12> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 367: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_13> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_13> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 389: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_14> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_14> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 411: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_15> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_15> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 433: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_16> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_16> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 455: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_17> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_17> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 477: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_18> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_18> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 499: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_19> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_19> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 521: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_20> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_20> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 543: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_21> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_21> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 565: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_22> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_22> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 587: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_23> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_23> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 609: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_24> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_24> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 631: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_25> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_25> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 653: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_26> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_26> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 675: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_27> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_27> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 697: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_28> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_28> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 719: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_29> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_29> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 741: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_30> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_30> in unit <bram_elaborate>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd" line 763: Instantiating black box module <RAMB16_S2_S2>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <ramb16_s2_s2_31> in unit <bram_elaborate>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb16_s2_s2_31> in unit <bram_elaborate>.
+Entity <bram_elaborate> analyzed. Unit <bram_elaborate> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <bram_elaborate>.
+    Related source file is "C:/Baseline_9_Working_Folder/K-new-base/hdl/elaborate/bram_elaborate_v1_00_a/hdl/vhdl/bram_elaborate.vhd".
+WARNING:Xst:647 - Input <BRAM_Addr_A<0:15>> is never used.
+WARNING:Xst:647 - Input <BRAM_Addr_A<29:31>> is never used.
+WARNING:Xst:647 - Input <BRAM_Addr_B<0:15>> is never used.
+WARNING:Xst:647 - Input <BRAM_Addr_B<29:31>> is never used.
+Unit <bram_elaborate> synthesized.
+
+
+Synthesizing Unit <bram_wrapper>.
+    Related source file is "C:/Baseline_9_Working_Folder/K-new-base/hdl/bram_wrapper.vhd".
+Unit <bram_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp100.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <bram_wrapper> ...
+
+Optimizing unit <bram_elaborate> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/bram_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 342
+
+Cell Usage :
+# RAMS                             : 32
+#      RAMB16_S2_S2                : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp100ff1704-6 
+
+ Number of Slices:                       0  out of  44096     0%  
+ Number of IOs:                        342
+ Number of bonded IOBs:                  0  out of   1040     0%  
+ Number of BRAMs:                       32  out of    444     7%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)     | Load  |
+-----------------------------------+---------------------------+-------+
+BRAM_Clk_A                         | NONE(bram/ramb16_s2_s2_19)| 32    |
+BRAM_Clk_B                         | NONE(bram/ramb16_s2_s2_15)| 32    |
+-----------------------------------+---------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 0.343ns
+   Maximum output required time after clock: 0.000ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BRAM_Clk_A'
+  Total number of paths / destination ports: 576 / 576
+-------------------------------------------------------------------------
+Offset:              0.343ns (Levels of Logic = 1)
+  Source:            BRAM_WEN_A<0> (PAD)
+  Destination:       bram/ramb16_s2_s2_0 (RAM)
+  Destination Clock: BRAM_Clk_A rising
+
+  Data Path: BRAM_WEN_A<0> to bram/ramb16_s2_s2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     begin scope: 'bram'
+     RAMB16_S2_S2:WEA          0.343          ramb16_s2_s2_0
+    ----------------------------------------
+    Total                      0.343ns (0.343ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BRAM_Clk_B'
+  Total number of paths / destination ports: 576 / 576
+-------------------------------------------------------------------------
+Offset:              0.343ns (Levels of Logic = 1)
+  Source:            BRAM_WEN_B<0> (PAD)
+  Destination:       bram/ramb16_s2_s2_0 (RAM)
+  Destination Clock: BRAM_Clk_B rising
+
+  Data Path: BRAM_WEN_B<0> to bram/ramb16_s2_s2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     begin scope: 'bram'
+     RAMB16_S2_S2:WEB          0.343          ramb16_s2_s2_0
+    ----------------------------------------
+    Total                      0.343ns (0.343ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'BRAM_Clk_B'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              0.000ns (Levels of Logic = 1)
+  Source:            bram/ramb16_s2_s2_0 (RAM)
+  Destination:       BRAM_Din_B<0> (PAD)
+  Source Clock:      BRAM_Clk_B rising
+
+  Data Path: bram/ramb16_s2_s2_0 to BRAM_Din_B<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S2_S2:CLKB->DOB1    0   0.000   0.000  ramb16_s2_s2_0 (BRAM_Din_B<0>)
+     end scope: 'bram'
+    ----------------------------------------
+    Total                      0.000ns (0.000ns logic, 0.000ns route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'BRAM_Clk_A'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              0.000ns (Levels of Logic = 1)
+  Source:            bram/ramb16_s2_s2_0 (RAM)
+  Destination:       BRAM_Din_A<0> (PAD)
+  Source Clock:      BRAM_Clk_A rising
+
+  Data Path: bram/ramb16_s2_s2_0 to BRAM_Din_A<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S2_S2:CLKA->DOA1    0   0.000   0.000  ramb16_s2_s2_0 (BRAM_Din_A<0>)
+     end scope: 'bram'
+    ----------------------------------------
+    Total                      0.000ns (0.000ns logic, 0.000ns route)
+
+=========================================================================
+CPU : 8.91 / 8.97 s | Elapsed : 9.00 / 9.00 s
+ 
+--> 
+
+Total memory usage is 270644 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   36 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

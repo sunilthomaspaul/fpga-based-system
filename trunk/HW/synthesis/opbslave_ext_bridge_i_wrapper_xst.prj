@@ -1,0 +1,5 @@
+Verilog opbslave_ext_bridge_v3_10_a C:\Baseline_9_Working_Folder\K-Fall09-Working_Copy\pcores\opbslave_ext_bridge_v3_10_a/hdl/verilog/bridge.v
+Verilog opbslave_ext_bridge_v3_10_a C:\Baseline_9_Working_Folder\K-Fall09-Working_Copy\pcores\opbslave_ext_bridge_v3_10_a/hdl/verilog/arbiter.v
+Verilog opbslave_ext_bridge_v3_10_a C:\Baseline_9_Working_Folder\K-Fall09-Working_Copy\pcores\opbslave_ext_bridge_v3_10_a/hdl/verilog/test_switch_led.v
+Verilog opbslave_ext_bridge_v3_10_a C:\Baseline_9_Working_Folder\K-Fall09-Working_Copy\pcores\opbslave_ext_bridge_v3_10_a/hdl/verilog/opbslave_ext_bridge.v
+verilog work ../hdl/opbslave_ext_bridge_i_wrapper.v

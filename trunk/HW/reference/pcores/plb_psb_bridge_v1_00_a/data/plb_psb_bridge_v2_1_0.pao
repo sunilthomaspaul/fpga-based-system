@@ -1,0 +1,47 @@
+###################################################################
+##
+## AMIRIX Systems Inc. 
+## 77 Chain Lake Drive 
+## Halifax, Nova Scotia B3S 1E1 
+## 
+## (C) 2005 AMIRIX Systems Inc. All rights reserved.
+## The information contained herein includes information which is confidential
+## and proprietary to AMIRIX Systems Inc. and may not be used or 
+## disclosed without prior written consent of AMIRIX Systems Inc. 
+##
+## Content of this file:                                                 
+##   This is the PAO file needed by the Xilinx EDK to allow
+##   the plb_psb_bridge to be used as a pcore within EDK.
+## 
+## Project #: HW05-030
+## Author:    Jeremy Kuehner
+## Date:      February 21, 2005
+##
+##
+## Filename:                $Source: /usr/cvsroot/ap1000/pcores/plb_psb_bridge_v1_00_a/data/plb_psb_bridge_v2_1_0.pao,v $                                
+## Current Revision:        $Revision: 1.1 $                                
+## Last Updated:            $Date: 2005/08/23 19:22:56 $                                
+## Last Modified by:        $Author: kuehner $                                
+## Currently Locked by:     $Locker:  $                                
+##                                                                       
+## Change History:                                                       
+## $Log: plb_psb_bridge_v2_1_0.pao,v $
+## Revision 1.1  2005/08/23 19:22:56  kuehner
+## Initial ap1000 commit (moved from hw05-030).
+##
+## Revision 1.1  2005/02/25 14:09:13  kuehner
+## Initial Revision.
+##
+##
+##
+###################################################################
+
+lib plb_psb_bridge_v1_00_a plb_psb_bridge_fpga_reg
+lib plb_psb_bridge_v1_00_a plb_psb_bridge_fpga_reg_wrapper
+lib plb_psb_bridge_v1_00_a plb2psb_plbside
+lib plb_psb_bridge_v1_00_a plb2psb_psbside
+lib plb_psb_bridge_v1_00_a plb2psb_bridge
+lib plb_psb_bridge_v1_00_a psb2plb_psbside
+lib plb_psb_bridge_v1_00_a psb2plb_plbside
+lib plb_psb_bridge_v1_00_a psb2plb_bridge
+lib plb_psb_bridge_v1_00_a plb_psb_bridge

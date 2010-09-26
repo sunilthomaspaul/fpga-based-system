@@ -1,0 +1,12 @@
+################################################################################
+##
+## opbslave_ext_bridge.pao
+##
+## Peripheral Analyze Order
+##
+################################################################################
+ 
+lib opbslave_ext_bridge_v3_10_a bridge
+lib opbslave_ext_bridge_v3_10_a arbiter
+lib opbslave_ext_bridge_v3_10_a test_switch_led
+lib opbslave_ext_bridge_v3_10_a opbslave_ext_bridge

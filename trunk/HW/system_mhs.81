@@ -1,0 +1,373 @@
+
+
+# 1  nothing.h
+# 1  system.mhs.tmp  1
+# Parameters
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT fpga_rst_n = FPGA_rst_n, DIR = IN
+ PORT fpga_opb_clk = fpga_opb_clk, DIR = IN
+ PORT fpga_plb_clk = fpga_plb_clk, DIR = IN
+ PORT fpga_test_led = fpga_test_led, VEC = [0:7], DIR = OUT
+ PORT fpga_test_switch_0 = fpga_test_switch_0, DIR = IN
+ PORT fpga_test_switch_1 = fpga_test_switch_1, DIR = IN
+ PORT fpga_test_switch_2 = fpga_test_switch_2, DIR = IN
+ PORT fpga_test_switch_3 = fpga_test_switch_3, DIR = IN
+ PORT fpga_test_switch_4 = fpga_test_switch_4, DIR = IN
+ PORT fpga_test_switch_5 = fpga_test_switch_5, DIR = IN
+ PORT fpga_test_switch_6 = fpga_test_switch_6, DIR = IN
+ PORT fpga_test_switch_7 = fpga_test_switch_7, DIR = IN
+ PORT lbus_addr = lbus_addr, VEC = [0:24], DIR = INOUT
+ PORT lbus_data = lbus_data, VEC = [0:15], DIR = INOUT
+ PORT lbus_oe_n = lbus_oe_n, DIR = INOUT
+ PORT lbus_we_n = lbus_we_n, DIR = INOUT
+ PORT flash_cs_n = flash_cs_n, DIR = OUT
+ PORT fpga_config_flash_cs_n = con_flash_cs_n, DIR = INOUT
+ PORT cpld_br_n = cpld_br_n, DIR = IN
+ PORT cpld_bg_n = cpld_bg_n, DIR = OUT
+ PORT cpld_cs_n = cpld_cs_n, DIR = OUT
+ PORT sysace_irq = sysace_irq, DIR = IN
+ PORT sysace_cs_n = sysace_cs_n, DIR = OUT
+ PORT uart1_sin = UART1_sin, DIR = IN
+ PORT uart1_sout = UART1_sout, DIR = OUT
+ PORT ddr1_clk_fb = DDR1_clk_fb, DIR = IN
+ PORT ddr1_clk = DDR1_clk, DIR = OUT
+ PORT ddr1_clk_n = DDR1_clk_n, DIR = OUT
+ PORT ddr1_addr = DDR1_addr, VEC = [1:13], DIR = OUT
+ PORT ddr1_ba = DDR1_ba, VEC = [0:1], DIR = OUT
+ PORT ddr1_ras_n = DDR1_ras_n, DIR = OUT
+ PORT ddr1_cas_n = DDR1_cas_n, DIR = OUT
+ PORT ddr1_we_n = DDR1_we_n, DIR = OUT
+ PORT ddr1_cs_n = DDR1_cs_n, DIR = OUT
+ PORT ddr1_cke = DDR1_cke, DIR = OUT
+ PORT ddr1_dm = DDR1_dm, VEC = [3:0], DIR = OUT
+ PORT ddr1_dqs = DDR1_dqs, VEC = [3:0], DIR = INOUT
+ PORT ddr1_dq = DDR1_dq, VEC = [31:0], DIR = INOUT
+ PORT psb_bg_n = PSB_bg_n, DIR = IN
+ PORT psb_dbg_n = PSB_dbg_n, DIR = IN
+ PORT ps2_int0_n = PS2_int0_n, DIR = IN
+ PORT ps2_int1_n = PS2_int1_n, DIR = IN
+ PORT ps2_int2_n = PS2_int2_n, DIR = IN
+ PORT ps2_int3_n = PS2_int3_n, DIR = IN
+ PORT ps2_int4_n = PS2_int4_n, DIR = IN
+ PORT ps2_int5_n = PS2_int5_n, DIR = IN
+ PORT psb_br_n = PSB_br_n, DIR = OUT
+ PORT psb_a = PSB_a, VEC = [0:31], DIR = INOUT
+ PORT psb_abb_n = PSB_abb_n, DIR = INOUT
+ PORT psb_artry_n = PSB_artry_n, DIR = INOUT
+ PORT psb_aack_n = PSB_aack_n, DIR = INOUT
+ PORT psb_tbst_n = PSB_tbst_n, DIR = INOUT
+ PORT psb_dbb_n = PSB_dbb_n, DIR = INOUT
+ PORT psb_ts_n = PSB_ts_n, DIR = INOUT
+ PORT psb_ta_n = PSB_ta_n, DIR = INOUT
+ PORT psb_tea_n = PSB_tea_n, DIR = INOUT
+ PORT psb_tsiz = PSB_tsiz, VEC = [0:3], DIR = INOUT
+ PORT psb_tt = PSB_tt, VEC = [0:4], DIR = INOUT
+ PORT psb_data = PSB_d, VEC = [0:63], DIR = INOUT
+ PORT pmc_inta_n = PMC_inta_n, DIR = IN
+ PORT pmc_intb_n = PMC_intb_n, DIR = IN
+ PORT pmc_intc_n = PMC_intc_n, DIR = IN
+ PORT pmc_intd_n = PMC_intd_n, DIR = IN
+ PORT fpga_therm = fpga_therm, DIR = IN
+
+
+# Sub Components
+BEGIN ap1000_bp_clock_reset_generation
+ PARAMETER INSTANCE = clock_reset_block
+ PARAMETER HW_VER = 1.00.a
+ PORT CLKPLB = CLKPLB
+ PORT DDR_CLKFB_90 = DDR1_CLKFB_90
+ PORT DDR_CLKPLB_90 = DDR_CLKPLB_90
+ PORT ddr_clk_fb = DDR1_clk_fb
+ PORT fpga_opb_clk = fpga_opb_clk
+ PORT fpga_plb_clk = fpga_plb_clk
+ PORT async_fpga_rst_n = FPGA_rst_n
+ PORT CLKOPB = CLKOPB
+ PORT CLKCPU = CLKCPU
+ PORT RSTCPU = RSTCPU
+ PORT RSTOPB = RSTOPB
+ PORT RSTPLB = RSTPLB
+END
+
+BEGIN ppc405
+ PARAMETER INSTANCE = ppc405_i
+ PARAMETER HW_VER = 2.00.c
+ PARAMETER C_ISOCM_DCR_BASEADDR = 0b1000010000
+ PARAMETER C_ISOCM_DCR_HIGHADDR = 0b1000010011
+ PARAMETER C_DSOCM_DCR_BASEADDR = 0b1000100000
+ PARAMETER C_DSOCM_DCR_HIGHADDR = 0b1000100011
+ BUS_INTERFACE MDCR = dcr_bus
+ BUS_INTERFACE DPLB = plb_bus
+ BUS_INTERFACE IPLB = plb_bus
+ BUS_INTERFACE JTAGPPC = jtagppc0
+ PORT RSTC405RESETCORE = RSTCPU
+ PORT RSTC405RESETSYS = RSTCPU
+ PORT RSTC405RESETCHIP = RSTCPU
+ PORT CPMC405CLOCK = CLKCPU
+ PORT EICC405EXTINPUTIRQ = Irq
+ PORT CPMC405JTAGCLKEN = net_vcc
+END
+
+# BEGIN jtagppc_bdi2000_cntlr
+# PARAMETER INSTANCE = jtagppc_bdi2000_cntlr_i
+# PARAMETER HW_VER = 1.00.a
+# PORT C405JTGTDO = C405JTGTDO
+# PORT JTGC405TRSTNEG = JTGC405TRSTNEG
+# PORT JTGC405TMS = JTGC405TMS
+# PORT JTGC405TDI = JTGC405TDI
+# PORT JTGC405TCK = JTGC405TCK
+# PORT DBGC405DEBUGHALT = DBGC405DEBUGHALT
+# PORT RISCWATCH_TDO = cpu_debug_TDO
+# PORT RISCWATCH_TDI = cpu_debug_TDI
+# PORT RISCWATCH_TCK = cpu_debug_TCK
+# PORT RISCWATCH_HALT = cpu_debug_HALT
+# PORT RISCWATCH_TMS = cpu_debug_TMS
+# PORT RISCWATCH_TRSTn = cpu_debug_TRSTn
+# END
+BEGIN plb_v34
+ PARAMETER INSTANCE = plb_bus
+ PARAMETER HW_VER = 1.01.a
+ PARAMETER C_PLB_NUM_SLAVES = 2
+ PARAMETER C_DCR_INTFCE = 1
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PARAMETER C_IRQ_ACTIVE = 1
+ PARAMETER C_BASEADDR = 0b0000000000
+ PARAMETER C_HIGHADDR = 0b0011111111
+ BUS_INTERFACE SDCR = dcr_bus
+ PORT SYS_Rst = RSTPLB
+ PORT PLB_Clk = CLKPLB
+END
+
+BEGIN modified_plb_ddr_controller
+ PARAMETER INSTANCE = plb_ddr_controller_i
+ PARAMETER HW_VER = 1.00.c
+ PARAMETER C_INCLUDE_BURST_CACHELN_SUPPORT = 1
+ PARAMETER C_DQS_PULLUPS = 0
+ PARAMETER C_PLB_CLK_PERIOD_PS = 12500
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x1FFFFFFF
+ BUS_INTERFACE SPLB = plb_bus
+ PORT PLB_Clk = CLKPLB
+ PORT Clk90_in = DDR_CLKPLB_90
+ PORT DDR_Clk90_in = DDR1_CLKFB_90
+ PORT DDR_Clk = DDR1_clk
+ PORT DDR_Clkn = DDR1_clk_n
+ PORT DDR_RASn = DDR1_ras_n
+ PORT DDR_CASn = DDR1_cas_n
+ PORT DDR_WEn = DDR1_we_n
+ PORT DDR_CSn = DDR1_cs_n
+ PORT DDR_CKE = DDR1_cke
+ PORT DDR_Addr = DDR1_addr
+ PORT DDR_BankAddr = DDR1_ba
+ PORT DDR_DM = DDR1_dm
+ PORT DDR_DQ = DDR1_dq
+ PORT DDR_DQS = DDR1_dqs
+END
+
+BEGIN plb_bram_if_cntlr
+ PARAMETER INSTANCE = plb_bram_if_cntlr_i
+ PARAMETER HW_VER = 1.00.b
+ PARAMETER C_BASEADDR = 0xFFFF0000
+ PARAMETER C_HIGHADDR = 0xFFFFFFFF
+ BUS_INTERFACE PORTA = porta
+ BUS_INTERFACE SPLB = plb_bus
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_MEMSIZE = 65536
+ BUS_INTERFACE PORTA = porta
+END
+
+BEGIN plb2opb_bridge
+ PARAMETER INSTANCE = plb2opb_bridge_i
+ PARAMETER HW_VER = 1.00.b
+ PARAMETER C_NUM_ADDR_RNG = 3
+ PARAMETER C_RNG0_BASEADDR = 0x20000000
+ PARAMETER C_RNG0_HIGHADDR = 0x27FFFFFF
+ PARAMETER C_RNG1_BASEADDR = 0x28000000
+ PARAMETER C_RNG1_HIGHADDR = 0x29FFFFFF
+ PARAMETER C_RNG2_BASEADDR = 0x4C000000
+ PARAMETER C_RNG2_HIGHADDR = 0x4FFFFFFF
+ PARAMETER C_DCR_BASEADDR = 0b0100000000
+ PARAMETER C_DCR_HIGHADDR = 0b0111111111
+ BUS_INTERFACE SDCR = dcr_bus
+ BUS_INTERFACE MOPB = opb_bus
+ BUS_INTERFACE SPLB = plb_bus
+ PORT PLB_Clk = CLKPLB
+ PORT OPB_Clk = CLKOPB
+ PORT Bus_Error_Det = int6
+END
+
+BEGIN opb_v20
+ PARAMETER INSTANCE = opb_bus
+ PARAMETER HW_VER = 1.10.c
+ PARAMETER C_PROC_INTRFCE = 1
+ PARAMETER C_BASEADDR = 0x4E000000
+ PARAMETER C_HIGHADDR = 0x4EFFFFFF
+ PORT SYS_Rst = RSTOPB
+ PORT OPB_Clk = CLKOPB
+END
+
+BEGIN ap1000_interrupt_interface
+ PARAMETER INSTANCE = ap1000_interrupt_interface_i
+ PARAMETER HW_VER = 1.00.a
+ PORT EXT_sysace_irq = sysace_irq
+ PORT EXT_sysace_irq_internal = int0
+ PORT PMC_inta_n = PMC_inta_n
+ PORT PMC_inta_n_internal = int3
+ PORT PMC_intb_n = PMC_intb_n
+ PORT PMC_intb_n_internal = int2
+ PORT PMC_intc_n = PMC_intc_n
+ PORT PMC_intc_n_internal = int1
+ PORT PMC_intd_n = PMC_intd_n
+ PORT PMC_intd_n_internal = int13
+ PORT PS2_int0_n = PS2_int0_n
+ PORT PS2_int0_n_internal = int16
+ PORT PS2_int1_n = PS2_int1_n
+ PORT PS2_int1_n_internal = int17
+ PORT PS2_int2_n = PS2_int2_n
+ PORT PS2_int2_n_internal = int18
+ PORT PS2_int3_n = PS2_int3_n
+ PORT PS2_int3_n_internal = int19
+ PORT PS2_int4_n = PS2_int4_n
+ PORT PS2_int4_n_internal = int20
+ PORT PS2_int5_n = PS2_int5_n
+ PORT PS2_int5_n_internal = int21
+ PORT dummy1_interrupt = int4
+ PORT dummy2_interrupt = int5
+ PORT dummy3_interrupt = int8
+ PORT dummy4_interrupt = int9
+ PORT dummy5_interrupt = int10
+ PORT dummy6_interrupt = int11
+ PORT dummy7_interrupt = int12
+ PORT dummy8_interrupt = int14
+ PORT dummy9_interrupt = int15
+END
+
+BEGIN opb_intc
+ PARAMETER INSTANCE = opb_intc_i
+ PARAMETER HW_VER = 1.00.c
+ PARAMETER C_BASEADDR = 0x4D000000
+ PARAMETER C_HIGHADDR = 0x4DFFFFFF
+ BUS_INTERFACE SOPB = opb_bus
+ PORT OPB_Clk = CLKOPB
+ PORT Irq = Irq
+ PORT Intr = int21 & int20 & int19 & int18 & int17 & int16 & int15 & int14 & int13 & int12 & int11 & int10 & int9 & int8 & int6 & int5 & int4 & int3 & int2 & int1 & int0
+END
+
+BEGIN opb_uartlite
+ PARAMETER INSTANCE = RS232_1
+ PARAMETER HW_VER = 1.00.b
+ PARAMETER C_BAUDRATE = 9600
+ PARAMETER C_DATA_BITS = 8
+ PARAMETER C_ODD_PARITY = 0
+ PARAMETER C_USE_PARITY = 0
+ PARAMETER C_CLK_FREQ = 40000000
+ PARAMETER C_BASEADDR = 0x4C000000
+ PARAMETER C_HIGHADDR = 0x4C00ffff
+ BUS_INTERFACE SOPB = opb_bus
+ PORT OPB_Clk = CLKOPB
+ PORT RX = UART1_sin
+ PORT TX = UART1_sout
+END
+
+BEGIN opbslave_ext_bridge
+ PARAMETER INSTANCE = opbslave_ext_bridge_i
+ PARAMETER HW_VER = 3.10.a
+ PARAMETER size_of_protected_area = 2
+ PARAMETER base_cfg_enable = 1
+ PARAMETER FPGA_revision = 0x21050010
+ PARAMETER ext_dwidth = 16
+ PARAMETER ext_awidth = 25
+ PARAMETER test_swtch_width = 8
+ PARAMETER test_led_width = 8
+ PARAMETER flash_wait_cycles = 8
+ BUS_INTERFACE SOPB = opb_bus
+ PORT clk = CLKOPB
+ PORT EXT_addr = lbus_addr
+ PORT EXT_sysace_cs_n = sysace_cs_n
+ PORT EXT_cpld_bg_n = cpld_bg_n
+ PORT EXT_we_n = lbus_we_n
+ PORT EXT_oe_n = lbus_oe_n
+ PORT EXT_flash_cs_n = flash_cs_n
+ PORT EXT_con_flash_cs_n = con_flash_cs_n
+ PORT EXT_cpld_br_n = cpld_br_n
+ PORT EXT_cpld_cs_n = cpld_cs_n
+ PORT EXT_data = lbus_data
+ PORT fpga_test_switch = fpga_test_switch_7 & fpga_test_switch_6 & fpga_test_switch_5 & fpga_test_switch_4 & fpga_test_switch_3 & fpga_test_switch_2 & fpga_test_switch_1 & fpga_test_switch_0
+ PORT fpga_test_led = fpga_test_led
+ PORT fpga_therm = fpga_therm
+END
+
+BEGIN plb_psb_bridge
+ PARAMETER INSTANCE = plb_psb_bridge_i
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER PLB_MASTER_BASEADDR1 = 0x00000000
+ PARAMETER PLB_MASTER_LSB_DECODE1 = 2
+ PARAMETER PLB_MASTER_BASEADDR2 = 0x20000000
+ PARAMETER PLB_MASTER_LSB_DECODE2 = 3
+ PARAMETER C_BASEADDR = 0x30000000
+ PARAMETER C_HIGHADDR = 0x3FFFFFFF
+ PARAMETER PLB_SLAVE_LSB_DECODE = 3
+ PARAMETER PLB_PSB_FPGA_REG_BASEADDR = 0x30002000
+ PARAMETER PLB_PSB_FPGA_REG_LSB_DECODE = 18
+ BUS_INTERFACE MPLB = plb_bus
+ BUS_INTERFACE SPLB = plb_bus
+ PORT clk = CLKPLB
+ PORT PSB_dbg_n = PSB_dbg_n
+ PORT PSB_br_n = PSB_br_n
+ PORT PSB_bg_n = PSB_bg_n
+ PORT PSB_abb_n = PSB_abb_n
+ PORT PSB_tbst_n = PSB_tbst_n
+ PORT PSB_tsiz = PSB_tsiz
+ PORT PSB_ts_n = PSB_ts_n
+ PORT PSB_tt = PSB_tt
+ PORT PSB_aack_n = PSB_aack_n
+ PORT PSB_artry_n = PSB_artry_n
+ PORT PSB_d = PSB_d
+ PORT PSB_ta_n = PSB_ta_n
+ PORT PSB_tea_n = PSB_tea_n
+ PORT PSB_dbb_n = PSB_dbb_n
+ PORT PSB_a = PSB_a
+END
+
+BEGIN dcr_v29
+ PARAMETER INSTANCE = dcr_bus
+ PARAMETER HW_VER = 1.00.a
+END
+
+BEGIN ppc405
+ PARAMETER INSTANCE = ppc405_ppcjtag_chain
+ PARAMETER HW_VER = 2.00.c
+ BUS_INTERFACE JTAGPPC = jtagppc1
+END
+
+BEGIN jtagppc_cntlr
+ PARAMETER INSTANCE = jtagppc_0
+ PARAMETER HW_VER = 2.00.a
+ BUS_INTERFACE JTAGPPC0 = jtagppc0
+ BUS_INTERFACE JTAGPPC1 = jtagppc1
+END
+
+BEGIN ms_rst_4regs
+ PARAMETER INSTANCE = ms_rst_4regs_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x4f000000
+ PARAMETER C_HIGHADDR = 0x4f00ffff
+ BUS_INTERFACE MSOPB = opb_bus
+ PORT OPB_Clk = CLKOPB
+END
+
+BEGIN opb_slave1
+ PARAMETER INSTANCE = opb_slave1_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x4ff00000
+ PARAMETER C_HIGHADDR = 0x4ff03fff
+ BUS_INTERFACE SOPB = opb_bus
+ PORT OPB_Clk = CLKOPB
+END
+
+# 1  nothing.h  2
