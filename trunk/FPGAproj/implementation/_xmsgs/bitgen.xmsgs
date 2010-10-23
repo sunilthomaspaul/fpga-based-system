@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">dlmb_LMB_ABus&lt;30&gt;</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">dlmb_LMB_ABus&lt;31&gt;</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1412" delta="new" >Invalid configuration (incorrect pin connections and/or modes) on block:&lt;<arg fmt="%s" index="1">Hard_Ethernet_MAC/Hard_Ethernet_MAC/V5HARD_SYS.I_TEMAC/SINGLE_GMII.IO_YES_01.gmii_rxc0_delay</arg>&gt;:&lt;<arg fmt="%s" index="2">IODELAY_IODELAY</arg>&gt;.  When DELAY_SRC is not DATAIN programming the DATAIN input pin is not used and will be ignored.
+</msg>
+
+</messages>
+

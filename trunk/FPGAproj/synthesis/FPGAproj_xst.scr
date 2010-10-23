@@ -1,0 +1,14 @@
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc5vlx110tff1136-1
+-top FPGAproj
+-ifmt MIXED
+-ifn FPGAproj_xst.prj
+-ofn ../implementation/FPGAproj.ngc
+-hierarchy_separator /
+-iobuf YES
+-max_fanout 10000
+-sd {../implementation}
+-vlgincdir {"C:\Users\fpga10\FPGAproj\pcores\" "C:\XilinxSuite\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }

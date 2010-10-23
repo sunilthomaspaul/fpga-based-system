@@ -1,0 +1,7 @@
+INFILE=C:\Users\fpga10\FPGAproj\implementation\FPGAproj.ncd
+OUTFILE=C:\Users\fpga10\FPGAproj\implementation\FPGAproj.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=C:\Users\fpga10\FPGAproj\implementation
+LICENSE=ISE
+USER_INFO=180030595_180030597_367
