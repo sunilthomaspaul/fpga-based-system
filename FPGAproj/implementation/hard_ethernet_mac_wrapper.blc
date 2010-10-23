@@ -1,0 +1,111 @@
+Release 12.3 ngcbuild M.70d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\XilinxSuite\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -p
+xc5vlx110tff1136-1 -intstyle silent -uc hard_ethernet_mac_wrapper.ucf -sd ..
+hard_ethernet_mac_wrapper.ngc ../hard_ethernet_mac_wrapper.ngc
+
+Reading NGO file
+"C:/Users/fpga10/FPGAproj/implementation/hard_ethernet_mac_wrapper/hard_ethernet
+_mac_wrapper.ngc" ...
+Executing edif2ngd -noa
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper_fifo_generato
+r_v4_3_1.edn" "hard_ethernet_mac_wrapper_fifo_generator_v4_3_1.ngo"
+Release 12.3 - edif2ngd M.70d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 12.3 edif2ngd M.70d (nt64)
+INFO:NgdBuild - Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/XilinxSuite/ISE_DS/EDK/data/edif2ngd.pfd>
+with local file <C:/XilinxSuite/ISE_DS/ISE/data/edif2ngd.pfd>
+Writing module to "hard_ethernet_mac_wrapper_fifo_generator_v4_3_1.ngo"...
+Loading design module
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper\hard_ethernet
+_mac_wrapper_fifo_generator_v4_3_1.ngo"...
+Loading design module
+"../hard_ethernet_mac_wrapper_fifo_generator_v4_3_1_fifo_generator_v4_3_xst_1.ng
+c"...
+Executing edif2ngd -noa
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper_fifo_generato
+r_v4_3_2.edn" "hard_ethernet_mac_wrapper_fifo_generator_v4_3_2.ngo"
+Release 12.3 - edif2ngd M.70d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 12.3 edif2ngd M.70d (nt64)
+INFO:NgdBuild - Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/XilinxSuite/ISE_DS/EDK/data/edif2ngd.pfd>
+with local file <C:/XilinxSuite/ISE_DS/ISE/data/edif2ngd.pfd>
+Writing module to "hard_ethernet_mac_wrapper_fifo_generator_v4_3_2.ngo"...
+Loading design module
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper\hard_ethernet
+_mac_wrapper_fifo_generator_v4_3_2.ngo"...
+Loading design module
+"../hard_ethernet_mac_wrapper_fifo_generator_v4_3_2_fifo_generator_v4_3_xst_1.ng
+c"...
+Executing edif2ngd -noa
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper_fifo_generato
+r_v4_3_4.edn" "hard_ethernet_mac_wrapper_fifo_generator_v4_3_4.ngo"
+Release 12.3 - edif2ngd M.70d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 12.3 edif2ngd M.70d (nt64)
+INFO:NgdBuild - Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/XilinxSuite/ISE_DS/EDK/data/edif2ngd.pfd>
+with local file <C:/XilinxSuite/ISE_DS/ISE/data/edif2ngd.pfd>
+Writing module to "hard_ethernet_mac_wrapper_fifo_generator_v4_3_4.ngo"...
+Loading design module
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper\hard_ethernet
+_mac_wrapper_fifo_generator_v4_3_4.ngo"...
+Loading design module
+"../hard_ethernet_mac_wrapper_fifo_generator_v4_3_4_fifo_generator_v4_3_xst_1.ng
+c"...
+Executing edif2ngd -noa
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper_fifo_generato
+r_v4_3_3.edn" "hard_ethernet_mac_wrapper_fifo_generator_v4_3_3.ngo"
+Release 12.3 - edif2ngd M.70d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 12.3 edif2ngd M.70d (nt64)
+INFO:NgdBuild - Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/XilinxSuite/ISE_DS/EDK/data/edif2ngd.pfd>
+with local file <C:/XilinxSuite/ISE_DS/ISE/data/edif2ngd.pfd>
+Writing module to "hard_ethernet_mac_wrapper_fifo_generator_v4_3_3.ngo"...
+Loading design module
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper\hard_ethernet
+_mac_wrapper_fifo_generator_v4_3_3.ngo"...
+Loading design module
+"../hard_ethernet_mac_wrapper_fifo_generator_v4_3_3_fifo_generator_v4_3_xst_1.ng
+c"...
+Executing edif2ngd -noa
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper_blk_mem_gen_v
+2_7.edn" "hard_ethernet_mac_wrapper_blk_mem_gen_v2_7.ngo"
+Release 12.3 - edif2ngd M.70d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 12.3 edif2ngd M.70d (nt64)
+INFO:NgdBuild - Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/XilinxSuite/ISE_DS/EDK/data/edif2ngd.pfd>
+with local file <C:/XilinxSuite/ISE_DS/ISE/data/edif2ngd.pfd>
+Writing module to "hard_ethernet_mac_wrapper_blk_mem_gen_v2_7.ngo"...
+Loading design module
+"C:\Users\fpga10\FPGAproj\implementation\hard_ethernet_mac_wrapper\hard_ethernet
+_mac_wrapper_blk_mem_gen_v2_7.ngo"...
+Loading design module
+"../hard_ethernet_mac_wrapper_blk_mem_gen_v2_7_blk_mem_gen_v2_7_xst_1.ngc"...
+
+Applying constraints in "hard_ethernet_mac_wrapper.ucf" to the design...
+Checking Constraint Associations...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 158640 kilobytes
+
+Writing NGC file "../hard_ethernet_mac_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  11 sec
+Total CPU time to NGCBUILD completion:   4 sec
+
+Writing NGCBUILD log file "../hard_ethernet_mac_wrapper.blc"...
