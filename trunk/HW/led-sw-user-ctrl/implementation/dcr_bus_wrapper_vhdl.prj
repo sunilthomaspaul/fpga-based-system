@@ -1,4 +1,0 @@
-vhdl proc_common_v1_00_b "C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\or_muxcy.vhd"
-vhdl proc_common_v1_00_b "C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v1_00_b\hdl\vhdl\or_gate.vhd"
-vhdl dcr_v29_v1_00_a "C:\EDK\hw\XilinxProcessorIPLib\pcores\dcr_v29_v1_00_a\hdl\vhdl\dcr_v29.vhd"
-vhdl work "C:\Baseline_9_Working_Folder\K-new-base\hdl\dcr_bus_wrapper.vhd"
