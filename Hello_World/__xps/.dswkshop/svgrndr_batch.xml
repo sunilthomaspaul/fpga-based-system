@@ -1,0 +1,56 @@
+
+<RENDERBATCH>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\microblaze_0.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\microblaze_0.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\microblaze_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\mb_plb.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\mb_plb.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\mb_plb.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\ilmb.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\ilmb.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\ilmb.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\dlmb.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\dlmb.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\dlmb.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\dlmb_cntlr.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\dlmb_cntlr.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\dlmb_cntlr.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\ilmb_cntlr.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\ilmb_cntlr.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\ilmb_cntlr.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\lmb_bram.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\lmb_bram.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\lmb_bram.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\LEDs_8Bit.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\LEDs_8Bit.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\LEDs_8Bit.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\LEDs_Positions.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\LEDs_Positions.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\LEDs_Positions.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\Push_Buttons_5Bit.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\Push_Buttons_5Bit.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\Push_Buttons_5Bit.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\DIP_Switches_8Bit.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\DIP_Switches_8Bit.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\DIP_Switches_8Bit.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\PS2_Mouse.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\PS2_Mouse.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\PS2_Mouse.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\PS2_Keyboard.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\PS2_Keyboard.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\PS2_Keyboard.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\IIC_EEPROM.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\IIC_EEPROM.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\IIC_EEPROM.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\SRAM.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\SRAM.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\SRAM.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\Hard_Ethernet_MAC.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\Hard_Ethernet_MAC.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\Hard_Ethernet_MAC.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\DDR2_SDRAM.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\DDR2_SDRAM.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\DDR2_SDRAM.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\SysACE_CompactFlash.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\SysACE_CompactFlash.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\SysACE_CompactFlash.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\RS232_Uart_1.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\RS232_Uart_1.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\RS232_Uart_1.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\RS232_Uart_2.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\RS232_Uart_2.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\RS232_Uart_2.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\xps_timer_0.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\xps_timer_0.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\xps_timer_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\clock_generator_0.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\clock_generator_0.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\clock_generator_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\mdm_0.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\mdm_0.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\mdm_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\proc_sys_reset_0.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\proc_sys_reset_0.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\proc_sys_reset_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\xps_intc_0.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\xps_intc_0.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\xps_intc_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\system_blkd.jpg" SVGNAME="C:\Users\fpga10\Documents\Hello_World\SDK\SDK_Export\hw\imgs\system_blkd.svg" TMPSVGFN="C:\Users\fpga10\Documents\Hello_World\__xps\.dswkshop\system_blkd.svg"/>
+
+</RENDERBATCH>

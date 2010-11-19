@@ -1,0 +1,7 @@
+INFILE=C:\Users\fpga10\Documents\Hello_World\implementation\system.ncd
+OUTFILE=C:\Users\fpga10\Documents\Hello_World\implementation\system.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=C:\Users\fpga10\Documents\Hello_World\implementation
+LICENSE=ISE
+USER_INFO=180030595_180030597_367

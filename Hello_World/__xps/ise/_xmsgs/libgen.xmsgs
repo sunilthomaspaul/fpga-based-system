@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="EDK" num="453" delta="old" ><arg fmt="%s" index="1">C:\Users\fpga10\Documents\Hello_World\system.mss</arg> line <arg fmt="%i" index="2">111</arg> - <arg fmt="%s" index="3">PARAMETER</arg> <arg fmt="%s" index="4">CLOCK_HZ</arg> is deprecated !. <arg fmt="%s" index="5"></arg>.
+To avoid seeing this Warning again, please remove <arg fmt="%s" index="6">PARAMETER</arg> <arg fmt="%s" index="7">CLOCK_HZ</arg>.
+</msg>
+
+<msg type="warning" file="EDK" num="453" delta="old" ><arg fmt="%s" index="1">C:\Users\fpga10\Documents\Hello_World\system.mss</arg> line <arg fmt="%i" index="2">118</arg> - <arg fmt="%s" index="3">PARAMETER</arg> <arg fmt="%s" index="4">CLOCK_HZ</arg> is deprecated !. <arg fmt="%s" index="5"></arg>.
+To avoid seeing this Warning again, please remove <arg fmt="%s" index="6">PARAMETER</arg> <arg fmt="%s" index="7">CLOCK_HZ</arg>.
+</msg>
+
+</messages>
+
