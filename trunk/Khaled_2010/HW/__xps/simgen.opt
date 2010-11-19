@@ -1,0 +1,1 @@
+ -p virtex2p -lang vhdl    -pe ppc405_i EX1_OS/executable.elf -s mti -X C:/Baseline_9_Working_Folder/K-test-baseline_userip_uart_CMC_9.1.02 -E C:/Baseline_9_Working_Folder/K-test-baseline_userip_uart_CMC_9.1.02

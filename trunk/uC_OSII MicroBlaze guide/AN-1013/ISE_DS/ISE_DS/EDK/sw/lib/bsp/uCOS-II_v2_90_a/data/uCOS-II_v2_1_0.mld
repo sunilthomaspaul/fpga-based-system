@@ -1,0 +1,175 @@
+################################################################################
+#            uC/OS-II Microprocessor Library Definition File (MLD)
+################################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN OS ucosii
+    OPTION drc = ucosii_drc;
+    OPTION COPYFILES = all;
+    OPTION DEPENDS = (standalone_v3_00_a);
+    OPTION DESC = "Generate standalone BSP along with os_cfg.h for uC/OS-II";
+    
+
+BEGIN CATEGORY BSP_OPTIONS
+    PARAM name = BSP_OPTIONS, desc = "Modify default values for BSP options", type = bool, default = true;
+    PARAM name = stdin, desc = "stdin peripheral", type = peripheral_instance, requires_interface = stdin, default=none;
+    PARAM name = stdout, desc = "stdout peripheral", type = peripheral_instance, requires_interface = stdout, default=none;
+    PARAM name = need_xil_malloc, desc = "Is xil_malloc required ?", type = bool, default = false;
+
+   BEGIN ARRAY microblaze_exception_vectors 
+        PROPERTY desc = "Specify the handlers for the various exceptions that Microblaze supports. Note: This array will be ignored for processors older than microblaze_v3_00_a"; 
+        PROPERTY size = 8;
+        PROPERTY default = ((XEXC_ID_FSL, XNullHandler, 1),((XEXC_UNALIGNMENT, XNullHandler, 2), (XEXC_ILLEGAL_OPCODE, XNullHandler, 3), (XEXC_IOPB, XNullHandler, 4), (XEXC_DOPB, XNullHandler, 5), (XEXC_DIV_BY_0, XNullHandler, 6), (XEXC_FPU, XNullHandler, 7),  (XEXC_MMU, XNullHandler, 8));
+        PARAM name = exception, type = enum, values = (" FSL Exception" = XEXC_ID_FSL, "Unaligned Exception" = XEXC_UNALIGNMENT, "Illegal Opcode Exception" = XEXC_ILLEGAL_OPCODE, "IOPB Exception" = XEXC_IOPB, "DOPB Exception" = XEXC_DOPB, "Div by Zero_Exception" = XEXC_DIV_BY_0, "FPU Exception" = XEXC_FPU, "MMU Exception" = XEXC_MMU), desc = "Exception type", permit=none; 
+        PARAM name = handler, type = string, desc = "Handler for this exception";
+        PARAM name = callback, desc = "Argument to be passed to the handler at run-time. Only literal constants allowed."; 
+    END ARRAY 
+
+END CATEGORY
+
+BEGIN CATEGORY uC-Probe
+    PARAM name = uC-Probe, desc = "Modify default values for uC/Probe options", type = bool, default = true;
+    PARAM name = PROBE_EN, desc = "(1) means that uC/Probe is present, (0) means it's absent", type = int, default = 0;
+	 PARAM name = PROBE_OS_EN, desc = "(1) enables the uC/Probe plug-in for uC/OS-II, (0) disables this plug-in", type = int, default = 0;
+	 PARAM name = PROBE_COM_CFG_RX_MAX_SIZE, desc = "uC/Probe receive buffer size", type = int, default = 256;
+	 PARAM name = PROBE_COM_CFG_TX_MAX_SIZE, desc = "uC/Probe transmit buffer size", type = int, default = 256;
+	 PARAM name = PROBE_COM_SUPPORT_STR, desc = "Allow strings to be sent from the target", type = bool, default = true;
+	 PARAM name = PROBE_COM_STR_BUF_SIZE, desc = "String buffer size", type = int, default = 256;
+	 PARAM name = PROBE_COM_CFG_STAT_EN, desc = "Enable packet and byte counters", type = bool, default = true;
+	 PARAM name = PROBE_RS232_CFG_PARSE_TASK_EN, desc = "Allow a task to handle parsing", type = bool, default = true;
+	 PARAM name = PROBE_RS232_CFG_TASK_PRIO, desc = "Priority of uC/Probe's task", type = int, default = 10;
+	 PARAM name = PROBE_RS232_CFG_TASK_STK_SIZE, desc = "Stack size associated with uC/Probe's task", type = int, default = 128;
+	 PARAM name = PROBE_COM_CFG_WR_REQ_EN, desc = "Controls whether write requests are available", type = bool, default = false;
+	 PARAM name = PROBE_COM_CFG_TERMINAL_REQ_EN, desc = " Controls whether terminal requests are available", type = bool, default = false;
+	 PARAM name = PROBE_COM_CFG_STR_REQ_EN, desc = " controls whether string requests are available", type = bool, default = false;
+	 
+END CATEGORY
+
+BEGIN CATEGORY TASK_STACK_SIZE
+    PARAM name = TASK_STACK_SIZE, desc = "Modify default values for task stack size options", type = bool, default = true;
+    PARAM name = OS_TASK_TMR_STK_SIZE, desc = "Timer task stack size (No. of OS_STK wide entries)", type = int, default = 128;
+    PARAM name = OS_TASK_IDLE_STK_SIZE, desc = "Idle task stack size (No. of OS_STK wide entries)", type = int, default = 256;
+    PARAM name = OS_TASK_STAT_STK_SIZE, desc = "Statistics task stack size (No. of OS_STK wide entries", type = int, default = 256;
+END CATEGORY
+
+BEGIN CATEGORY MISCELLANEOUS
+    PARAM name = MISCELLANEOUS, desc = "Modify default values for miscellaneous parameters", type = bool, default = true;
+	 PARAM name = OS_APP_HOOKS_EN, desc = "Application-defined hooks are called from the uC/OS-II hooks", type = int, default = 1;
+    PARAM name = OS_ARG_CHK_EN, desc = "Enable or Disable argument checking", type = int, default = 0;
+    PARAM name = OS_CPU_HOOKS_EN, desc = "uC/OS-II hooks are found in the processor port files", type = int, default = 1;
+    PARAM name = OS_DEBUG_EN, desc = "Enable debug variables", type = int, default = 0;
+	 PARAM name = OS_EVENT_MULTI_EN, desc = "Include code for OSEventPendMulti()", type = int, default = 1;
+    PARAM name = OS_EVENT_NAME_EN, desc = "Enable names for Sem, Mutex, Mbox and Q", type = int, default = 1;
+    PARAM name = OS_LOWEST_PRIO, desc = "Defines the lowest priority that can be assigned", type = int, default = 20;
+    PARAM name = OS_MAX_EVENTS, desc = "Max. number of event control blocks in your application", type = int, default = 2;
+    PARAM name = OS_MAX_FLAGS, desc = "Max. number of Event Flag Groups in your application", type = int, default = 2;
+    PARAM name = OS_MAX_MEM_PART, desc = "Max number of memory partitions", type = int, default = 2;
+    PARAM name = OS_MAX_QS, desc = "Max. number of queue control blocks in your application", type = int, default = 2;
+    PARAM name = OS_MAX_TASKS, desc = "Max. number of tasks in your application, MUST be >= 2", type = int, default = 10;
+    PARAM name = OS_SCHED_LOCK_EN, desc = "Include code for OSSchedLock() and OSSchedUnlock()", type = int, default = 0;
+    PARAM name = OS_TASK_STAT_EN, desc = "Enable or Disable the statistics task", type = int, default = 1;
+    PARAM name = OS_TASK_STAT_STK_CHK_EN, desc = "Check task stacks from statistic task", type = int, default = 1;
+    PARAM name = OS_TICK_STEP_EN, desc = "Enable tick stepping feature for uC/OS-View", type = int, default = 0;
+    PARAM name = OS_TICKS_PER_SEC, desc = "Set the number of ticks in one second", type = int, default = 100;
+    PARAM name = OS_VIEW_MODULE, desc = "Enable or Disable the OS View module ", type = int, default = 0;
+END CATEGORY
+  
+BEGIN CATEGORY EVENT_FLAGS
+    PARAM name = EVENT_FLAGS, desc = "Modify default values for event flag parameters", type = bool, default = true;
+    PARAM name = OS_FLAG_EN, desc = "Enable or Disable code generation for EVENT FLAGS", type = int, default = 1;
+    PARAM name = OS_FLAG_WAIT_CLR_EN, desc = "Include code for Wait on Clear EVENT FLAGS", type = int, default = 0;
+    PARAM name = OS_FLAG_ACCEPT_EN, desc = "Include code for OSFlagAccept()", type = int, default = 0;
+    PARAM name = OS_FLAG_DEL_EN, desc = "Include code for OSFlagDel()", type = int, default = 0;
+    PARAM name = OS_FLAG_NAME_EN, desc = "Enable names for event flag group", type = int, default = 1;
+    PARAM name = OS_FLAG_QUERY_EN, desc = "Include code for OSFlagQuery()", type = int, default = 0;
+    PARAM name = OS_FLAGS_NBITS, desc = "Size in bits of OS_FLAGS data type (8, 16, or 32)", type = int, default = 16;
+END CATEGORY
+ 
+BEGIN CATEGORY MESSAGE_MAILBOXES
+    PARAM name = MESSAGE_MAILBOXES, desc = "Modify default values for message mailbox parameters", type = bool, default = true;
+    PARAM name = OS_MBOX_EN, desc = "Enable or Disable code generation for MAILBOXES", type = int, default = 1;
+    PARAM name = OS_MBOX_ACCEPT_EN, desc = "Include code for OSMboxAccept()", type = int, default = 0;
+    PARAM name = OS_MBOX_DEL_EN, desc = "Include code for OSMboxDel()", type = int, default = 0;
+	 PARAM name = OS_MBOX_PEND_ABORT_EN, desc = "Include code for OSMboxPendAbort()", type = int, default = 0;
+    PARAM name = OS_MBOX_POST_EN, desc = "Include code for OSMboxPost()", type = int, default = 1;
+    PARAM name = OS_MBOX_POST_OPT_EN, desc = "Include code for OSMboxPostOpt()", type = int, default = 0;
+    PARAM name = OS_MBOX_QUERY_EN, desc = "Include code for OSMboxQuery()", type = int, default = 0;
+END CATEGORY 
+
+BEGIN CATEGORY MEMORY_MANAGEMENT
+    PARAM name = MEMORY_MANAGEMENT, desc = "Modify default values for memory management parameters", type = bool, default = true;
+    PARAM name = OS_MEM_EN, desc = "Enable or Disable code generation for MEMORY MANAGER", type = int, default = 1;
+    PARAM name = OS_MEM_QUERY_EN, desc = "Include code for OSMemQuery()", type = int, default = 0;
+    PARAM name = OS_MEM_NAME_EN, desc = "OS_MEM_NAME_SIZE", type = int, default = 1;
+END CATEGORY
+ 
+BEGIN CATEGORY MUTUAL_EXCLUSION_SEMAPHORES
+    PARAM name = MUTUAL_EXCLUSION_SEMAPHORES, desc = "Modify default values for mutex parameters", type = bool, default = true;
+    PARAM name = OS_MUTEX_EN, desc = "Enable or Disable code generation for MUTEX", type = int, default = 1;
+    PARAM name = OS_MUTEX_ACCEPT_EN, desc = "Include code for OSMutexAccept()", type = int, default = 0;
+    PARAM name = OS_MUTEX_DEL_EN, desc = "Include code for OSMutexDel()", type = int, default = 0;
+    PARAM name = OS_MUTEX_QUERY_EN, desc = "Include code for OSMutexQuery()", type = int, default = 0;
+END CATEGORY
+
+BEGIN CATEGORY MESSAGE_QUEUES
+    PARAM name = MESSAGE_QUEUES, desc = "Modify default values for message queue parameters", type = bool, default = true;
+    PARAM name = OS_Q_EN, desc = "Enable or Disable code generation for QUEUES", type = int, default = 1;
+    PARAM name = OS_Q_ACCEPT_EN, desc = "Include code for OSQAccept()", type = int, default = 0;
+    PARAM name = OS_Q_DEL_EN, desc = "Include code for OSQDel()", type = int, default = 0;
+    PARAM name = OS_Q_FLUSH_EN, desc = "Include code for OSQFlush()", type = int, default = 0;
+	 PARAM name = OS_Q_PEND_ABORT_EN, desc = "Include code for OSQPendAbort()", type = int, default = 0;
+    PARAM name = OS_Q_POST_EN, desc = "Include code for OSQPost()", type = int, default = 1;
+    PARAM name = OS_Q_POST_FRONT_EN, desc = "Include code for OSQPostFront()", type = int, default = 0;
+    PARAM name = OS_Q_POST_OPT_EN, desc = "Include code for OSQPostOpt()", type = int, default = 0;
+    PARAM name = OS_Q_QUERY_EN, desc = "Include code for OSQuery()", type = int, default = 0;
+END CATEGORY
+
+BEGIN CATEGORY SEMAPHORES
+    PARAM name = SEMAPHORES, desc = "Modify default values for semaphore parameters", type = bool, default = true;
+    PARAM name = OS_SEM_EN, desc = "Enable or Disable code generation for SEMAPHORES", type = int, default = 1;
+    PARAM name = OS_SEM_ACCEPT_EN, desc = "Include code for OSSemAccept()", type = int, default = 0;
+    PARAM name = OS_SEM_DEL_EN, desc = "Include code for OSSemDel()", type = int, default = 0;
+	 PARAM name = OS_SEM_PEND_ABORT_EN, desc = "Include code for OSSemPendAbort()", type = int, default = 0;
+    PARAM name = OS_SEM_QUERY_EN, desc = "Include code for OSSemQuery()", type = int, default = 0;
+    PARAM name = OS_SEM_SET_EN, desc = "Include code for OSSemSet()", type = int, default = 1;
+END CATEGORY
+
+BEGIN CATEGORY TASK_MANAGEMENT
+    PARAM name = TASK_MANAGEMENT, desc = "Modify default values for task management parameters", type = bool, default = true;
+    PARAM name = OS_TASK_CHANGE_PRIO_EN, desc = "Include code for OSTaskChangePrio()", type = int, default = 0;
+    PARAM name = OS_TASK_CREATE_EN, desc = "Include code for OSTaskCreate()", type = int, default = 0;
+    PARAM name = OS_TASK_CREATE_EXT_EN, desc = "Include code for OSTaskCreateExt()", type = int, default = 1;
+    PARAM name = OS_TASK_DEL_EN, desc = "Include code for OSTaskDel()", type = int, default = 0;
+    PARAM name = OS_TASK_NAME_EN, desc = "Enable task names", type = int, default = 1;
+    PARAM name = OS_TASK_PROFILE_EN, desc = "Include variables in OS_TCB for profiling", type = int, default = 1;
+    PARAM name = OS_TASK_QUERY_EN, desc = "Include code for OSTaskQuery()", type = int, default = 0;
+    PARAM name = OS_TASK_SUSPEND_EN, desc = "Include code for OSTaskSuspend() and OSTaskResume()", type = int, default = 1;
+    PARAM name = OS_TASK_SW_HOOK_EN, desc = "Include code for OSTaskSwHook()", type = int, default = 1;
+    PARAM name = OS_TASK_REG_TBL_SIZE, desc = "Size of task variables array", type = int, default = 1;
+ END CATEGORY
+
+BEGIN CATEGORY TIME_MANAGEMENT
+    PARAM name = TIME_MANAGEMENT, desc = "Modify default values for time management parameters", type = bool, default = true;
+    PARAM name = OS_TIME_DLY_HMSM_EN, desc = "Include code for OSTimeDlyHMSM()", type = int, default = 1;
+    PARAM name = OS_TIME_DLY_RESUME_EN, desc = "Include code for OSTimeDlyResume()", type = int, default = 0;
+    PARAM name = OS_TIME_GET_SET_EN, desc = "Include code for OSTimeGet() and OSTimeSet()", type = int, default = 0;
+    PARAM name = OS_TIME_TICK_HOOK_EN, desc = "Include code for OSTimeTickHook()", type = int, default = 1;
+END CATEGORY
+
+BEGIN CATEGORY TIMER_MANAGEMENT
+    PARAM name = TIMER_MANAGEMENT, desc = "Modify default values for time management parameters", type = bool, default = true;
+    PARAM name = OS_TMR_EN, desc = "Enable (1) or disable (0) code generation for TIMERS", type = int, default = 0;
+    PARAM name = OS_TMR_CFG_MAX, desc = "Maximum number of timers", type = int, default = 16;
+    PARAM name = OS_TMR_CFG_NAME_EN, desc = "Determine timer names ", type = int, default = 1;
+    PARAM name = OS_TMR_CFG_WHEEL_SIZE, desc = "Size of timer wheel (No. of entries)", type = int, default = 8;
+    PARAM name = OS_TMR_CFG_TICKS_PER_SEC, desc = "Rate at which timer management task runs (Hz)", type = int, default = 10;
+END CATEGORY
+
+BEGIN CATEGORY FILE_LOCATION
+    PARAM name = FILE_LOCATION, desc = "Modify default file locations", type = bool, default = true;
+    PARAM name = OS_SOURCE_LOCATION, desc = "Location of uC/OS-II source files", type = string, default = "C:\Xilinx\12.1\ISE_DS\EDK\sw\lib\bsp\uCOS-II_v2_90_a\src\uC_OS-II";
+END CATEGORY
+
+END OS
+

@@ -1,0 +1,77 @@
+Release 9.1.02i Map J.33
+Xilinx Map Application Log File for Design 'system'
+
+Design Information
+------------------
+Command Line   : map -o system_map.ncd -pr b system.ngd system.pcf 
+Target Device  : xc2vp100
+Target Package : ff1704
+Target Speed   : -6
+Mapper Version : virtex2p -- $Revision: 1.36 $
+Mapped Date    : Thu Jun 04 12:27:57 2009
+
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Writing design file "system_map.ncd"...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   27
+Logic Utilization:
+  Number of Slice Flip Flops:       5,745 out of  88,192    6%
+  Number of 4 input LUTs:           7,970 out of  88,192    9%
+Logic Distribution:
+  Number of occupied Slices:        6,428 out of  44,096   14%
+  Number of Slices containing only related logic:   6,428 out of   6,428  100%
+  Number of Slices containing unrelated logic:          0 out of   6,428    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:          8,882 out of  88,192   10%
+  Number used as logic:             7,970
+  Number used as a route-thru:        314
+  Number used for Dual Port RAMs:     342
+    (Two LUTs used per Dual Port RAM)
+  Number used as Shift registers:     256
+
+  Number of bonded IOBs:              261 out of   1,040   25%
+    IOB Flip Flops:                   476
+    IOB Dual-Data Rate Flops:          42
+  Number of PPC405s:                   2 out of       2  100%
+  Number of JTAGPPCs:                  1 out of       1  100%
+  Number of Block RAMs:                32 out of     444    7%
+  Number of GCLKs:                      5 out of      16   31%
+  Number of DCMs:                       3 out of      12   25%
+  Number of GTs:                        0 out of      20    0%
+  Number of GT10s:                      0 out of       0    0%
+
+Total equivalent gate count for design:  2,284,528
+Additional JTAG gate count for IOBs:  12,528
+Peak Memory Usage:  364 MB
+Total REAL time to MAP completion:  29 secs 
+Total CPU time to MAP completion:   29 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.

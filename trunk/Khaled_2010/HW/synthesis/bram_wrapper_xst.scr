@@ -1,0 +1,11 @@
+run
+-opt_mode speed
+-opt_level 1
+-p xc2vp100ff1704-6
+-top bram_wrapper
+-ifmt MIXED
+-ifn bram_wrapper_xst.prj
+-ofn ../implementation/bram_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}

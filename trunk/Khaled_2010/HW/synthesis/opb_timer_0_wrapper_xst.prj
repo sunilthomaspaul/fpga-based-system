@@ -1,0 +1,13 @@
+VHDL proc_common_v2_00_a C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v2_00_a/hdl/vhdl/family.vhd
+VHDL proc_common_v2_00_a C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v2_00_a/hdl/vhdl/common_types_pkg.vhd
+VHDL proc_common_v2_00_a C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v2_00_a/hdl/vhdl/family_support.vhd
+VHDL proc_common_v2_00_a C:\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd
+VHDL opb_timer_v1_00_b C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b/hdl/vhdl/tc_types_be.vhd
+VHDL opb_timer_v1_00_b C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd
+VHDL opb_timer_v1_00_b C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b/hdl/vhdl/counter.vhd
+VHDL opb_timer_v1_00_b C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b/hdl/vhdl/count_module.vhd
+VHDL opb_timer_v1_00_b C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b/hdl/vhdl/bus_interface.vhd
+VHDL opb_timer_v1_00_b C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b/hdl/vhdl/timer_control.vhd
+VHDL opb_timer_v1_00_b C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b/hdl/vhdl/tc_core.vhd
+VHDL opb_timer_v1_00_b C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b/hdl/vhdl/opb_timer.vhd
+vhdl work ../hdl/opb_timer_0_wrapper.vhd

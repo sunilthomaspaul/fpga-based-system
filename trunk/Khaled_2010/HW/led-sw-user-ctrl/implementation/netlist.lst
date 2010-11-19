@@ -1,0 +1,22 @@
+C:\Baseline_9_Working_Folder\K-new-base\implementation\system.ngc 1244132845
+C:/Baseline_9_Working_Folder/K-new-base/implementation/clock_reset_block_wrapper.ngc 1244132391
+C:/Baseline_9_Working_Folder/K-new-base/implementation/ppc405_i_wrapper.ngc 1244132401
+C:/Baseline_9_Working_Folder/K-new-base/implementation/plb_bus_wrapper.ngc 1244132425
+C:/Baseline_9_Working_Folder/K-new-base/implementation/plb_ddr_controller_i_wrapper.ngc 1244132759
+C:/Baseline_9_Working_Folder/K-new-base/implementation/plb_bram_if_cntlr_i_wrapper.ngc 1244132473
+C:/Baseline_9_Working_Folder/K-new-base/implementation/bram_wrapper.ngc 1244132482
+C:/Baseline_9_Working_Folder/K-new-base/implementation/plb2opb_bridge_i_wrapper.ngc 1244132504
+C:/Baseline_9_Working_Folder/K-new-base/implementation/opb_bus_wrapper.ngc 1244132516
+C:/Baseline_9_Working_Folder/K-new-base/implementation/ap1000_interrupt_interface_i_wrapper.ngc 1244132524
+C:/Baseline_9_Working_Folder/K-new-base/implementation/opb_intc_i_wrapper.ngc 1244132761
+C:/Baseline_9_Working_Folder/K-new-base/implementation/rs232_1_wrapper.ngc 1244132547
+C:/Baseline_9_Working_Folder/K-new-base/implementation/opbslave_ext_bridge_i_wrapper.ngc 1244132563
+C:/Baseline_9_Working_Folder/K-new-base/implementation/plb_psb_bridge_i_wrapper.ngc 1244132619
+C:/Baseline_9_Working_Folder/K-new-base/implementation/dcr_bus_wrapper.ngc 1244132628
+C:/Baseline_9_Working_Folder/K-new-base/implementation/ppc405_ppcjtag_chain_wrapper.ngc 1244132638
+C:/Baseline_9_Working_Folder/K-new-base/implementation/jtagppc_0_wrapper.ngc 1244132646
+C:/Baseline_9_Working_Folder/K-new-base/implementation/plb_emc_0_wrapper.ngc 1244132667
+C:/Baseline_9_Working_Folder/K-new-base/implementation/opb_gpio_0_wrapper.ngc 1244132679
+C:/Baseline_9_Working_Folder/K-new-base/implementation/opb_timer_0_wrapper.ngc 1244132698
+C:/Baseline_9_Working_Folder/K-new-base/implementation/hwrtos_0_wrapper.ngc 1244132757
+OK

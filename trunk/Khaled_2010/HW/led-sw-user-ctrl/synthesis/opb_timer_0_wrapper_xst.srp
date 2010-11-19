@@ -1,0 +1,1585 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "opb_timer_0_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp100ff1704-6
+Output File Name                   : "../implementation/opb_timer_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : opb_timer_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/family_support.vhd" in Library proc_common_v2_00_a.
+Package <family_support> compiled.
+Package body <family_support> compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/family.vhd" in Library proc_common_v2_00_a.
+Package <family> compiled.
+Package body <family> compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" in Library proc_common_v2_00_a.
+Entity <mux_onehot_f> compiled.
+Entity <mux_onehot_f> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/common_types_pkg.vhd" in Library proc_common_v2_00_a.
+Package <Common_Types> compiled.
+WARNING:HDLParsers:3534 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/common_types_pkg.vhd" Line 171. In the function Get_RLOC_Name, not all control paths contain a return statement.
+Package body <Common_Types> compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/tc_types_be.vhd" in Library opb_timer_v1_00_b.
+Package <TC_Types> compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd" in Library opb_timer_v1_00_b.
+Entity <counter_bit> compiled.
+Entity <counter_bit> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter.vhd" in Library opb_timer_v1_00_b.
+Entity <Counter> compiled.
+Entity <Counter> (Architecture <imp>) compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/bus_interface.vhd" in Library opb_timer_v1_00_b.
+Entity <Bus_Interface> compiled.
+Entity <Bus_Interface> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/count_module.vhd" in Library opb_timer_v1_00_b.
+Entity <count_module> compiled.
+Entity <count_module> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/timer_control.vhd" in Library opb_timer_v1_00_b.
+Entity <timer_control> compiled.
+Entity <timer_control> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/tc_core.vhd" in Library opb_timer_v1_00_b.
+Entity <TC_Core> compiled.
+Entity <TC_Core> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/opb_timer.vhd" in Library opb_timer_v1_00_b.
+Entity <opb_timer> compiled.
+Entity <opb_timer> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/Baseline_9_Working_Folder/K-new-base/hdl/opb_timer_0_wrapper.vhd" in Library work.
+Entity <opb_timer_0_wrapper> compiled.
+Entity <opb_timer_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <opb_timer_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <opb_timer> in library <opb_timer_v1_00_b> (architecture <IMP>) with generics.
+	C_BASEADDR = "01001111111111110000000000000000"
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_GEN0_ASSERT = '1'
+	C_GEN1_ASSERT = '1'
+	C_HIGHADDR = "01001111111111111111111111111111"
+	C_ONE_TIMER_ONLY = 0
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+	C_TRIG0_ASSERT = '1'
+	C_TRIG1_ASSERT = '1'
+
+Analyzing hierarchy for entity <TC_Core> in library <opb_timer_v1_00_b> (architecture <IMP>) with generics.
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_GEN0_ASSERT = '1'
+	C_GEN1_ASSERT = '1'
+	C_ONE_TIMER_ONLY = 0
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+	C_TRIG0_ASSERT = '1'
+	C_TRIG1_ASSERT = '1'
+	C_U_SET = "timer_control"
+	C_X = 0
+	C_Y = 0
+
+Analyzing hierarchy for entity <Bus_Interface> in library <opb_timer_v1_00_b> (architecture <IMP>) with generics.
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_OPB_DWIDTH = 32
+	C_U_SET = "timer_control"
+	C_X = 0
+	C_Y = 0
+
+Analyzing hierarchy for entity <count_module> in library <opb_timer_v1_00_b> (architecture <IMP>) with generics.
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 0
+
+Analyzing hierarchy for entity <count_module> in library <opb_timer_v1_00_b> (architecture <IMP>) with generics.
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 0
+
+Analyzing hierarchy for entity <timer_control> in library <opb_timer_v1_00_b> (architecture <IMP>) with generics.
+	C_FAMILY = "virtex2p"
+	C_GEN0_ASSERT = '1'
+	C_GEN1_ASSERT = '1'
+	C_TRIG0_ASSERT = '1'
+	C_TRIG1_ASSERT = '1'
+	C_U_SET = "timer_control"
+	C_X = 0
+	C_Y = 0
+
+Analyzing hierarchy for entity <mux_onehot_f> in library <proc_common_v2_00_a> (architecture <imp>) with generics.
+	C_DW = 32
+	C_FAMILY = "virtex2p"
+	C_NB = 6
+
+Analyzing hierarchy for entity <Counter> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 0
+
+Analyzing hierarchy for entity <Counter> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 0
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 0
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 1
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 2
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 3
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 4
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 5
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 6
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 7
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 8
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 9
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 10
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 11
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 12
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 13
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 14
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 15
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 0
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 1
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 2
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 3
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 4
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 5
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 6
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 7
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 8
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 9
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 10
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 11
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 12
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 13
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 14
+
+Analyzing hierarchy for entity <counter_bit> in library <opb_timer_v1_00_b> (architecture <imp>) with generics.
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 15
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <opb_timer_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+WARNING:Xst:37 - Unknown property "IP_GROUP".
+    Set property "MAX_FANOUT = 10000" for signal <OPB_Clk> in unit <opb_timer>.
+WARNING:Xst:37 - Unknown property "SIGIS".
+    Set property "MAX_FANOUT = 10000" for signal <OPB_Rst> in unit <opb_timer>.
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "IP_GROUP".
+    Set user-defined property "X_CORE_INFO =  opb_timer_v1_00_b" for unit <opb_timer>.
+Entity <opb_timer_0_wrapper> analyzed. Unit <opb_timer_0_wrapper> generated.
+
+Analyzing generic Entity <opb_timer> in library <opb_timer_v1_00_b> (Architecture <IMP>).
+	C_BASEADDR = "01001111111111110000000000000000"
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_GEN0_ASSERT = '1'
+	C_GEN1_ASSERT = '1'
+	C_HIGHADDR = "01001111111111111111111111111111"
+	C_ONE_TIMER_ONLY = 0
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+	C_TRIG0_ASSERT = '1'
+	C_TRIG1_ASSERT = '1'
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "SIGIS".
+WARNING:Xst:37 - Unknown property "SIGIS".
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[0].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[1].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[2].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[3].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[4].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[5].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[6].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[7].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[8].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[9].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[10].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[11].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[12].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[13].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[14].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[15].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[16].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[17].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[18].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[19].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[20].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[21].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[22].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[23].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[24].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[25].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[26].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[27].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[28].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[29].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[30].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <WRDBUS_FF_GENERATE[31].WRDBUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[0].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[1].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[2].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[3].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[4].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[5].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[6].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[7].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[8].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[9].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[10].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[11].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[12].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[13].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[14].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[15].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[16].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[17].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[18].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[19].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[20].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[21].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[22].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[23].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[24].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[25].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[26].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[27].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[28].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[29].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[30].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <ABUS_FF_GENERATE[31].ABUS_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <BE_FF_GENERATE[0].BE_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <BE_FF_GENERATE[1].BE_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <BE_FF_GENERATE[2].BE_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <BE_FF_GENERATE[3].BE_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <RNW_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <SELECT_FF_I> in unit <opb_timer>.
+    Set user-defined property "INIT =  0" for instance <SEQADDR_FF_I> in unit <opb_timer>.
+Entity <opb_timer> analyzed. Unit <opb_timer> generated.
+
+Analyzing generic Entity <TC_Core> in library <opb_timer_v1_00_b> (Architecture <IMP>).
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_GEN0_ASSERT = '1'
+	C_GEN1_ASSERT = '1'
+	C_ONE_TIMER_ONLY = 0
+	C_OPB_AWIDTH = 32
+	C_OPB_DWIDTH = 32
+	C_TRIG0_ASSERT = '1'
+	C_TRIG1_ASSERT = '1'
+	C_U_SET = "timer_control"
+	C_X = 0
+	C_Y = 0
+    Set property "syn_keep = TRUE" for signal <count_Down>.
+    Set user-defined property "INIT =  0" for instance <PWM_FF_I> in unit <TC_Core>.
+Entity <TC_Core> analyzed. Unit <TC_Core> generated.
+
+Analyzing generic Entity <Bus_Interface> in library <opb_timer_v1_00_b> (Architecture <IMP>).
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_OPB_DWIDTH = 32
+	C_U_SET = "timer_control"
+	C_X = 0
+	C_Y = 0
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[0].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[1].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[2].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[3].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[4].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[5].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[6].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[7].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[8].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[9].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[10].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[11].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[12].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[13].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[14].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[15].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[16].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[17].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[18].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[19].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[20].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[21].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[22].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[23].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[24].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[25].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[26].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[27].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[28].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[29].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[30].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <READ_REG_GEN[31].READ_REG_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <XFERACK_FF_I> in unit <Bus_Interface>.
+    Set user-defined property "INIT =  0" for instance <XFERACK_FF_DELAYED_I> in unit <Bus_Interface>.
+Entity <Bus_Interface> analyzed. Unit <Bus_Interface> generated.
+
+Analyzing generic Entity <mux_onehot_f> in library <proc_common_v2_00_a> (Architecture <imp>).
+	C_DW = 32
+	C_FAMILY = "virtex2p"
+	C_NB = 6
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd" line 211: Instantiating black box module <MUXCY>.
+Entity <mux_onehot_f> analyzed. Unit <mux_onehot_f> generated.
+
+Analyzing generic Entity <count_module.1> in library <opb_timer_v1_00_b> (Architecture <IMP>).
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 0
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[0].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[1].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[2].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[3].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[4].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[5].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[6].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[7].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[8].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[9].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[10].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[11].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[12].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[13].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[14].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[15].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[16].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[17].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[18].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[19].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[20].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[21].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[22].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[23].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[24].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[25].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[26].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[27].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[28].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[29].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[30].LOAD_REG_I> in unit <count_module.1>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[31].LOAD_REG_I> in unit <count_module.1>.
+Entity <count_module.1> analyzed. Unit <count_module.1> generated.
+
+Analyzing generic Entity <Counter.1> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 0
+    Set user-defined property "INIT =  0" for instance <CARRY_OUT_I> in unit <Counter.1>.
+Entity <Counter.1> analyzed. Unit <Counter.1> generated.
+
+Analyzing generic Entity <counter_bit.1> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 0
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.1>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.1>.
+Entity <counter_bit.1> analyzed. Unit <counter_bit.1> generated.
+
+Analyzing generic Entity <counter_bit.2> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 1
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.2>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.2>.
+Entity <counter_bit.2> analyzed. Unit <counter_bit.2> generated.
+
+Analyzing generic Entity <counter_bit.3> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 2
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.3>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.3>.
+Entity <counter_bit.3> analyzed. Unit <counter_bit.3> generated.
+
+Analyzing generic Entity <counter_bit.4> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 3
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.4>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.4>.
+Entity <counter_bit.4> analyzed. Unit <counter_bit.4> generated.
+
+Analyzing generic Entity <counter_bit.5> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 4
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.5>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.5>.
+Entity <counter_bit.5> analyzed. Unit <counter_bit.5> generated.
+
+Analyzing generic Entity <counter_bit.6> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 5
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.6>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.6>.
+Entity <counter_bit.6> analyzed. Unit <counter_bit.6> generated.
+
+Analyzing generic Entity <counter_bit.7> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 6
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.7>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.7>.
+Entity <counter_bit.7> analyzed. Unit <counter_bit.7> generated.
+
+Analyzing generic Entity <counter_bit.8> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 7
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.8>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.8>.
+Entity <counter_bit.8> analyzed. Unit <counter_bit.8> generated.
+
+Analyzing generic Entity <counter_bit.9> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 8
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.9>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.9>.
+Entity <counter_bit.9> analyzed. Unit <counter_bit.9> generated.
+
+Analyzing generic Entity <counter_bit.10> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 9
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.10>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.10>.
+Entity <counter_bit.10> analyzed. Unit <counter_bit.10> generated.
+
+Analyzing generic Entity <counter_bit.11> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 10
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.11>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.11>.
+Entity <counter_bit.11> analyzed. Unit <counter_bit.11> generated.
+
+Analyzing generic Entity <counter_bit.12> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 11
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.12>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.12>.
+Entity <counter_bit.12> analyzed. Unit <counter_bit.12> generated.
+
+Analyzing generic Entity <counter_bit.13> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 12
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.13>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.13>.
+Entity <counter_bit.13> analyzed. Unit <counter_bit.13> generated.
+
+Analyzing generic Entity <counter_bit.14> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 13
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.14>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.14>.
+Entity <counter_bit.14> analyzed. Unit <counter_bit.14> generated.
+
+Analyzing generic Entity <counter_bit.15> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 14
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.15>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.15>.
+Entity <counter_bit.15> analyzed. Unit <counter_bit.15> generated.
+
+Analyzing generic Entity <counter_bit.16> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter0"
+	C_X = 0
+	C_Y = 15
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.16>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.16>.
+Entity <counter_bit.16> analyzed. Unit <counter_bit.16> generated.
+
+Analyzing generic Entity <count_module.2> in library <opb_timer_v1_00_b> (Architecture <IMP>).
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 0
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[0].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[1].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[2].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[3].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[4].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[5].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[6].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[7].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[8].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[9].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[10].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[11].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[12].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[13].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[14].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[15].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[16].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[17].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[18].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[19].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[20].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[21].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[22].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[23].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[24].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[25].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[26].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[27].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[28].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[29].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[30].LOAD_REG_I> in unit <count_module.2>.
+    Set user-defined property "INIT =  0" for instance <LOAD_REG_GEN[31].LOAD_REG_I> in unit <count_module.2>.
+Entity <count_module.2> analyzed. Unit <count_module.2> generated.
+
+Analyzing generic Entity <Counter.2> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_COUNT_WIDTH = 32
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 0
+    Set user-defined property "INIT =  0" for instance <CARRY_OUT_I> in unit <Counter.2>.
+Entity <Counter.2> analyzed. Unit <Counter.2> generated.
+
+Analyzing generic Entity <counter_bit.17> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 0
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.17>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.17>.
+Entity <counter_bit.17> analyzed. Unit <counter_bit.17> generated.
+
+Analyzing generic Entity <counter_bit.18> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 1
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.18>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.18>.
+Entity <counter_bit.18> analyzed. Unit <counter_bit.18> generated.
+
+Analyzing generic Entity <counter_bit.19> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 2
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.19>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.19>.
+Entity <counter_bit.19> analyzed. Unit <counter_bit.19> generated.
+
+Analyzing generic Entity <counter_bit.20> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 3
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.20>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.20>.
+Entity <counter_bit.20> analyzed. Unit <counter_bit.20> generated.
+
+Analyzing generic Entity <counter_bit.21> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 4
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.21>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.21>.
+Entity <counter_bit.21> analyzed. Unit <counter_bit.21> generated.
+
+Analyzing generic Entity <counter_bit.22> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 5
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.22>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.22>.
+Entity <counter_bit.22> analyzed. Unit <counter_bit.22> generated.
+
+Analyzing generic Entity <counter_bit.23> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 6
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.23>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.23>.
+Entity <counter_bit.23> analyzed. Unit <counter_bit.23> generated.
+
+Analyzing generic Entity <counter_bit.24> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 7
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.24>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.24>.
+Entity <counter_bit.24> analyzed. Unit <counter_bit.24> generated.
+
+Analyzing generic Entity <counter_bit.25> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 8
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.25>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.25>.
+Entity <counter_bit.25> analyzed. Unit <counter_bit.25> generated.
+
+Analyzing generic Entity <counter_bit.26> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 9
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.26>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.26>.
+Entity <counter_bit.26> analyzed. Unit <counter_bit.26> generated.
+
+Analyzing generic Entity <counter_bit.27> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 10
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.27>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.27>.
+Entity <counter_bit.27> analyzed. Unit <counter_bit.27> generated.
+
+Analyzing generic Entity <counter_bit.28> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 11
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.28>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.28>.
+Entity <counter_bit.28> analyzed. Unit <counter_bit.28> generated.
+
+Analyzing generic Entity <counter_bit.29> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 12
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.29>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.29>.
+Entity <counter_bit.29> analyzed. Unit <counter_bit.29> generated.
+
+Analyzing generic Entity <counter_bit.30> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 13
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.30>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.30>.
+Entity <counter_bit.30> analyzed. Unit <counter_bit.30> generated.
+
+Analyzing generic Entity <counter_bit.31> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 14
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.31>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.31>.
+Entity <counter_bit.31> analyzed. Unit <counter_bit.31> generated.
+
+Analyzing generic Entity <counter_bit.32> in library <opb_timer_v1_00_b> (Architecture <imp>).
+	C_FAMILY = "virtex2p"
+	C_U_SET = "TC_Counter1"
+	C_X = 0
+	C_Y = 15
+    Set user-defined property "INIT =  36C6" for instance <I_ALU_LUT> in unit <counter_bit.32>.
+    Set user-defined property "INIT =  0" for instance <FDRE_I> in unit <counter_bit.32>.
+Entity <counter_bit.32> analyzed. Unit <counter_bit.32> generated.
+
+Analyzing generic Entity <timer_control> in library <opb_timer_v1_00_b> (Architecture <IMP>).
+	C_FAMILY = "virtex2p"
+	C_GEN0_ASSERT = '1'
+	C_GEN1_ASSERT = '1'
+	C_TRIG0_ASSERT = '1'
+	C_TRIG1_ASSERT = '1'
+	C_U_SET = "timer_control"
+	C_X = 0
+	C_Y = 0
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[0].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[1].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[2].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[3].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[4].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[5].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[6].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[7].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[8].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[9].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[10].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[11].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[12].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[13].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[14].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[15].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[16].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[17].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[18].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[19].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[20].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[21].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[22].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[23].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[24].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[25].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[26].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[27].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[28].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[29].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[30].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR0_GENERATE[31].TCSR0_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[0].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[1].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[2].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[3].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[4].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[5].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[6].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[7].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[8].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[9].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[10].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[11].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[12].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[13].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[14].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[15].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[16].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[17].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[18].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[19].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[20].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[21].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[22].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[23].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[24].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[25].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[26].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[27].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[28].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[29].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[30].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <TCSR1_GENERATE[31].TCSR1_FF_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <READ_DONE0_I> in unit <timer_control>.
+    Set user-defined property "INIT =  0" for instance <READ_DONE1_I> in unit <timer_control>.
+Entity <timer_control> analyzed. Unit <timer_control> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <timer_control>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/timer_control.vhd".
+    Found 1-bit register for signal <Interrupt>.
+    Found 1-bit register for signal <GenerateOut0>.
+    Found 1-bit register for signal <GenerateOut1>.
+    Found 1-bit register for signal <captureTrig0_d>.
+    Found 1-bit register for signal <captureTrig0_d2>.
+    Found 1-bit register for signal <captureTrig1_d>.
+    Found 1-bit register for signal <captureTrig1_d2>.
+    Found 2-bit register for signal <counter_TC_Reg>.
+    Found 1-bit register for signal <generateOutPre0>.
+    Found 1-bit register for signal <generateOutPre1>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <timer_control> synthesized.
+
+
+Synthesizing Unit <mux_onehot_f>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/hdl/vhdl/mux_onehot_f.vhd".
+Unit <mux_onehot_f> synthesized.
+
+
+Synthesizing Unit <counter_bit_1>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_1> synthesized.
+
+
+Synthesizing Unit <counter_bit_2>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_2> synthesized.
+
+
+Synthesizing Unit <counter_bit_3>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_3> synthesized.
+
+
+Synthesizing Unit <counter_bit_4>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_4> synthesized.
+
+
+Synthesizing Unit <counter_bit_5>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_5> synthesized.
+
+
+Synthesizing Unit <counter_bit_6>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_6> synthesized.
+
+
+Synthesizing Unit <counter_bit_7>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_7> synthesized.
+
+
+Synthesizing Unit <counter_bit_8>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_8> synthesized.
+
+
+Synthesizing Unit <counter_bit_9>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_9> synthesized.
+
+
+Synthesizing Unit <counter_bit_10>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_10> synthesized.
+
+
+Synthesizing Unit <counter_bit_11>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_11> synthesized.
+
+
+Synthesizing Unit <counter_bit_12>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_12> synthesized.
+
+
+Synthesizing Unit <counter_bit_13>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_13> synthesized.
+
+
+Synthesizing Unit <counter_bit_14>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_14> synthesized.
+
+
+Synthesizing Unit <counter_bit_15>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_15> synthesized.
+
+
+Synthesizing Unit <counter_bit_16>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_16> synthesized.
+
+
+Synthesizing Unit <counter_bit_17>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_17> synthesized.
+
+
+Synthesizing Unit <counter_bit_18>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_18> synthesized.
+
+
+Synthesizing Unit <counter_bit_19>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_19> synthesized.
+
+
+Synthesizing Unit <counter_bit_20>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_20> synthesized.
+
+
+Synthesizing Unit <counter_bit_21>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_21> synthesized.
+
+
+Synthesizing Unit <counter_bit_22>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_22> synthesized.
+
+
+Synthesizing Unit <counter_bit_23>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_23> synthesized.
+
+
+Synthesizing Unit <counter_bit_24>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_24> synthesized.
+
+
+Synthesizing Unit <counter_bit_25>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_25> synthesized.
+
+
+Synthesizing Unit <counter_bit_26>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_26> synthesized.
+
+
+Synthesizing Unit <counter_bit_27>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_27> synthesized.
+
+
+Synthesizing Unit <counter_bit_28>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_28> synthesized.
+
+
+Synthesizing Unit <counter_bit_29>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_29> synthesized.
+
+
+Synthesizing Unit <counter_bit_30>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_30> synthesized.
+
+
+Synthesizing Unit <counter_bit_31>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_31> synthesized.
+
+
+Synthesizing Unit <counter_bit_32>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter_bit.vhd".
+Unit <counter_bit_32> synthesized.
+
+
+Synthesizing Unit <Bus_Interface>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/bus_interface.vhd".
+WARNING:Xst:647 - Input <TCSR0_Reg<0:20>> is never used.
+WARNING:Xst:647 - Input <TCSR1_Reg<0:20>> is never used.
+WARNING:Xst:647 - Input <OPB_ABus<0:25>> is never used.
+WARNING:Xst:647 - Input <OPB_ABus<30:31>> is never used.
+WARNING:Xst:1780 - Signal <xferAck_FF> is never used or assigned.
+WARNING:Xst:1780 - Signal <shiftReg> is never used or assigned.
+WARNING:Xst:1780 - Signal <tc_xferAck_Reg> is never used or assigned.
+Unit <Bus_Interface> synthesized.
+
+
+Synthesizing Unit <Counter_1>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter.vhd".
+    Found 1-bit xor2 for signal <carry_active_high>.
+Unit <Counter_1> synthesized.
+
+
+Synthesizing Unit <Counter_2>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/counter.vhd".
+    Found 1-bit xor2 for signal <carry_active_high>.
+Unit <Counter_2> synthesized.
+
+
+Synthesizing Unit <count_module_1>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/count_module.vhd".
+WARNING:Xst:1780 - Signal <counter_out> is never used or assigned.
+Unit <count_module_1> synthesized.
+
+
+Synthesizing Unit <count_module_2>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/count_module.vhd".
+WARNING:Xst:1780 - Signal <counter_out> is never used or assigned.
+Unit <count_module_2> synthesized.
+
+
+Synthesizing Unit <TC_Core>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/tc_core.vhd".
+WARNING:Xst:1780 - Signal <tCR2_Select> is never used or assigned.
+WARNING:Xst:1780 - Signal <tCCR2_Select> is never used or assigned.
+WARNING:Xst:1780 - Signal <tCSR2_Select> is never used or assigned.
+WARNING:Xst:646 - Signal <tCR1_Select> is assigned but never used.
+WARNING:Xst:646 - Signal <tCR0_Select> is assigned but never used.
+WARNING:Xst:1780 - Signal <opb_Read_Reg_CE> is never used or assigned.
+WARNING:Xst:1780 - Signal <tCR3_Select> is never used or assigned.
+WARNING:Xst:1780 - Signal <tCCR3_Select> is never used or assigned.
+Unit <TC_Core> synthesized.
+
+
+Synthesizing Unit <opb_timer>.
+    Related source file is "C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_timer_v1_00_b/hdl/vhdl/opb_timer.vhd".
+WARNING:Xst:646 - Signal <opb_seqAddr_Reg> is assigned but never used.
+Unit <opb_timer> synthesized.
+
+
+Synthesizing Unit <opb_timer_0_wrapper>.
+    Related source file is "C:/Baseline_9_Working_Folder/K-new-base/hdl/opb_timer_0_wrapper.vhd".
+Unit <opb_timer_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 11
+ 1-bit register                                        : 11
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp100.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 313
+ Flip-Flops                                            : 313
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <opb_timer_0_wrapper> ...
+
+Optimizing unit <timer_control> ...
+
+Optimizing unit <mux_onehot_f> ...
+
+Optimizing unit <Bus_Interface> ...
+
+Optimizing unit <Counter_1> ...
+
+Optimizing unit <Counter_2> ...
+
+Optimizing unit <count_module_1> ...
+
+Optimizing unit <count_module_2> ...
+
+Optimizing unit <opb_timer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2260 - The FF/Latch <opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[21].TCSR0_FF_I> in Unit <opb_timer_0_wrapper> is equivalent to the following FF/Latch : <opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[21].TCSR1_FF_I> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 313
+ Flip-Flops                                            : 313
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/opb_timer_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 116
+
+Cell Usage :
+# BELS                             : 501
+#      GND                         : 1
+#      LUT1                        : 1
+#      LUT2                        : 13
+#      LUT2_D                      : 1
+#      LUT3                        : 87
+#      LUT3_D                      : 4
+#      LUT4                        : 161
+#      LUT4_D                      : 3
+#      MUXCY                       : 101
+#      MUXCY_L                     : 64
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 313
+#      FDR                         : 116
+#      FDRE                        : 130
+#      FDRS                        : 1
+#      FDRSE                       : 66
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp100ff1704-6 
+
+ Number of Slices:                     262  out of  44096     0%  
+ Number of Slice Flip Flops:           313  out of  88192     0%  
+ Number of 4 input LUTs:               270  out of  88192     0%  
+ Number of IOs:                        116
+ Number of bonded IOBs:                  0  out of   1040     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                              | Load  |
+-----------------------------------+----------------------------------------------------+-------+
+OPB_Clk                            | NONE(opb_timer_0/WRDBUS_FF_GENERATE[3].WRDBUS_FF_I)| 313   |
+-----------------------------------+----------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: 6.684ns (Maximum Frequency: 149.614MHz)
+   Minimum input arrival time before clock: 1.829ns
+   Maximum output required time after clock: 0.374ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OPB_Clk'
+  Clock period: 6.684ns (frequency: 149.614MHz)
+  Total number of paths / destination ports: 19485 / 481
+-------------------------------------------------------------------------
+Delay:               6.684ns (Levels of Logic = 11)
+  Source:            opb_timer_0/ABUS_FF_GENERATE[12].ABUS_FF_I (FF)
+  Destination:       opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_REG_GEN[0].READ_REG_FF_I (FF)
+  Source Clock:      OPB_Clk rising
+  Destination Clock: OPB_Clk rising
+
+  Data Path: opb_timer_0/ABUS_FF_GENERATE[12].ABUS_FF_I to opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_REG_GEN[0].READ_REG_FF_I
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.374   0.533  opb_timer_0/ABUS_FF_GENERATE[12].ABUS_FF_I (opb_timer_0/opb_ABus_Reg<12>)
+     LUT1:I0->O            1   0.313   0.000  opb_timer_0/tc_Select_wg_cy<0>_rt (opb_timer_0/tc_Select_wg_cy<0>_rt)
+     MUXCY:S->O            1   0.377   0.000  opb_timer_0/tc_Select_wg_cy<0> (opb_timer_0/tc_Select_wg_cy<0>)
+     MUXCY:CI->O           1   0.042   0.000  opb_timer_0/tc_Select_wg_cy<1> (opb_timer_0/tc_Select_wg_cy<1>)
+     MUXCY:CI->O           1   0.042   0.000  opb_timer_0/tc_Select_wg_cy<2> (opb_timer_0/tc_Select_wg_cy<2>)
+     MUXCY:CI->O           1   0.042   0.000  opb_timer_0/tc_Select_wg_cy<3> (opb_timer_0/tc_Select_wg_cy<3>)
+     MUXCY:CI->O           3   0.751   0.495  opb_timer_0/tc_Select_wg_cy<4> (opb_timer_0/tc_Select)
+     LUT3_D:I2->O          7   0.313   0.575  opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/iTCSR0_Select11 (opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/N0)
+     LUT3:I2->O           33   0.313   0.841  opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/iTLR1_Select1 (opb_timer_0/TC_CORE_I/tCCR1_Select)
+     LUT4:I3->O            1   0.313   0.000  opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_MUX_I/lutout_1_not00011 (opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_MUX_I/lutout<1>)
+     MUXCY:S->O            1   0.377   0.000  opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_MUX_I/GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_MUX_I/cyout<2>)
+     MUXCY:CI->O           1   0.750   0.000  opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_MUX_I/GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[2].MUXCY_GEN.MUXCY_I (opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/opb_Read_Reg_In<0>)
+     FDR:D                     0.234          opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_REG_GEN[0].READ_REG_FF_I
+    ----------------------------------------
+    Total                      6.684ns (4.240ns logic, 2.444ns route)
+                                       (63.4% logic, 36.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 317 / 317
+-------------------------------------------------------------------------
+Offset:              1.829ns (Levels of Logic = 1)
+  Source:            OPB_Rst (PAD)
+  Destination:       opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_REG_GEN[0].READ_REG_FF_I (FF)
+  Destination Clock: OPB_Clk rising
+
+  Data Path: OPB_Rst to opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_REG_GEN[0].READ_REG_FF_I
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O           32   0.313   0.790  opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/opb_Read_Reg_Rst1 (opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/opb_Read_Reg_Rst)
+     FDR:R                     0.583          opb_timer_0/TC_CORE_I/BUS_INTERFACE_I/READ_REG_GEN[0].READ_REG_FF_I
+    ----------------------------------------
+    Total                      1.829ns (1.039ns logic, 0.790ns route)
+                                       (56.8% logic, 43.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 37 / 37
+-------------------------------------------------------------------------
+Offset:              0.374ns (Levels of Logic = 0)
+  Source:            opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/Interrupt (FF)
+  Destination:       Interrupt (PAD)
+  Source Clock:      OPB_Clk rising
+
+  Data Path: opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/Interrupt to Interrupt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              0   0.374   0.000  opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/Interrupt (Interrupt)
+    ----------------------------------------
+    Total                      0.374ns (0.374ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+CPU : 18.91 / 18.97 s | Elapsed : 18.00 / 19.00 s
+ 
+--> 
+
+Total memory usage is 308080 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  123 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

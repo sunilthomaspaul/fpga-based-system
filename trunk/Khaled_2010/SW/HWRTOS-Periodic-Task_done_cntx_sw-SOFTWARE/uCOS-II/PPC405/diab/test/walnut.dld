@@ -1,0 +1,50 @@
+/*
+* walnut.dld
+*
+* Linker command file for the Walnut PPC405GP board.
+*
+* Author: Ganesh.S
+* Wipro Technologies
+*/
+
+MEMORY
+{
+        ram:        org = 0x00026000, len = 0x00400000
+}
+
+SECTIONS
+{
+	GROUP : {
+		.text (TEXT)	: {
+			*(.bootcode)
+			*(.text)
+			*(.init)
+			*(.fini)
+		}
+                .sdata2 (TEXT)  : {}  /* small CONST area for some targets */
+        } > ram
+
+	GROUP : {
+		__DATA_ROM	= .;
+		__DATA_RAM	= .;
+		.data (DATA)	: {}
+                .sdata (DATA)   : { *(.sdata) }
+ 		__DATA_END	= .;
+
+ 		__BSS_START	= .;
+		.sbss (BSS)	: {}
+		.bss  (BSS)	: {}
+		__BSS_END	= .;
+        } > ram
+}
+
+__SP_INIT       = 0x00432800;
+__SP_END        = __SP_INIT-0xC800;        /* Stack is 50 KB. */
+
+___SP_INIT	= __SP_INIT;
+___SP_END	= __SP_END;
+___DATA_ROM	= __DATA_ROM;
+___DATA_RAM	= __DATA_RAM;
+___DATA_END	= __DATA_END;
+___BSS_START	= __BSS_START;
+___BSS_END	= __BSS_END;

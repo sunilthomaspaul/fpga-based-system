@@ -1,0 +1,1745 @@
+Release 9.1.02i Xflow J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc2vp100ff1704-6 -implement xflow.opt system.ngc
+ 
+.... Copying flowfile C:/Xilinx91i/xilinx/data/fpga.flw into working directory
+C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation 
+
+Using Flow File:
+C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/fpga.flw 
+Using Option File(s): 
+ C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/xflow.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc2vp100ff1704-6 -nt timestamp -bm system.bmm
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/system.ngc"
+-uc system.ucf system.ngd 
+#----------------------------------------------#
+Release 9.1.02i - ngdbuild J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -p xc2vp100ff1704-6 -nt timestamp -bm system.bmm
+C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/system.ngc -uc
+system.ucf system.ngd
+
+Reading NGO file
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/system.ngc"
+...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/clock_reset_b
+lock_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/ppc405_i_wrap
+per.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_bus_wrapp
+er.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_ddr_contr
+oller_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_bram_if_c
+ntlr_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/bram_wrapper.
+ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb2opb_bridg
+e_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opb_bus_wrapp
+er.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/ap1000_interr
+upt_interface_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opb_intc_i_wr
+apper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/rs232_1_wrapp
+er.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opbslave_ext_
+bridge_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_psb_bridg
+e_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/dcr_bus_wrapp
+er.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/ppc405_ppcjta
+g_chain_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/jtagppc_0_wra
+pper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_emc_0_wra
+pper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opb_gpio_0_wr
+apper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opb_timer_0_w
+rapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/hwrtos_0_wrap
+per.ngc"...
+
+Applying constraints in "system.ucf" to the design...
+
+Checking timing specifications ...
+INFO:XdmHelpers:851 - TNM "fpga_plb_clk", used in period specification
+   "TS_fpga_plb_clk", was traced into DCM instance
+   "clock_reset_block/clock_reset_block/ap1000_bp_clock_generation/plb_dcm". The
+   following new TNM groups and period specifications were generated at the DCM
+   output(s):
+   CLK0:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkplb_i=PERIO
+D clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkplb_i
+TS_fpga_plb_clk*1 HIGH 50%
+   CLK90:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_ddr_clkplb_90_
+i=PERIOD
+clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_ddr_clkplb_90_i
+TS_fpga_plb_clk*1 PHASE + 3.125 nS HIGH 50%
+   CLKFX:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkcpu_i=PERIO
+D clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkcpu_i
+TS_fpga_plb_clk/3 HIGH 50%
+INFO:XdmHelpers:851 - TNM "ddr1_clk_fb", used in period specification
+   "TS_ddr1_clk_fb", was traced into DCM instance
+   "clock_reset_block/clock_reset_block/ap1000_bp_clock_generation/ddrfb_dcm".
+   The following new TNM groups and period specifications were generated at the
+   DCM output(s):
+   CLK0:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_ddr_clk_fb_i=P
+ERIOD
+clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_ddr_clk_fb_i
+TS_ddr1_clk_fb*1 PHASE - 1.562 nS HIGH 50%
+INFO:XdmHelpers:851 - TNM "fpga_opb_clk", used in period specification
+   "TS_fpga_opb_clk", was traced into DCM instance
+   "clock_reset_block/clock_reset_block/ap1000_bp_clock_generation/opb_dcm". The
+   following new TNM groups and period specifications were generated at the DCM
+   output(s):
+   CLK0:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkopb_i=PERIO
+D clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkopb_i
+TS_fpga_opb_clk*1 HIGH 50%
+
+Processing BMM file ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/
+   DQS_OE_SETRST_GEN[3].DQS_SETRST_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/
+   DQS_OE_SETRST_GEN[2].DQS_SETRST_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/
+   DQS_OE_SETRST_GEN[1].DQS_SETRST_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/
+   DQS_OE_SETRST_GEN[0].DQS_SETRST_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/READCNTR_I/CAR
+   RY_OUT_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BURST_SUPPORT/CONTROL_DBEAT_CNTR_I/I_UP_DWN_COUNTER/I_C
+   ARRY_OUT' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BURST_SUPPORT/RESPONSE_DBEAT_CNTR_I/I_UP_DWN_COUNTER/I_
+   CARRY_OUT' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_RE
+   G' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_RE
+   G' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_4to7[7
+   ].I_FDRSE_BE4to7' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_4to7[6
+   ].I_FDRSE_BE4to7' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_4to7[5
+   ].I_FDRSE_BE4to7' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_4to7[4
+   ].I_FDRSE_BE4to7' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[3
+   ].I_FDRSE_BE0to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[2
+   ].I_FDRSE_BE0to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[1
+   ].I_FDRSE_BE0to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[0
+   ].I_FDRSE_BE0to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_S_H_ADDR_REG[0].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_S_H_ADDR_REG[1].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_S_H_ADDR_REG[2].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/I_CS_SIZE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/I_CS_SIZE_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/I_CS_SIZE_REG2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU51' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU56' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU61' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU66' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU71' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU76' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU81' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU86' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU173' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU280' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU51' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU56' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU61' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU66' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU71' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU76' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU81' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU86' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU173' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU280' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU51' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU56' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU61' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU66' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU71' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU76' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU81' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU86' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU173' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU280' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU51' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU56' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU61' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU66' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU71' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU76' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU81' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU86' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU173' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU280' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SL
+   OW_MODE_BURSTXFER.I_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SL
+   OW_MODE_BURSTXFER.I_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[0].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[1].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[2].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[10].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[9].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[8].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[7].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[6].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[5].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[4].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[3].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[2].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[1].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[0].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[31].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[30].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[26].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[25].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[24].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[23].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[22].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[21].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[20].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[19].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[18].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[17].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[16].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[15].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[14].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[13].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[12].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[11].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[10].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[9].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[8].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[7].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[6].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[5].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[4].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[3].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[2].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[1].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[0].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SLOW_MODE_BURSTXFER.I_
+   ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG' has unconnected output
+   pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SLOW_MODE_BURSTXFER.I_
+   ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG' has unconnected output
+   pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG
+   [0].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG
+   [1].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG
+   [2].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1
+   ].I_BKEND_CS_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[2
+   ].I_BKEND_CS_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[3
+   ].I_BKEND_CS_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[0].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[0].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[0].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[1].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[1].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[1].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[2].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[2].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[2].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[3].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[3].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[3].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG0'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG1'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG2'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[0].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[1].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[2].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[3].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[4].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[5].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[6].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[7].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[8].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[9].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[10].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[11].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[12].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[13].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[14].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[15].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[16].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[17].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[18].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[19].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[20].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[0].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[1].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[2].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[3].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[4].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[5].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[6].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[7].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[8].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[9].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[10].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[11].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[12].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[13].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[14].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[15].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[16].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[17].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[18].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[19].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[20].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'opb_timer_0/opb_timer_0/SEQADDR_FF_I' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[31].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[30].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[25].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[24].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[23].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[22].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[21].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[20].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[19].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[18].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[17].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[16].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_BURST.I_DTIME_CONTRO
+   LLER/RESPONSE_CYCLE_CNTR_I/I_UP_DWN_COUNTER/I_CARRY_OUT' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_BURST.I_DTIME_CONTRO
+   LLER/CONTROL_CYCLE_CNTR_I/I_UP_DWN_COUNTER/I_CARRY_OUT' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_BURST.I_DTIME_CONTRO
+   LLER/RESPONSE_CNTR_I/I_UP_DWN_COUNTER/I_CARRY_OUT' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_BURST.I_DTIME_CONTRO
+   LLER/CONTROL_CNTR_I/I_UP_DWN_COUNTER/I_CARRY_OUT' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/IP2INTC_I
+   RPT_FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/ERR_FF_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDBTERM_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDWDADDR_
+   FF_GEN[0].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDWDADDR_
+   FF_GEN[1].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDWDADDR_
+   FF_GEN[2].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDWDADDR_
+   FF_GEN[3].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/REARB_FF_
+   I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/WRBTERM_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/WRDACK_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SSIZE_FF_
+   GEN[0].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SSIZE_FF_
+   GEN[1].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/PENDPRI_F
+   F_GEN[0].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/PENDPRI_F
+   F_GEN[1].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/PENDREQ_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/REQPRI_FF
+   _GEN[0].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/REQPRI_FF
+   _GEN[1].FF_I' has unconnected output pin
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "fpga_plb_clk"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "fpga_plb_clk"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "fpga_opb_clk"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "fpga_opb_clk"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "psb_bg_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "psb_bg_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "pmc_inta_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "pmc_inta_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int0_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int0_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "fpga_rst_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "fpga_rst_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "pmc_intb_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "pmc_intb_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int1_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int1_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "psb_dbg_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "psb_dbg_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "uart1_sin" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "uart1_sin" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "pmc_intc_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "pmc_intc_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int2_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int2_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_0" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_0" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_1" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_1" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_2" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_2" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_3" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_3" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_4" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_4" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "pmc_intd_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "pmc_intd_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_5" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_5" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_6" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_6" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_7" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_7" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int3_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int3_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "sysace_irq"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "sysace_irq" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "cpld_br_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "cpld_br_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int4_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int4_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int5_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int5_n" of
+   type "IPAD".  This attribute will be ignored.
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 302
+
+Writing NGD file "system.ngd" ...
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -pr b system.ngd system.pcf 
+#----------------------------------------------#
+Release 9.1.02i - Map J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+Using target part "2vp100ff1704-6".
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Writing design file "system_map.ncd"...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   30
+Logic Utilization:
+  Total Number Slice Registers:    13,314 out of  88,192   15%
+    Number used as Flip Flops:                13,249
+    Number used as Latches:                       65
+  Number of 4 input LUTs:          39,258 out of  88,192   44%
+Logic Distribution:
+  Number of occupied Slices:       23,884 out of  44,096   54%
+  Number of Slices containing only related logic:  23,884 out of  23,884  100%
+  Number of Slices containing unrelated logic:          0 out of  23,884    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:         40,485 out of  88,192   45%
+  Number used as logic:            39,258
+  Number used as a route-thru:        628
+  Number used for Dual Port RAMs:     342
+    (Two LUTs used per Dual Port RAM)
+  Number used as Shift registers:     257
+
+  Number of bonded IOBs:              261 out of   1,040   25%
+    IOB Flip Flops:                   492
+    IOB Dual-Data Rate Flops:          42
+  Number of PPC405s:                   2 out of       2  100%
+  Number of JTAGPPCs:                  1 out of       1  100%
+  Number of Block RAMs:                33 out of     444    7%
+  Number of GCLKs:                     13 out of      16   81%
+  Number of DCMs:                       3 out of      12   25%
+  Number of GTs:                        0 out of      20    0%
+  Number of GT10s:                      0 out of       0    0%
+
+Total equivalent gate count for design:  2,618,483
+Additional JTAG gate count for IOBs:  12,528
+Peak Memory Usage:  577 MB
+Total REAL time to MAP completion:  1 mins 36 secs 
+Total CPU time to MAP completion:   1 mins 34 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol std system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 9.1.02i - par J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '2vp100.nph' in environment C:\Xilinx91i.
+   "system" is an NCD, version 3.1, device xc2vp100, package ff1704, speed -6
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.400 Volts. (default - Range: 1.400 to 1.600 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.93 2007-02-23".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                       13 out of 16     81%
+      Number of LOCed BUFGMUXs               5 out of 13     38%
+
+   Number of DCMs                            3 out of 12     25%
+   Number of External IOBs                 261 out of 1040   25%
+      Number of LOCed IOBs                 261 out of 261   100%
+
+   Number of JTAGPPCs                        1 out of 1     100%
+   Number of PPC405s                         2 out of 2     100%
+   Number of RAMB16s                        33 out of 444     7%
+   Number of SLICEs                      23884 out of 44096  54%
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+Starting initial Timing Analysis.  REAL time: 42 secs 
+Finished initial Timing Analysis.  REAL time: 42 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:9fb994) REAL time: 1 mins 34 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:1312cfe) REAL time: 1 mins 34 secs 
+
+Phase 3.31
+WARNING:Place:479 - Use of the left PPC405 has been detected. The left processor requires specialdesign considerations
+   when operating above 350 MHz in the -7 speed grade part.Please see Xilinx Application Note XAPP755 for details.
+Phase 3.31 (Checksum:1c9c37d) REAL time: 1 mins 34 secs 
+
+Phase 4.2
+WARNING:Place:83 - This design either uses more than 8 clock buffers or has clock buffers locked into primary and
+   secondary sites. Since only one clock buffer output signal from a primary / secondary pair may enter any clock region
+   it is necessary to partition the clock logic being driven by these clocks into different clock regions. It may be
+   possible through Floorplanning all or just part of the logic being driven by the Global clocks to achieve a legal
+   placement for this design...................................................................
+.......
+..................
+Phase 4.2 (Checksum:990827) REAL time: 3 mins 1 secs 
+
+Phase 5.30
+Phase 5.30 (Checksum:2faf07b) REAL time: 3 mins 6 secs 
+
+Phase 6.3
+Phase 6.3 (Checksum:39386fa) REAL time: 3 mins 6 secs 
+
+Phase 7.5
+Phase 7.5 (Checksum:42c1d79) REAL time: 3 mins 7 secs 
+
+Phase 8.8
+................................................................................................
+........................
+.....................................................................................................................................................................
+.............................
+.........................
+...
+Phase 8.8 (Checksum:6d93da8) REAL time: 7 mins 16 secs 
+
+Phase 9.5
+Phase 9.5 (Checksum:55d4a77) REAL time: 7 mins 16 secs 
+
+Phase 10.18
+Phase 10.18 (Checksum:5f5e0f6) REAL time: 9 mins 15 secs 
+
+Phase 11.5
+Phase 11.5 (Checksum:68e7775) REAL time: 9 mins 16 secs 
+
+Phase 12.27
+Phase 12.27 (Checksum:7270df4) REAL time: 9 mins 24 secs 
+
+Phase 13.24
+Phase 13.24 (Checksum:7bfa473) REAL time: 9 mins 24 secs 
+
+REAL time consumed by placer: 9 mins 37 secs 
+CPU  time consumed by placer: 9 mins 35 secs 
+Writing design to file system.ncd
+
+
+Total REAL time to Placer completion: 9 mins 44 secs 
+Total CPU time to Placer completion: 9 mins 42 secs 
+
+Starting Router
+
+Phase 1: 180871 unrouted;       REAL time: 10 mins 28 secs 
+
+Phase 2: 170115 unrouted;       REAL time: 13 mins 58 secs 
+
+Phase 3: 57638 unrouted;       REAL time: 14 mins 29 secs 
+
+Phase 4: 57638 unrouted; (2092854)      REAL time: 14 mins 31 secs 
+
+Phase 5: 59636 unrouted; (155628)      REAL time: 15 mins 35 secs 
+
+Phase 6: 59813 unrouted; (67898)      REAL time: 15 mins 40 secs 
+
+Phase 7: 0 unrouted; (74005)      REAL time: 17 mins 13 secs 
+
+Phase 8: 0 unrouted; (74005)      REAL time: 17 mins 34 secs 
+
+Phase 9: 0 unrouted; (74005)      REAL time: 17 mins 52 secs 
+
+WARNING:Route:455 - CLK Net:hwrtos_0/hwrtos_0/USER_LOGIC_I/tick_int may have excessive skew because 
+      1 CLK pins and 4 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:hwrtos_0/hwrtos_0/USER_LOGIC_I/sema4_create_en may have excessive skew because 
+      0 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:hwrtos_0/hwrtos_0/USER_LOGIC_I/test_en may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:hwrtos_0/hwrtos_0/USER_LOGIC_I/sema4_pend_stat_en may have excessive skew because 
+      0 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:hwrtos_0/hwrtos_0/USER_LOGIC_I/os_start_en may have excessive skew because 
+      0 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:hwrtos_0/hwrtos_0/USER_LOGIC_I/time_delay_en may have excessive skew because 
+      0 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:hwrtos_0/hwrtos_0/USER_LOGIC_I/mbox_create_en may have excessive skew because 
+      0 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:hwrtos_0/hwrtos_0/USER_LOGIC_I/mbox_pend_stat_en may have excessive skew because 
+      6 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:hwrtos_0/hwrtos_0/USER_LOGIC_I/sw_ctrl_timer_en may have excessive skew because 
+      1 CLK pins and 20 NON_CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 17 mins 53 secs 
+Total CPU time to Router completion: 17 mins 50 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|              CLKPLB |     BUFGMUX3S|Yes   | 3454 |  1.180     |  2.659      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/update_cl |              |      |      |            |             |
+|                   k |     BUFGMUX6P| No   | 3824 |  1.177     |  2.657      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|  ER_LOGIC_I/tick_en |     BUFGMUX1P| No   |  353 |  0.820     |  2.566      |
++---------------------+--------------+------+------+------------+-------------+
+|              CLKOPB |     BUFGMUX1S|Yes   |  778 |  0.762     |  2.631      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/task_crea |              |      |      |            |             |
+|               te_en |     BUFGMUX5P| No   |  121 |  0.797     |  2.282      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/mbox_post |              |      |      |            |             |
+|                 _en |     BUFGMUX7P| No   |  173 |  1.115     |  2.604      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/sema4_pos |              |      |      |            |             |
+|                t_en |     BUFGMUX4P| No   |  145 |  0.912     |  2.524      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/sema4_pen |              |      |      |            |             |
+|                d_en |     BUFGMUX0P| No   |  133 |  1.101     |  2.601      |
++---------------------+--------------+------+------+------------+-------------+
+|       DDR1_CLKFB_90 |     BUFGMUX0S|Yes   |  167 |  0.390     |  2.418      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/select_cl |              |      |      |            |             |
+|                   k |     BUFGMUX4S| No   |  154 |  0.897     |  2.376      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/mbox_pend |              |      |      |            |             |
+|                 _en |     BUFGMUX2S| No   |  144 |  1.080     |  2.606      |
++---------------------+--------------+------+------+------------+-------------+
+|       DDR_CLKPLB_90 |     BUFGMUX2P|Yes   |   12 |  0.267     |  2.399      |
++---------------------+--------------+------+------+------------+-------------+
+|              CLKCPU |     BUFGMUX5S|Yes   |    1 |  0.000     |  2.135      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/rd_reg4_r |              |      |      |            |             |
+|                  st |         Local|      |   65 |  0.667     |  3.519      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/os_start_ |              |      |      |            |             |
+|                  en |         Local|      |   21 |  0.173     |  3.248      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/mbox_pend |              |      |      |            |             |
+|            _stat_en |         Local|      |  104 |  3.355     |  6.829      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/time_dela |              |      |      |            |             |
+|                y_en |         Local|      |   75 |  1.373     |  4.638      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/rd_reg4_c |              |      |      |            |             |
+|           mp_eq0000 |         Local|      |    1 |  0.000     |  0.619      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/os_time_t |              |      |      |            |             |
+|                 ick |         Local|      |    1 |  0.000     |  0.808      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|  ER_LOGIC_I/test_en |         Local|      |  156 |  1.831     |  4.785      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/hw_init_e |              |      |      |            |             |
+|                   n |         Local|      |   21 |  0.583     |  3.539      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/sema4_pen |              |      |      |            |             |
+|           d_stat_en |         Local|      |   42 |  1.380     |  4.770      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/sema4_cre |              |      |      |            |             |
+|              ate_en |         Local|      |   15 |  0.604     |  3.786      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|   ER_LOGIC_I/cmd_en |         Local|      |    1 |  0.000     |  0.447      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+| ER_LOGIC_I/tick_int |         Local|      |    5 |  0.000     |  1.824      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/mbox_crea |              |      |      |            |             |
+|               te_en |         Local|      |   25 |  0.848     |  3.480      |
++---------------------+--------------+------+------+------------+-------------+
+|opb_intc_i/opb_intc_ |              |      |      |            |             |
+|i/INTC_CORE_I/MANY_I |              |      |      |            |             |
+|NTR_DET_GEN.INTR_DET |              |      |      |            |             |
+|    _I/interrupts<6> |         Local|      |    1 |  0.000     |  1.481      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/os_time_e |              |      |      |            |             |
+|                   n |         Local|      |    1 |  0.000     |  0.584      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/sw_ctrl_t |              |      |      |            |             |
+|             imer_en |         Local|      |   21 |  0.000     |  1.024      |
++---------------------+--------------+------+------+------------+-------------+
+|hwrtos_0/hwrtos_0/US |              |      |      |            |             |
+|ER_LOGIC_I/cont_time |              |      |      |            |             |
+|                r_en |         Local|      |    1 |  0.000     |  0.472      |
++---------------------+--------------+------+------+------------+-------------+
+| jtagppc0_JTGC405TCK |         Local|      |    2 |  5.178     | 10.171      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 74005
+
+WARNING:Par:62 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
+   your design.
+
+      Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+      Route Static Timing Report").  Go to the failing constraint(s) and select
+      the "Timing Improvement Wizard" link for suggestions to correct each problem.
+
+   Increase the PAR Effort Level setting to "high"
+
+   Rerun Map with "-timing" (ISE process "Perform Timing -Driven
+   Packing and Placement"
+
+   Run Multi-Pass Place and Route in PAR using at least 5 "PAR Iterations"
+   (ISE process "Multi Pass Place & Route").
+
+   Use the Xilinx "xplorer" script to try special combinations of
+   options known to produce very good results.
+   See http://www.xilinx.com/ise/implementation/Xplorer.htm for details.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
+
+Number of Timing Constraints that were not applied: 6
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+* COMP "psb_ta_n" OFFSET = IN 7.3 ns BEFORE | SETUP   |    -2.091ns|     9.391ns|      20|        7718
+   COMP "fpga_plb_clk"                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "psb_tea_n" OFFSET = IN 7.3 ns BEFOR | SETUP   |    -2.070ns|     9.370ns|       8|        5772
+  E COMP "fpga_plb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* TS_clock_reset_block_clock_reset_block_ap | SETUP   |    -1.446ns|    13.946ns|     101|       56128
+  1000_bp_clock_generation_clkplb_i =       | HOLD    |     0.213ns|            |       0|           0
+     PERIOD TIMEGRP         "clock_reset_bl |         |            |            |        |            
+  ock_clock_reset_block_ap1000_bp_clock_gen |         |            |            |        |            
+  eration_clkplb_i"         TS_fpga_plb_clk |         |            |            |        |            
+   HIGH 50%                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "psb_bg_n" OFFSET = IN 7.3 ns BEFORE | SETUP   |    -1.101ns|     8.401ns|       2|        1492
+   COMP "fpga_plb_clk"                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "psb_abb_n" OFFSET = IN 7.3 ns BEFOR | SETUP   |    -1.023ns|     8.323ns|       2|        1336
+  E COMP "fpga_plb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "psb_artry_n" OFFSET = IN 7.3 ns BEF | SETUP   |    -0.922ns|     8.222ns|       2|        1134
+  ORE COMP "fpga_plb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "lbus_data<0>" OFFSET = OUT 9 ns AFT | MAXDELAY|    -0.116ns|     9.116ns|       1|         116
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "lbus_data<1>" OFFSET = OUT 9 ns AFT | MAXDELAY|    -0.116ns|     9.116ns|       1|         116
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "lbus_data<2>" OFFSET = OUT 9 ns AFT | MAXDELAY|    -0.095ns|     9.095ns|       1|          95
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "lbus_data<3>" OFFSET = OUT 9 ns AFT | MAXDELAY|    -0.095ns|     9.095ns|       1|          95
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "psb_aack_n" OFFSET = IN 7.3 ns BEFO | SETUP   |    -0.003ns|     7.303ns|       1|           3
+  RE COMP "fpga_plb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_DCR2 = MAXDELAY FROM TIMEGRP "CPUS" TH | SETUP   |     0.025ns|     7.975ns|       0|           0
+  RU TIMEGRP "DCR_DATA_GRP" TO TIMEGRP      |         |            |            |        |            
+      "CPUS" 8 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_DCR1 = MAXDELAY FROM TIMEGRP "FFS" THR | SETUP   |     0.026ns|     7.974ns|       0|           0
+  U TIMEGRP "DCR_DATA_GRP" TO TIMEGRP       |         |            |            |        |            
+     "CPUS" 8 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<5>" OFFSET = OUT 9 ns AFT | MAXDELAY|     0.049ns|     8.951ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<4>" OFFSET = OUT 9 ns AFT | MAXDELAY|     0.049ns|     8.951ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<6>" OFFSET = OUT 9 ns AFT | MAXDELAY|     0.052ns|     8.948ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<7>" OFFSET = OUT 9 ns AFT | MAXDELAY|     0.052ns|     8.948ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "psb_dbb_n" OFFSET = IN 7.3 ns BEFOR | SETUP   |     0.075ns|     7.225ns|       0|           0
+  E COMP "fpga_plb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TSCLK2CLK90 = MAXDELAY FROM TIMEGRP "clkp | SETUP   |     0.111ns|     2.764ns|       0|           0
+  lb" TO TIMEGRP "ddr_clkplb_90" 2.875      |         |            |            |        |            
+      ns                                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_clock_reset_block_clock_reset_block_ap | SETUP   |     0.171ns|     3.995ns|       0|           0
+  1000_bp_clock_generation_clkcpu_i =       | HOLD    |     1.858ns|            |       0|           0
+     PERIOD TIMEGRP         "clock_reset_bl |         |            |            |        |            
+  ock_clock_reset_block_ap1000_bp_clock_gen |         |            |            |        |            
+  eration_clkcpu_i"         TS_fpga_plb_clk |         |            |            |        |            
+   / 3 HIGH 50%                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "psb_dbg_n" OFFSET = IN 7.3 ns BEFOR | SETUP   |     0.185ns|     7.115ns|       0|           0
+  E COMP "fpga_plb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_clock_reset_block_clock_reset_block_ap | SETUP   |     0.856ns|     6.596ns|       0|           0
+  1000_bp_clock_generation_ddr_clk_fb_i     | HOLD    |     0.582ns|            |       0|           0
+       = PERIOD TIMEGRP         "clock_rese |         |            |            |        |            
+  t_block_clock_reset_block_ap1000_bp_clock |         |            |            |        |            
+  _generation_ddr_clk_fb_i"         TS_ddr1 |         |            |            |        |            
+  _clk_fb PHASE -1.562 ns HIGH 50%          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_DCR3 = MAXDELAY FROM TIMEGRP "CPUS" TH | SETUP   |     1.005ns|     6.995ns|       0|           0
+  RU TIMEGRP "DCR_DATA_GRP" TO TIMEGRP      |         |            |            |        |            
+      "FFS" 8 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<0>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.220ns|     7.780ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<1>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.220ns|     7.780ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_we_n" OFFSET = OUT 9 ns AFTER  | MAXDELAY|     1.512ns|     7.488ns|       0|           0
+  COMP "fpga_opb_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_oe_n" OFFSET = OUT 9 ns AFTER  | MAXDELAY|     1.512ns|     7.488ns|       0|           0
+  COMP "fpga_opb_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "flash_cs_n" OFFSET = OUT 9 ns AFTER | MAXDELAY|     2.402ns|     6.598ns|       0|           0
+   COMP "fpga_opb_clk"                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<14>" OFFSET = OUT 9 ns AF | MAXDELAY|     2.887ns|     6.113ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<8>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.033ns|     5.967ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<15>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.087ns|     5.913ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<12>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.094ns|     5.906ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<11>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.189ns|     5.811ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<9>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.238ns|     5.762ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<24>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.305ns|     5.695ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<23>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.305ns|     5.695ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<10>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.308ns|     5.692ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "sysace_cs_n" OFFSET = OUT 9 ns AFTE | MAXDELAY|     3.408ns|     5.592ns|       0|           0
+  R COMP "fpga_opb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<13>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.490ns|     5.510ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<3>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.532ns|     5.468ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<2>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.532ns|     5.468ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<4>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.532ns|     5.468ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<5>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.532ns|     5.468ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<20>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.535ns|     5.465ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<19>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.535ns|     5.465ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<21>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.535ns|     5.465ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<22>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.535ns|     5.465ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "cpld_cs_n" OFFSET = OUT 9 ns AFTER  | MAXDELAY|     3.715ns|     5.285ns|       0|           0
+  COMP "fpga_opb_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<6>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.757ns|     5.243ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<7>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.757ns|     5.243ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<14>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.757ns|     5.243ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<13>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.757ns|     5.243ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<12>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.757ns|     5.243ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<8>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.757ns|     5.243ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<9>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.757ns|     5.243ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<15>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.763ns|     5.237ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<16>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.763ns|     5.237ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<17>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.763ns|     5.237ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<18>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.763ns|     5.237ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "fpga_config_flash_cs_n" OFFSET = OU | MAXDELAY|     3.972ns|     5.028ns|       0|           0
+  T 9 ns AFTER COMP "fpga_opb_clk"          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<10>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.983ns|     5.017ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<11>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.983ns|     5.017ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "cpld_bg_n" OFFSET = OUT 9 ns AFTER  | MAXDELAY|     6.176ns|     2.824ns|       0|           0
+  COMP "fpga_opb_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_clock_reset_block_clock_reset_block_ap | SETUP   |    10.968ns|    12.928ns|       0|           0
+  1000_bp_clock_generation_clkopb_i =       | HOLD    |     0.520ns|            |       0|           0
+     PERIOD TIMEGRP         "clock_reset_bl |         |            |            |        |            
+  ock_clock_reset_block_ap1000_bp_clock_gen |         |            |            |        |            
+  eration_clkopb_i"         TS_fpga_opb_clk |         |            |            |        |            
+   HIGH 50%                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_CPU_2_PLB_ARB_DCR = MAXDELAY FROM TIME | SETUP   |    20.696ns|     4.304ns|       0|           0
+  GRP "CPUS" TO TIMEGRP         "PLB_ARBITE |         |            |            |        |            
+  R_DCR" 25 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_clock_reset_block_clock_reset_block_ap | N/A     |         N/A|         N/A|     N/A|         N/A
+  1000_bp_clock_generation_ddr_clkplb_90_i  |         |            |            |        |            
+          = PERIOD TIMEGRP         "clock_r |         |            |            |        |            
+  eset_block_clock_reset_block_ap1000_bp_cl |         |            |            |        |            
+  ock_generation_ddr_clkplb_90_i"         T |         |            |            |        |            
+  S_fpga_plb_clk PHASE 3.125 ns HIGH 50%    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_fpga_opb_clk = PERIOD TIMEGRP "fpga_op | N/A     |         N/A|         N/A|     N/A|         N/A
+  b_clk" 25 ns HIGH 50%                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ddr1_clk_fb = PERIOD TIMEGRP "ddr1_clk | N/A     |         N/A|         N/A|     N/A|         N/A
+  _fb" 12.5 ns HIGH 50%                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_CLK90 = PERIOD TIMEGRP "ddr_clkplb_90" | N/A     |         N/A|         N/A|     N/A|         N/A
+   12.5 ns HIGH 50%                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_plb_clk = PERIOD TIMEGRP "clkplb" 12.5 | N/A     |         N/A|         N/A|     N/A|         N/A
+   ns HIGH 50%                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_fpga_plb_clk = PERIOD TIMEGRP "fpga_pl | N/A     |         N/A|         N/A|     N/A|         N/A
+  b_clk" 12.5 ns HIGH 50%                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+
+
+11 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 18 mins 21 secs 
+Total CPU time to PAR completion: 18 mins 5 secs 
+
+Peak Memory Usage:  988 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - 140 errors found.
+
+Number of error messages: 0
+Number of warning messages: 12
+Number of info messages: 0
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 9.1.02i - Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+
+Loading device for application Rf_Device from file '2vp100.nph' in environment
+C:\Xilinx91i.
+   "system" is an NCD, version 3.1, device xc2vp100, package ff1704, speed -6
+--------------------------------------------------------------------------------
+Release 9.1.02i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+trce -e 3 -xml system.twx system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc2vp100,-6 (PRODUCTION 1.93 2007-02-23)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a
+   50 Ohm transmission line loading model.  For the details of this model, and
+   for more information on accounting for different loading conditions, please
+   see the device datasheet.
+
+
+Timing summary:
+---------------
+
+Timing errors: 140  Score: 74005
+
+Constraints cover 461905 paths, 0 nets, and 47491 connections
+
+Design statistics:
+   Minimum period:  13.946ns (Maximum frequency:  71.705MHz)
+   Maximum path delay from/to any node:   7.975ns
+   Minimum input required time before clock:   9.391ns
+   Minimum output required time after clock:   9.116ns
+
+
+Analysis completed Tue Feb 16 14:14:06 2010
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 2
+Total time: 49 secs 
+
+

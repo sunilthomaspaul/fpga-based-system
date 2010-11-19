@@ -1,0 +1,63 @@
+// BMM LOC annotation file.
+//
+// Release 9.1.01i - Data2MEM J.33, build 1.5.4 Dec 1, 2006
+// Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+//
+// Created on 06/04/09 01:13 pm
+//
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Processor 'ppc405_i', ID 100, memory map.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_MAP ppc405_i PPC405 100
+
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'ppc405_i' address space 'bram_combined' 0xFFFF0000:0xFFFFFFFF (64 KB).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE bram_combined RAMB16 [0xFFFF0000:0xFFFFFFFF]
+        BUS_BLOCK
+            bram/bram/ramb16_s2_s2_0 [63:62] PLACED = X7Y12;
+            bram/bram/ramb16_s2_s2_1 [61:60] PLACED = X7Y10;
+            bram/bram/ramb16_s2_s2_2 [59:58] PLACED = X7Y11;
+            bram/bram/ramb16_s2_s2_3 [57:56] PLACED = X7Y13;
+            bram/bram/ramb16_s2_s2_4 [55:54] PLACED = X9Y11;
+            bram/bram/ramb16_s2_s2_5 [53:52] PLACED = X10Y12;
+            bram/bram/ramb16_s2_s2_6 [51:50] PLACED = X10Y13;
+            bram/bram/ramb16_s2_s2_7 [49:48] PLACED = X9Y12;
+            bram/bram/ramb16_s2_s2_8 [47:46] PLACED = X8Y12;
+            bram/bram/ramb16_s2_s2_9 [45:44] PLACED = X8Y14;
+            bram/bram/ramb16_s2_s2_10 [43:42] PLACED = X9Y9;
+            bram/bram/ramb16_s2_s2_11 [41:40] PLACED = X10Y9;
+            bram/bram/ramb16_s2_s2_12 [39:38] PLACED = X8Y11;
+            bram/bram/ramb16_s2_s2_13 [37:36] PLACED = X10Y10;
+            bram/bram/ramb16_s2_s2_14 [35:34] PLACED = X8Y10;
+            bram/bram/ramb16_s2_s2_15 [33:32] PLACED = X9Y10;
+            bram/bram/ramb16_s2_s2_16 [31:30] PLACED = X7Y14;
+            bram/bram/ramb16_s2_s2_17 [29:28] PLACED = X10Y14;
+            bram/bram/ramb16_s2_s2_18 [27:26] PLACED = X9Y15;
+            bram/bram/ramb16_s2_s2_19 [25:24] PLACED = X8Y13;
+            bram/bram/ramb16_s2_s2_20 [23:22] PLACED = X7Y18;
+            bram/bram/ramb16_s2_s2_21 [21:20] PLACED = X7Y17;
+            bram/bram/ramb16_s2_s2_22 [19:18] PLACED = X10Y15;
+            bram/bram/ramb16_s2_s2_23 [17:16] PLACED = X7Y16;
+            bram/bram/ramb16_s2_s2_24 [15:14] PLACED = X9Y17;
+            bram/bram/ramb16_s2_s2_25 [13:12] PLACED = X9Y18;
+            bram/bram/ramb16_s2_s2_26 [11:10] PLACED = X9Y16;
+            bram/bram/ramb16_s2_s2_27 [9:8] PLACED = X8Y15;
+            bram/bram/ramb16_s2_s2_28 [7:6] PLACED = X8Y16;
+            bram/bram/ramb16_s2_s2_29 [5:4] PLACED = X9Y14;
+            bram/bram/ramb16_s2_s2_30 [3:2] PLACED = X8Y17;
+            bram/bram/ramb16_s2_s2_31 [1:0] PLACED = X9Y13;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+END_ADDRESS_MAP;
+
