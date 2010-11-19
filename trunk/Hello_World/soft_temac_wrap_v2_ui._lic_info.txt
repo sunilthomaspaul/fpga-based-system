@@ -1,0 +1,10 @@
+<b>License Status for xps_ll_temac, 2.03.a</b>
+Feature:	soft_temac_wrap_v2
+Status:	Hardware Evaluation
+License version limit found:	1.0
+Minimum version limit required:	1.0
+Expiration date:	Jan-30-2016
+Current host ID:	002564aadf10
+License type:	FLEXlm
+Built in search paths:	C:\.Xilinx;C:\.Xilinx\Coregen\CoreLicenses;C:\Xilinx\12.3\ISE_DS\EDK\data\core_licenses;C:\Xilinx\12.3\ISE_DS\EDK\coregen\core_licenses;C:\Xilinx\12.3\ISE_DS\ISE\coregen\core_licenses
+XILINXD_LICENSE_FILE:	2100@trevor
