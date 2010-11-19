@@ -1,0 +1,56 @@
+
+    Public Domain Release of the MicroC/OS port to PPC 405GP.
+
+The files in this release contain v2.00 release of the MicroC/OS
+that has been ported to the PowerPC 405GP Microcontroller. The
+port has been tested on the IBM Walnut Evaluation board based on
+the Revision C of the processor.
+
+The Diab tools (Rel 4.3 Rev f) was used to build the kernel and 
+other files. At the post linking stage tools to get a flat image
+file (*.img) The .img file can be directly loaded into the 
+Walnut board from the ROM monitor on Walnut.
+
+PPC 405GP has several onchip peripherals. The current release of the
+port has not enabled support for all the peripherals. Support for
+the 2 UART channels is provided. UART0 can be used as a console port.
+UART1 can be used as a serial I/O port. It is planned to support
+the other peripherals in the next release.
+
+This distribution contains ONLY the PowerPC port code.  It is
+expected that the user will have acquired the code for the UCOS-II
+kernel and the associated manual from Jean J. Labrosse, Weston, FL
+Jean.Labrosse@uCOS-II.com . See http://www.ucos-ii.com for details.
+
+Note:
+----
+The source directory contains the MicroC/OS v2.0 cpu independent files.
+You can have this ported to a new version of the OS simply by 
+having the path to the new OS independent files defined for UCOSDIR 
+in the makefile.
+
+How to build and load:
+---------------------
+1. Extract the package 
+   - extract using tar -xvf <package>.tar or unzip <package>.zip.
+   - package is extacted to software/ucos-ii/PPC405/diab/ 
+2. Set the environment variable DIABPATH to the path where the diab
+   tools can be found.
+   Example: In csh, 
+   setenv DIABPATH path_to_diab_tools
+3. Ensure that you have atleast Rel 4.3 Rev f version of the diab tools.
+   dcc -V and das -V
+4. Set the UCOSDIR variable in the makefile to point to the path to
+   the processor independent files.
+5. type 'make'
+6. The final image ucosppc.elf and ucosppc.img is obtained.
+7. If you use walnut board, ucosppc.img can be loaded using the walnut
+   boot monitor.
+
+Please feel free to ask me any questions or report any problems
+
+Author: Ganesh.S
+Wipro Technologies India. (http://www.wipro.com)
+ganesh.subramaniam@wipro.com 
+
+Sept 19, 2001

@@ -1,0 +1,109 @@
+
+bitinit version Xilinx EDK 9.1.02 Build EDK_J_SP2.4
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_emc_v2_00_a/data/plb_emc_v2_1_0.tcl
+...
+
+Overriding IP level properties ...
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-Fall09-Working_Copy\pcores\modified_plb_ddr_co
+   ntroller_v1_00_c\data\modified_plb_ddr_controller_v2_1_0.mpd line 50 -
+   plb_ddr_controller_i (modified_plb_ddr_controller) tool is overriding
+   PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 41 - bram (bram_block) tool is overriding PARAMETER C_FAMILY
+   value to 
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 38 - plb2opb_bridge_i (plb2opb_bridge) tool is overriding
+   PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.m
+   pd line 38 - opb_intc_i (opb_intc) tool is overriding PARAMETER C_FAMILY
+   value to 
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-Fall09-Working_Copy\pcores\plb_psb_bridge_v1_0
+   0_a\data\plb_psb_bridge_v2_1_0.mpd line 97 - plb_psb_bridge_i
+   (plb_psb_bridge) tool is overriding PARAMETER C_FAMILY value to 
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2_1_0.mpd
+   line 45 - ppc405_ppcjtag_chain (ppc405) tcl is overriding PARAMETER
+   C_ISOCM_DCR_HIGHADDR value to 0b0000010011
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v2_00_c\data\ppc405_v2_1_0.mpd
+   line 47 - ppc405_ppcjtag_chain (ppc405) tcl is overriding PARAMETER
+   C_DSOCM_DCR_HIGHADDR value to 0b0000100011
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntl
+   r_v2_1_0.mpd line 35 - jtagppc_0 (jtagppc_cntlr) tool is overriding PARAMETER
+   C_DEVICE value to 
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.m
+   pd line 40 - opb_gpio_0 (opb_gpio) tool is overriding PARAMETER C_FAMILY
+   value to 
+INFO:MDT -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b\data\opb_timer_v2_1_0
+   .mpd line 34 - opb_timer_0 (opb_timer) tool is overriding PARAMETER C_FAMILY
+   value to 
+INFO:MDT -
+   C:\Baseline_9_Working_Folder\K-Fall09-Working_Copy\pcores\hwrtos_v1_00_a\data
+   \hwrtos_v2_1_0.mpd line 30 - hwrtos_0 (hwrtos) tool is overriding PARAMETER
+   C_FAMILY value to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_if_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/emc_common_v2_00_a/data/emc_common_v2_1_0.
+tcl ...
+Address Map for Processor ppc405_i
+  (0b0000000000-0b0011111111) plb_bus	dcr_bus
+  (0b0100000000-0b0111111111) plb2opb_bridge_i	dcr_bus
+  (0b1000010000-0b1000010011) ppc405_i	
+  (0b1000100000-0b1000100011) ppc405_i	
+  (0000000000-0x1fffffff) plb_ddr_controller_i	plb_bus
+  (0x29000000-0x29ffffff) opb_gpio_0	plb_bus->plb2opb_bridge_i->opb_bus
+  (0x40000000-0x4000ffff) hwrtos_0	plb_bus
+  (0x4c000000-0x4c00ffff) RS232_1	plb_bus->plb2opb_bridge_i->opb_bus
+  (0x4d000000-0x4dffffff) opb_intc_i	plb_bus->plb2opb_bridge_i->opb_bus
+  (0x4fff0000-0x4fffffff) opb_timer_0	plb_bus->plb2opb_bridge_i->opb_bus
+  (0x50000000-0x50ffffff) plb_emc_0	plb_bus
+  (0xffff0000-0xffffffff) plb_bram_if_cntlr_i	plb_bus
+Address Map for Processor ppc405_ppcjtag_chain
+  (0b0000010000-0b0000010011) ppc405_ppcjtag_chain	
+  (0b0000100000-0b0000100011) ppc405_ppcjtag_chain	
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_i for overlap...
+
+
+Analyzing file EX1_OS/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -bt "implementation/system.bit"  -bd
+"EX1_OS/executable.elf" tag ppc405_i  -o b implementation/download.bit 
+Memory Initialization completed successfully.
+

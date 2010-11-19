@@ -1,0 +1,73 @@
+The PowerPC 405GP and Walnut specific files. 
+--------------------------------------------
+
+crt0.s
+The startup file for Walnut PPC 405GP.
+
+multit.c
+A simple test program that demonstates multitasking. uses semaphores also.
+
+uart_init.c
+uart_tx.c
+Uart tx/rx routines. Implements UART0 for console operations.
+UART1 can be used for other serial I/O.
+
+iolib.s
+ppclib.s
+ppcuic.s 
+ppcmal.s
+
+Contains all the register access routines for the PPC 405.
+
+board.inc
+Currently just includes walnut.inc
+
+walnut.inc
+Contains some definitions for walnut used only in assembly file.
+
+p405.inc
+Contains PPC 405 specific definitions used only in assembly file.
+
+ppc.h 
+Contains generic PowerPc register definitions. 
+
+ppc4xx.h
+Contains PowerPC405 specific definitions.
+
+types.h
+Contains some data types
+
+walnut.h
+Contains Walnut board specific definitions.
+
+uart.h
+Contains UART Register definitions.
+
+interrupts.c
+Contains interrupt management routines.
+
+The PowerPC port files. 
+------------------------
+Mainly taken from Harry E. Barnett port.
+
+os_cpu.h
+
+os_cpu_c.c
+Contains the PowerPC specific C language code for UCOS-II
+
+os_cpu_a.s
+Contains the PowerPC specific Assembly language code for UCOS-II
+
+Tools and utilities:
+-------------------
+walnut.dld
+Contains the linker command descriptions as required by diab.
+
+These tools Compiles and creates a *.img file from the elf file.
+makefile 
+elf.pl
+mkevimg 
+
+Author: Ganesh.S
+Wipro Technologies India. (http://www.wipro.com)
+ganesh.subramaniam@wipro.com 

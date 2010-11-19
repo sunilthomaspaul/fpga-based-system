@@ -1,0 +1,854 @@
+Release 9.1.02i - xst J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+Verilog Include Directory          : {"C:\Baseline_9_Working_Folder\K-new-base\pcores\" "C:\EDK\hw\XilinxProcessorIPLib\pcores\" "C:\EDK\hw\XilinxReferenceDesigns\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc2vp100ff1704-6
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 10000
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" in Library work.
+Entity <system> compiled.
+Entity <system> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system> in library <work> (architecture <STRUCTURE>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system> in library <work> (Architecture <STRUCTURE>).
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2655: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2663: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2671: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2679: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2687: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2695: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2703: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2711: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2719: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2727: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2735: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2743: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2751: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2759: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2767: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2775: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2783: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2791: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2799: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2807: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2815: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2823: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2831: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2839: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2847: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2855: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2863: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2871: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2879: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2887: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2895: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2903: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2911: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2919: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2927: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2935: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2943: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2951: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2959: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2967: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2975: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2983: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2991: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 2999: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3007: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3015: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3023: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3031: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3039: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3047: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3055: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3063: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3071: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3079: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3087: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3095: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3103: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3111: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3119: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3127: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3135: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3143: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3151: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3159: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3167: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3175: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3183: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3191: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3199: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3207: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3215: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3223: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3231: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3239: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3247: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3255: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3263: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3271: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3279: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3287: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3295: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3303: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3311: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3319: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3327: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3335: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3343: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3351: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3359: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3367: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3375: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3383: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3391: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3399: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3407: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3415: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3423: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3431: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3439: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3447: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3455: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3463: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3471: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3479: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3487: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3495: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3503: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3511: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3519: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3527: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3535: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3543: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3551: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3559: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3567: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3575: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3583: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3591: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3599: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3607: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3615: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3623: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3631: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3639: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3647: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3655: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3663: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3671: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3679: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3687: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3695: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3703: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3711: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3719: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3727: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3735: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3743: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3751: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3759: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3767: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3775: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3783: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3791: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3799: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3807: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3815: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3823: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3831: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3839: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3847: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3855: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3863: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3871: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3879: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3887: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3895: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3903: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3911: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3919: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3927: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3935: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3943: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3951: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3959: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3967: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3975: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3983: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3991: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 3999: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4007: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4015: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4023: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4031: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4039: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4047: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4055: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4063: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4071: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4079: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4087: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4095: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4103: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4111: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4119: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4127: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4135: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4143: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4151: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4159: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4167: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4175: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4183: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4191: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4199: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4207: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4215: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4223: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4231: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4239: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4247: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd" line 4255: Instantiating black box module <IOBUF>.
+Entity <system> analyzed. Unit <system> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <system>.
+    Related source file is "C:/Baseline_9_Working_Folder/K-new-base/hdl/system.vhd".
+WARNING:Xst:646 - Signal <plb_bus_PLB_SMBusy<2:3>> is assigned but never used.
+WARNING:Xst:646 - Signal <plb_bus_PLB_SMErr<2:3>> is assigned but never used.
+Unit <system> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../implementation/clock_reset_block_wrapper.ngc>.
+Reading core <../implementation/ppc405_i_wrapper.ngc>.
+Reading core <../implementation/plb_bus_wrapper.ngc>.
+Reading core <../implementation/plb_ddr_controller_i_wrapper.ngc>.
+Reading core <../implementation/plb_bram_if_cntlr_i_wrapper.ngc>.
+Reading core <../implementation/bram_wrapper.ngc>.
+Reading core <../implementation/plb2opb_bridge_i_wrapper.ngc>.
+Reading core <../implementation/opb_bus_wrapper.ngc>.
+Reading core <../implementation/ap1000_interrupt_interface_i_wrapper.ngc>.
+Reading core <../implementation/opb_intc_i_wrapper.ngc>.
+Reading core <../implementation/rs232_1_wrapper.ngc>.
+Reading core <../implementation/opbslave_ext_bridge_i_wrapper.ngc>.
+Reading core <../implementation/plb_psb_bridge_i_wrapper.ngc>.
+Reading core <../implementation/dcr_bus_wrapper.ngc>.
+Reading core <../implementation/ppc405_ppcjtag_chain_wrapper.ngc>.
+Reading core <../implementation/jtagppc_0_wrapper.ngc>.
+Reading core <../implementation/plb_emc_0_wrapper.ngc>.
+Reading core <../implementation/opb_gpio_0_wrapper.ngc>.
+Reading core <../implementation/opb_timer_0_wrapper.ngc>.
+Reading core <../implementation/hwrtos_0_wrapper.ngc>.
+Loading core <clock_reset_block_wrapper> for timing and area information for instance <clock_reset_block>.
+Loading core <ppc405_i_wrapper> for timing and area information for instance <ppc405_i>.
+Loading core <plb_bus_wrapper> for timing and area information for instance <plb_bus>.
+Loading core <plb_ddr_controller_i_wrapper> for timing and area information for instance <plb_ddr_controller_i>.
+Loading core <plb_bram_if_cntlr_i_wrapper> for timing and area information for instance <plb_bram_if_cntlr_i>.
+Loading core <bram_wrapper> for timing and area information for instance <bram>.
+Loading core <plb2opb_bridge_i_wrapper> for timing and area information for instance <plb2opb_bridge_i>.
+Loading core <opb_bus_wrapper> for timing and area information for instance <opb_bus>.
+Loading core <ap1000_interrupt_interface_i_wrapper> for timing and area information for instance <ap1000_interrupt_interface_i>.
+Loading core <opb_intc_i_wrapper> for timing and area information for instance <opb_intc_i>.
+Loading core <rs232_1_wrapper> for timing and area information for instance <rs232_1>.
+Loading core <opbslave_ext_bridge_i_wrapper> for timing and area information for instance <opbslave_ext_bridge_i>.
+Loading core <plb_psb_bridge_i_wrapper> for timing and area information for instance <plb_psb_bridge_i>.
+Loading core <dcr_bus_wrapper> for timing and area information for instance <dcr_bus>.
+Loading core <ppc405_ppcjtag_chain_wrapper> for timing and area information for instance <ppc405_ppcjtag_chain>.
+Loading core <jtagppc_0_wrapper> for timing and area information for instance <jtagppc_0>.
+Loading core <plb_emc_0_wrapper> for timing and area information for instance <plb_emc_0>.
+Loading core <opb_gpio_0_wrapper> for timing and area information for instance <opb_gpio_0>.
+Loading core <opb_timer_0_wrapper> for timing and area information for instance <opb_timer_0>.
+Loading core <hwrtos_0_wrapper> for timing and area information for instance <hwrtos_0>.
+Loading device for application Rf_Device from file '2vp100.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2260 - The FF/Latch <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0> in Unit <plb_bus> is equivalent to the following FF/Latch : <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_3> in Unit <plb_bus> is equivalent to the following FF/Latch : <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_3_1> 
+INFO:Xst:2260 - The FF/Latch <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1> in Unit <plb_bus> is equivalent to the following FF/Latch : <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2> in Unit <plb_bus> is equivalent to the following FF/Latch : <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/I_BURST_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_BURST_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/WRITE_DQS_EN_GEN[3].WR_DQS_REG> in Unit <plb_ddr_controller_i> is equivalent to the following 3 FFs/Latches : <plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/WRITE_DQS_EN_GEN[2].WR_DQS_REG> <plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/WRITE_DQS_EN_GEN[1].WR_DQS_REG> <plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/WRITE_DQS_EN_GEN[0].WR_DQS_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_RST_I> in Unit <plb_ddr_controller_i> is equivalent to the following 3 FFs/Latches : <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_RST_I> <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_RST_I> <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_RST_I> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/I_CACHLN_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_CACHLN_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_OE_REG_I> in Unit <plb_ddr_controller_i> is equivalent to the following 3 FFs/Latches : <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_OE_REG_I> <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_OE_REG_I> <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_OE_REG_I> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/I_SNGL_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_SNGL_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb2opb_bridge_i/Read_inprog> in Unit <plb2opb_bridge_i> is equivalent to the following FF/Latch : <plb2opb_bridge_i/Read_inprog_1> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[20].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[20].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[0].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[0].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[7].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[7].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[10].INTC_DBUS_BIT_I> in Unit <opb_intc_i> is equivalent to the following 10 FFs/Latches : <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[9].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[8].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[7].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[6].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[5].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[4].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[3].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[2].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[1].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[0].INTC_DBUS_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[18].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[18].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[16].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[16].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[2].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[2].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[11].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[11].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[9].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[9].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[4].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[4].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[13].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[13].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[6].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[6].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[15].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[15].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[17].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[17].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[8].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[8].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[10].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[10].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[5].IVR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following 15 FFs/Latches : <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[6].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[7].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[8].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[9].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[10].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[11].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[12].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[13].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[14].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[15].IVR_REG_BIT_I>
+   <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[16].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[17].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[18].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[19].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[20].IVR_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[1].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[1].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[3].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[3].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[19].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[19].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[12].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[12].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[14].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[14].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[5].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[5].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opbslave_ext_bridge_i/bridge/flash_cs_n> in Unit <opbslave_ext_bridge_i> is equivalent to the following FF/Latch : <opbslave_ext_bridge_i/bridge/flash_cs_n_1> 
+INFO:Xst:2260 - The FF/Latch <opbslave_ext_bridge_i/bridge/current_ext_access_0> in Unit <opbslave_ext_bridge_i> is equivalent to the following 2 FFs/Latches : <opbslave_ext_bridge_i/bridge/current_ext_access_0_1> <opbslave_ext_bridge_i/bridge/current_ext_access_0_2> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/PSB_d_T_0> in Unit <plb_psb_bridge_i> is equivalent to the following 63 FFs/Latches : <plb_psb_bridge_i/PSB_d_T_1> <plb_psb_bridge_i/PSB_d_T_2> <plb_psb_bridge_i/PSB_d_T_3> <plb_psb_bridge_i/PSB_d_T_4> <plb_psb_bridge_i/PSB_d_T_5> <plb_psb_bridge_i/PSB_d_T_6> <plb_psb_bridge_i/PSB_d_T_7> <plb_psb_bridge_i/PSB_d_T_8> <plb_psb_bridge_i/PSB_d_T_9> <plb_psb_bridge_i/PSB_d_T_10> <plb_psb_bridge_i/PSB_d_T_11> <plb_psb_bridge_i/PSB_d_T_12> <plb_psb_bridge_i/PSB_d_T_13> <plb_psb_bridge_i/PSB_d_T_14> <plb_psb_bridge_i/PSB_d_T_15> <plb_psb_bridge_i/PSB_d_T_16> <plb_psb_bridge_i/PSB_d_T_17> <plb_psb_bridge_i/PSB_d_T_18> <plb_psb_bridge_i/PSB_d_T_19> <plb_psb_bridge_i/PSB_d_T_20> <plb_psb_bridge_i/PSB_d_T_21> <plb_psb_bridge_i/PSB_d_T_22> <plb_psb_bridge_i/PSB_d_T_23> <plb_psb_bridge_i/PSB_d_T_24> <plb_psb_bridge_i/PSB_d_T_25> <plb_psb_bridge_i/PSB_d_T_26> <plb_psb_bridge_i/PSB_d_T_27> <plb_psb_bridge_i/PSB_d_T_28> <plb_psb_bridge_i/PSB_d_T_29> <plb_psb_bridge_i/PSB_d_T_30>
+   <plb_psb_bridge_i/PSB_d_T_31> <plb_psb_bridge_i/PSB_d_T_32> <plb_psb_bridge_i/PSB_d_T_33> <plb_psb_bridge_i/PSB_d_T_34> <plb_psb_bridge_i/PSB_d_T_35> <plb_psb_bridge_i/PSB_d_T_36> <plb_psb_bridge_i/PSB_d_T_37> <plb_psb_bridge_i/PSB_d_T_38> <plb_psb_bridge_i/PSB_d_T_39> <plb_psb_bridge_i/PSB_d_T_40> <plb_psb_bridge_i/PSB_d_T_41> <plb_psb_bridge_i/PSB_d_T_42> <plb_psb_bridge_i/PSB_d_T_43> <plb_psb_bridge_i/PSB_d_T_44> <plb_psb_bridge_i/PSB_d_T_45> <plb_psb_bridge_i/PSB_d_T_46> <plb_psb_bridge_i/PSB_d_T_47> <plb_psb_bridge_i/PSB_d_T_48> <plb_psb_bridge_i/PSB_d_T_49> <plb_psb_bridge_i/PSB_d_T_50> <plb_psb_bridge_i/PSB_d_T_51> <plb_psb_bridge_i/PSB_d_T_52> <plb_psb_bridge_i/PSB_d_T_53> <plb_psb_bridge_i/PSB_d_T_54> <plb_psb_bridge_i/PSB_d_T_55> <plb_psb_bridge_i/PSB_d_T_56> <plb_psb_bridge_i/PSB_d_T_57> <plb_psb_bridge_i/PSB_d_T_58> <plb_psb_bridge_i/PSB_d_T_59> <plb_psb_bridge_i/PSB_d_T_60> <plb_psb_bridge_i/PSB_d_T_61> <plb_psb_bridge_i/PSB_d_T_62> <plb_psb_bridge_i/PSB_d_T_63> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_s> in Unit <plb_psb_bridge_i> is equivalent to the following FF/Latch : <plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_s_1> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_abb_n_o_reg> in Unit <plb_psb_bridge_i> is equivalent to the following 42 FFs/Latches : <plb_psb_bridge_i/PSB_tt_T_0> <plb_psb_bridge_i/PSB_tt_T_1> <plb_psb_bridge_i/PSB_tt_T_2> <plb_psb_bridge_i/PSB_tt_T_3> <plb_psb_bridge_i/PSB_tt_T_4> <plb_psb_bridge_i/PSB_tsiz_T_0> <plb_psb_bridge_i/PSB_tsiz_T_1> <plb_psb_bridge_i/PSB_tsiz_T_2> <plb_psb_bridge_i/PSB_tsiz_T_3> <plb_psb_bridge_i/PSB_tbst_n_T> <plb_psb_bridge_i/PSB_a_T_0> <plb_psb_bridge_i/PSB_a_T_1> <plb_psb_bridge_i/PSB_a_T_2> <plb_psb_bridge_i/PSB_a_T_3> <plb_psb_bridge_i/PSB_a_T_4> <plb_psb_bridge_i/PSB_a_T_5> <plb_psb_bridge_i/PSB_a_T_6> <plb_psb_bridge_i/PSB_a_T_7> <plb_psb_bridge_i/PSB_a_T_8> <plb_psb_bridge_i/PSB_a_T_9> <plb_psb_bridge_i/PSB_a_T_10> <plb_psb_bridge_i/PSB_a_T_11> <plb_psb_bridge_i/PSB_a_T_12> <plb_psb_bridge_i/PSB_a_T_13> <plb_psb_bridge_i/PSB_a_T_14> <plb_psb_bridge_i/PSB_a_T_15> <plb_psb_bridge_i/PSB_a_T_16> <plb_psb_bridge_i/PSB_a_T_17>
+   <plb_psb_bridge_i/PSB_a_T_18> <plb_psb_bridge_i/PSB_a_T_19> <plb_psb_bridge_i/PSB_a_T_20> <plb_psb_bridge_i/PSB_a_T_21> <plb_psb_bridge_i/PSB_a_T_22> <plb_psb_bridge_i/PSB_a_T_23> <plb_psb_bridge_i/PSB_a_T_24> <plb_psb_bridge_i/PSB_a_T_25> <plb_psb_bridge_i/PSB_a_T_26> <plb_psb_bridge_i/PSB_a_T_27> <plb_psb_bridge_i/PSB_a_T_28> <plb_psb_bridge_i/PSB_a_T_29> <plb_psb_bridge_i/PSB_a_T_30> <plb_psb_bridge_i/PSB_a_T_31> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full> in Unit <plb_psb_bridge_i> is equivalent to the following FF/Latch : <plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_1> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_br_n> in Unit <plb_psb_bridge_i> is equivalent to the following FF/Latch : <plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_br_n_int> 
+INFO:Xst:2260 - The FF/Latch <opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[21].TCSR0_FF_I> in Unit <opb_timer_0> is equivalent to the following FF/Latch : <opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[21].TCSR1_FF_I> 
+INFO:Xst:2260 - The FF/Latch <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SIZE_FF_GEN[0].FF_I> in Unit <hwrtos_0> is equivalent to the following 2 FFs/Latches : <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SIZE_FF_GEN[2].FF_I> <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SIZE_FF_GEN[3].FF_I> 
+INFO:Xst:2260 - The FF/Latch <hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/lcl_busy_i> in Unit <hwrtos_0> is equivalent to the following FF/Latch : <hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/lcl_busy_i_1> 
+INFO:Xst:2260 - The FF/Latch <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/TYPE_FF_GEN[0].FF_I> in Unit <hwrtos_0> is equivalent to the following 2 FFs/Latches : <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/TYPE_FF_GEN[1].FF_I> <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/TYPE_FF_GEN[2].FF_I> 
+INFO:Xst:2260 - The FF/Latch <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0> in Unit <plb_bus> is equivalent to the following FF/Latch : <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_3> in Unit <plb_bus> is equivalent to the following FF/Latch : <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_3_1> 
+INFO:Xst:2260 - The FF/Latch <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1> in Unit <plb_bus> is equivalent to the following FF/Latch : <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2> in Unit <plb_bus> is equivalent to the following FF/Latch : <plb_bus/I_PLB_ARBITER_LOGIC/I_PRIORITY_ENCODER/I_ARBADDRSEL/arbAddrSelReg_i_2_1> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/I_BURST_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_BURST_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/WRITE_DQS_EN_GEN[3].WR_DQS_REG> in Unit <plb_ddr_controller_i> is equivalent to the following 3 FFs/Latches : <plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/WRITE_DQS_EN_GEN[2].WR_DQS_REG> <plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/WRITE_DQS_EN_GEN[1].WR_DQS_REG> <plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/WRITE_DQS_EN_GEN[0].WR_DQS_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_RST_I> in Unit <plb_ddr_controller_i> is equivalent to the following 3 FFs/Latches : <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_RST_I> <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_RST_I> <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_RST_I> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/I_CACHLN_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_CACHLN_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[3].DQS_OE_REG_I> in Unit <plb_ddr_controller_i> is equivalent to the following 3 FFs/Latches : <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[2].DQS_OE_REG_I> <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[1].DQS_OE_REG_I> <plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/DQS_OE_SETRST_GEN[0].DQS_OE_REG_I> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/I_SNGL_S_H_REG> in Unit <plb_ddr_controller_i> is equivalent to the following FF/Latch : <plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_SNGL_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <plb2opb_bridge_i/Read_inprog> in Unit <plb2opb_bridge_i> is equivalent to the following FF/Latch : <plb2opb_bridge_i/Read_inprog_1> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[3].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[3].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[5].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[5].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[6].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[6].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[11].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[11].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[20].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[20].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[17].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[17].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[8].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[8].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[18].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[18].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[19].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[19].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[0].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[0].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[1].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[1].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[7].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[7].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[13].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[13].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[5].IVR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following 15 FFs/Latches : <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[6].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[7].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[8].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[9].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[10].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[11].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[12].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[13].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[14].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[15].IVR_REG_BIT_I>
+   <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[16].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[17].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[18].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[19].IVR_REG_BIT_I> <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IVR_GEN.IVR_REG_GEN[20].IVR_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[14].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[14].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[15].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[15].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[10].INTC_DBUS_BIT_I> in Unit <opb_intc_i> is equivalent to the following 10 FFs/Latches : <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[9].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[8].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[7].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[6].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[5].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[4].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[3].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[2].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[1].INTC_DBUS_BIT_I> <opb_intc_i/OPB_INTFC_I/INTC_DBUS_REG_GEN[0].INTC_DBUS_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[2].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[2].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[9].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[9].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[4].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[4].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[10].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[10].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[16].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[16].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opb_intc_i/INTC_CORE_I/REGS_I/OPT_REGS_I/IPR_GEN.IPR_REG_GEN[12].IPR_REG_BIT_I> in Unit <opb_intc_i> is equivalent to the following FF/Latch : <opb_intc_i/INTC_CORE_I/IRQ_GEN_I/MASKED_INTS_REG_GEN[12].MASKED_INTS_REG_BIT_I> 
+INFO:Xst:2260 - The FF/Latch <opbslave_ext_bridge_i/bridge/flash_cs_n> in Unit <opbslave_ext_bridge_i> is equivalent to the following FF/Latch : <opbslave_ext_bridge_i/bridge/flash_cs_n_1> 
+INFO:Xst:2260 - The FF/Latch <opbslave_ext_bridge_i/bridge/current_ext_access_0> in Unit <opbslave_ext_bridge_i> is equivalent to the following 2 FFs/Latches : <opbslave_ext_bridge_i/bridge/current_ext_access_0_1> <opbslave_ext_bridge_i/bridge/current_ext_access_0_2> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/PSB_d_T_0> in Unit <plb_psb_bridge_i> is equivalent to the following 63 FFs/Latches : <plb_psb_bridge_i/PSB_d_T_1> <plb_psb_bridge_i/PSB_d_T_2> <plb_psb_bridge_i/PSB_d_T_3> <plb_psb_bridge_i/PSB_d_T_4> <plb_psb_bridge_i/PSB_d_T_5> <plb_psb_bridge_i/PSB_d_T_6> <plb_psb_bridge_i/PSB_d_T_7> <plb_psb_bridge_i/PSB_d_T_8> <plb_psb_bridge_i/PSB_d_T_9> <plb_psb_bridge_i/PSB_d_T_10> <plb_psb_bridge_i/PSB_d_T_11> <plb_psb_bridge_i/PSB_d_T_12> <plb_psb_bridge_i/PSB_d_T_13> <plb_psb_bridge_i/PSB_d_T_14> <plb_psb_bridge_i/PSB_d_T_15> <plb_psb_bridge_i/PSB_d_T_16> <plb_psb_bridge_i/PSB_d_T_17> <plb_psb_bridge_i/PSB_d_T_18> <plb_psb_bridge_i/PSB_d_T_19> <plb_psb_bridge_i/PSB_d_T_20> <plb_psb_bridge_i/PSB_d_T_21> <plb_psb_bridge_i/PSB_d_T_22> <plb_psb_bridge_i/PSB_d_T_23> <plb_psb_bridge_i/PSB_d_T_24> <plb_psb_bridge_i/PSB_d_T_25> <plb_psb_bridge_i/PSB_d_T_26> <plb_psb_bridge_i/PSB_d_T_27> <plb_psb_bridge_i/PSB_d_T_28> <plb_psb_bridge_i/PSB_d_T_29> <plb_psb_bridge_i/PSB_d_T_30>
+   <plb_psb_bridge_i/PSB_d_T_31> <plb_psb_bridge_i/PSB_d_T_32> <plb_psb_bridge_i/PSB_d_T_33> <plb_psb_bridge_i/PSB_d_T_34> <plb_psb_bridge_i/PSB_d_T_35> <plb_psb_bridge_i/PSB_d_T_36> <plb_psb_bridge_i/PSB_d_T_37> <plb_psb_bridge_i/PSB_d_T_38> <plb_psb_bridge_i/PSB_d_T_39> <plb_psb_bridge_i/PSB_d_T_40> <plb_psb_bridge_i/PSB_d_T_41> <plb_psb_bridge_i/PSB_d_T_42> <plb_psb_bridge_i/PSB_d_T_43> <plb_psb_bridge_i/PSB_d_T_44> <plb_psb_bridge_i/PSB_d_T_45> <plb_psb_bridge_i/PSB_d_T_46> <plb_psb_bridge_i/PSB_d_T_47> <plb_psb_bridge_i/PSB_d_T_48> <plb_psb_bridge_i/PSB_d_T_49> <plb_psb_bridge_i/PSB_d_T_50> <plb_psb_bridge_i/PSB_d_T_51> <plb_psb_bridge_i/PSB_d_T_52> <plb_psb_bridge_i/PSB_d_T_53> <plb_psb_bridge_i/PSB_d_T_54> <plb_psb_bridge_i/PSB_d_T_55> <plb_psb_bridge_i/PSB_d_T_56> <plb_psb_bridge_i/PSB_d_T_57> <plb_psb_bridge_i/PSB_d_T_58> <plb_psb_bridge_i/PSB_d_T_59> <plb_psb_bridge_i/PSB_d_T_60> <plb_psb_bridge_i/PSB_d_T_61> <plb_psb_bridge_i/PSB_d_T_62> <plb_psb_bridge_i/PSB_d_T_63> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_s> in Unit <plb_psb_bridge_i> is equivalent to the following FF/Latch : <plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_s_1> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_abb_n_o_reg> in Unit <plb_psb_bridge_i> is equivalent to the following 42 FFs/Latches : <plb_psb_bridge_i/PSB_tt_T_0> <plb_psb_bridge_i/PSB_tt_T_1> <plb_psb_bridge_i/PSB_tt_T_2> <plb_psb_bridge_i/PSB_tt_T_3> <plb_psb_bridge_i/PSB_tt_T_4> <plb_psb_bridge_i/PSB_tsiz_T_0> <plb_psb_bridge_i/PSB_tsiz_T_1> <plb_psb_bridge_i/PSB_tsiz_T_2> <plb_psb_bridge_i/PSB_tsiz_T_3> <plb_psb_bridge_i/PSB_tbst_n_T> <plb_psb_bridge_i/PSB_a_T_0> <plb_psb_bridge_i/PSB_a_T_1> <plb_psb_bridge_i/PSB_a_T_2> <plb_psb_bridge_i/PSB_a_T_3> <plb_psb_bridge_i/PSB_a_T_4> <plb_psb_bridge_i/PSB_a_T_5> <plb_psb_bridge_i/PSB_a_T_6> <plb_psb_bridge_i/PSB_a_T_7> <plb_psb_bridge_i/PSB_a_T_8> <plb_psb_bridge_i/PSB_a_T_9> <plb_psb_bridge_i/PSB_a_T_10> <plb_psb_bridge_i/PSB_a_T_11> <plb_psb_bridge_i/PSB_a_T_12> <plb_psb_bridge_i/PSB_a_T_13> <plb_psb_bridge_i/PSB_a_T_14> <plb_psb_bridge_i/PSB_a_T_15> <plb_psb_bridge_i/PSB_a_T_16> <plb_psb_bridge_i/PSB_a_T_17>
+   <plb_psb_bridge_i/PSB_a_T_18> <plb_psb_bridge_i/PSB_a_T_19> <plb_psb_bridge_i/PSB_a_T_20> <plb_psb_bridge_i/PSB_a_T_21> <plb_psb_bridge_i/PSB_a_T_22> <plb_psb_bridge_i/PSB_a_T_23> <plb_psb_bridge_i/PSB_a_T_24> <plb_psb_bridge_i/PSB_a_T_25> <plb_psb_bridge_i/PSB_a_T_26> <plb_psb_bridge_i/PSB_a_T_27> <plb_psb_bridge_i/PSB_a_T_28> <plb_psb_bridge_i/PSB_a_T_29> <plb_psb_bridge_i/PSB_a_T_30> <plb_psb_bridge_i/PSB_a_T_31> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full> in Unit <plb_psb_bridge_i> is equivalent to the following FF/Latch : <plb_psb_bridge_i/plb2psb_bridge/plb2psb_plbside/pa1_full_1> 
+INFO:Xst:2260 - The FF/Latch <plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_br_n> in Unit <plb_psb_bridge_i> is equivalent to the following FF/Latch : <plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_br_n_int> 
+INFO:Xst:2260 - The FF/Latch <opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[21].TCSR0_FF_I> in Unit <opb_timer_0> is equivalent to the following FF/Latch : <opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[21].TCSR1_FF_I> 
+INFO:Xst:2260 - The FF/Latch <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SIZE_FF_GEN[0].FF_I> in Unit <hwrtos_0> is equivalent to the following 2 FFs/Latches : <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SIZE_FF_GEN[2].FF_I> <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SIZE_FF_GEN[3].FF_I> 
+INFO:Xst:2260 - The FF/Latch <hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/lcl_busy_i> in Unit <hwrtos_0> is equivalent to the following FF/Latch : <hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/lcl_busy_i_1> 
+INFO:Xst:2260 - The FF/Latch <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/TYPE_FF_GEN[0].FF_I> in Unit <hwrtos_0> is equivalent to the following 2 FFs/Latches : <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/TYPE_FF_GEN[1].FF_I> <hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/TYPE_FF_GEN[2].FF_I> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 262
+
+Cell Usage :
+# BELS                             : 11712
+#      BUF                         : 1
+#      GND                         : 21
+#      INV                         : 177
+#      LUT1                        : 236
+#      LUT2                        : 762
+#      LUT2_D                      : 34
+#      LUT2_L                      : 21
+#      LUT3                        : 2004
+#      LUT3_D                      : 88
+#      LUT3_L                      : 48
+#      LUT4                        : 5097
+#      LUT4_D                      : 150
+#      LUT4_L                      : 282
+#      MULT_AND                    : 47
+#      MUXCY                       : 1112
+#      MUXCY_D                     : 8
+#      MUXCY_L                     : 184
+#      MUXF5                       : 628
+#      MUXF6                       : 92
+#      VCC                         : 23
+#      XORCY                       : 697
+# FlipFlops/Latches                : 7192
+#      FD                          : 184
+#      FD_1                        : 5
+#      FDC                         : 592
+#      FDCE                        : 1318
+#      FDCPE                       : 4
+#      FDDRRSE                     : 42
+#      FDE                         : 207
+#      FDP                         : 165
+#      FDPE                        : 68
+#      FDR                         : 1765
+#      FDR_1                       : 4
+#      FDRE                        : 2309
+#      FDRS                        : 192
+#      FDRS_1                      : 1
+#      FDRSE                       : 125
+#      FDS                         : 110
+#      FDS_1                       : 8
+#      FDSE                        : 93
+# RAMS                             : 206
+#      RAM16X1D                    : 174
+#      RAMB16_S2_S2                : 32
+# Shift Registers                  : 322
+#      SRL16                       : 43
+#      SRL16E                      : 279
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 262
+#      IBUF                        : 25
+#      IBUFG                       : 3
+#      IOBUF                       : 201
+#      OBUF                        : 33
+# DCMs                             : 3
+#      DCM                         : 3
+# Others                           : 3
+#      JTAGPPC                     : 1
+#      PPC405                      : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp100ff1704-6 
+
+ Number of Slices:                    6662  out of  44096    15%  
+ Number of Slice Flip Flops:          6966  out of  88192     7%  
+ Number of 4 input LUTs:              9569  out of  88192    10%  
+    Number used as logic:             8899
+    Number used as Shift registers:    322
+    Number used as RAMs:               348
+ Number of IOs:                        262
+ Number of bonded IOBs:                259  out of   1040    24%  
+    IOB Flip Flops:                    226
+ Number of BRAMs:                       32  out of    444     7%  
+ Number of GCLKs:                        5  out of     16    31%  
+ Number of PPC405s:                      2  out of      2   100%  
+ Number of DCMs:                         3  out of     12    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                 | Clock buffer(FF name)                                                                                                                                                                   | Load  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+fpga_plb_clk                                                                                                                                                 | clock_reset_block/ap1000_bp_clock_generation/plb_dcm:CLK0                                                                                                                               | 6229  |
+fpga_opb_clk                                                                                                                                                 | clock_reset_block/ap1000_bp_clock_generation/opb_dcm:CLK0                                                                                                                               | 1254  |
+fpga_plb_clk                                                                                                                                                 | clock_reset_block/ap1000_bp_clock_generation/plb_dcm:CLKFX                                                                                                                              | 1     |
+fpga_plb_clk                                                                                                                                                 | clock_reset_block/ap1000_bp_clock_generation/plb_dcm:CLK90                                                                                                                              | 16    |
+ddr1_clk_fb                                                                                                                                                  | clock_reset_block/ap1000_bp_clock_generation/ddrfb_dcm:CLK0                                                                                                                             | 254   |
+plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/N0                                                           | NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU173)                                                                             | 2     |
+plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[2].V2_ASYNCH_FIFO_I/N0                                                           | NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[2].V2_ASYNCH_FIFO_I/BU173)                                                                             | 2     |
+plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0                                                           | NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU280)                                                                             | 2     |
+plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[0].V2_ASYNCH_FIFO_I/N0                                                           | NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[0].V2_ASYNCH_FIFO_I/BU173)                                                                             | 2     |
+ExternalPort_0_OBUF                                                                                                                                          | NONE(bram/bram/ramb16_s2_s2_12)                                                                                                                                                         | 33    |
+opb_intc_i/opb_intc_i/INTC_CORE_I/MANY_INTR_DET_GEN.INTR_DET_I/interrupts<6>(opb_intc_i/opb_intc_i/INTC_CORE_I/MANY_INTR_DET_GEN.INTR_DET_I/interrupts<6>1:O)| NONE(*)(opb_intc_i/opb_intc_i/INTC_CORE_I/MANY_INTR_DET_GEN.INTR_DET_I/DETECT_INTR_I/INTR_DETECT_GEN[6].EDGE_DETECT_GEN.EDGE_DET_BIT_I/KIND_OF_EDGE_I/RISING_EDGE_GEN.RISING_EDGE_DET_I)| 1     |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                           | Buffer(FF name)                                                                                                                                                                      | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+plb_bus/PLB_Rst(plb_bus/plb_bus/POR_FF2_I:Q)                                                                                                                                                             | NONE(plb_psb_bridge_i/plb_psb_bridge_i/psb2plb_bridge/psb2plb_psbside/rdata2_hold_51)                                                                                                | 1782  |
+plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/fifo_rst(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/fifo_rst:Q)                                               | NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU267)                                                                          | 120   |
+clock_reset_block/clock_reset_block/plb_dcm_rst(clock_reset_block/clock_reset_block/ap1000_bp_reset_generation/async_fpga_rst_n_inv11_INV_0:O)                                                           | NONE(clock_reset_block/clock_reset_block/ap1000_bp_reset_generation/FPGA_rst_n)                                                                                                      | 3     |
+plb2opb_bridge_i/plb2opb_bridge_i/PLB_abort_regd_clear(plb2opb_bridge_i/plb2opb_bridge_i/I_PLB_abort_regd_clear:O)                                                                                       | NONE(plb2opb_bridge_i/plb2opb_bridge_i/I_PLB_abort_Reg)                                                                                                                              | 1     |
+plb2opb_bridge_i/BGO_SSize<0>(plb2opb_bridge_i/XST_GND:G)                                                                                                                                                | NONE(plb2opb_bridge_i/plb2opb_bridge_i/I_PLB_abort_Reg)                                                                                                                              | 4     |
+plb2opb_bridge_i/plb2opb_bridge_i/OPBside_reset_Read_inprog_negedge_regd(plb2opb_bridge_i/plb2opb_bridge_i/I_OPBside_reset_Read_inprog_negedge_regd:O)                                                   | NONE(plb2opb_bridge_i/plb2opb_bridge_i/I_Read_inprog_negedge_Reg)                                                                                                                    | 1     |
+opb_bus/OPB_Rst(opb_bus/opb_bus/POR_FF_I:Q)                                                                                                                                                              | NONE(opbslave_ext_bridge_i/opbslave_ext_bridge_i/bridge/EXTo_addr_23)                                                                                                                | 223   |
+plb2opb_bridge_i/plb2opb_bridge_i/PLBside_reset_OPB_timeout_onRd(plb2opb_bridge_i/plb2opb_bridge_i/I_OPB_timeout_side_Reg_CLR:O)                                                                         | NONE(plb2opb_bridge_i/plb2opb_bridge_i/I_OPB_timeout_Reg)                                                                                                                            | 1     |
+plb2opb_bridge_i/plb2opb_bridge_i/PLBside_reset_OPB_retry_onRd(plb2opb_bridge_i/plb2opb_bridge_i/I_B_side_Reg_CLR:O)                                                                                     | NONE(plb2opb_bridge_i/plb2opb_bridge_i/I_A_side_Reg)                                                                                                                                 | 1     |
+rs232_1/rs232_1/OPB_UARTLITE_Core_I/reset_RX_FIFO(rs232_1/rs232_1/OPB_UARTLITE_Core_I/reset_RX_FIFO:Q)                                                                                                   | NONE(rs232_1/rs232_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_RX_I/SRL_FIFO_I/data_Exists_I)                                                                                                 | 1     |
+rs232_1/rs232_1/OPB_UARTLITE_Core_I/reset_TX_FIFO(rs232_1/rs232_1/OPB_UARTLITE_Core_I/reset_TX_FIFO:Q)                                                                                                   | NONE(rs232_1/rs232_1/OPB_UARTLITE_Core_I/OPB_UARTLITE_TX_I/SRL_FIFO_I/data_Exists_I)                                                                                                 | 1     |
+plb_ddr_controller_i/Sl_rdWdAddr<3>(plb_ddr_controller_i/XST_GND:G)                                                                                                                                      | NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/IO_REG_I/INPUT_DQS_REG_GEN[3].RDDQS_REG)                                                                                   | 4     |
+plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/N0(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/GND:G)| NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU173)                                                                          | 2     |
+plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[2].V2_ASYNCH_FIFO_I/N0(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[2].V2_ASYNCH_FIFO_I/GND:G)| NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[2].V2_ASYNCH_FIFO_I/BU173)                                                                          | 2     |
+plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[1].V2_ASYNCH_FIFO_I/N0(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[1].V2_ASYNCH_FIFO_I/GND:G)| NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[1].V2_ASYNCH_FIFO_I/BU280)                                                                          | 2     |
+plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[0].V2_ASYNCH_FIFO_I/N0(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[0].V2_ASYNCH_FIFO_I/GND:G)| NONE(plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[0].V2_ASYNCH_FIFO_I/BU173)                                                                          | 2     |
+opb_intc_i/opb_intc_i/INTC_CORE_I/MANY_INTR_DET_GEN.INTR_DET_I/clear<6>(opb_intc_i/opb_intc_i/INTC_CORE_I/MANY_INTR_DET_GEN.INTR_DET_I/clear<6>1:O)                                                      | NONE(opb_intc_i/opb_intc_i/INTC_CORE_I/MANY_INTR_DET_GEN.INTR_DET_I/DETECT_INTR_I/INTR_DETECT_GEN[6].EDGE_DETECT_GEN.EDGE_DET_BIT_I/KIND_OF_EDGE_I/RISING_EDGE_GEN.RISING_EDGE_DET_I)| 1     |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: 23.505ns (Maximum Frequency: 42.544MHz)
+   Minimum input arrival time before clock: 5.920ns
+   Maximum output required time after clock: 4.706ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fpga_plb_clk'
+  Clock period: 23.505ns (frequency: 42.544MHz)
+  Total number of paths / destination ports: 455004 / 15539
+-------------------------------------------------------------------------
+Delay:               5.876ns (Levels of Logic = 9)
+  Source:            plb_bus/plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/dcr_read_d1 (FF)
+  Destination:       ppc405_i/ppc405_i/PPC405_i (CPU)
+  Source Clock:      fpga_plb_clk rising
+  Destination Clock: fpga_plb_clk rising 4.0X
+
+  Data Path: plb_bus/plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/dcr_read_d1 to ppc405_i/ppc405_i/PPC405_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.374   0.610  plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/dcr_read_d1 (plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/dcr_read_d1)
+     LUT2:I0->O            1   0.313   0.390  plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/dcr_address_valid1 (plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/dcr_address_valid)
+     MUXCY:CI->O           3   0.751   0.495  plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/MULTI_DEVADDR_BITS_GEN.DCR_BASEADDR_DECODE_I/XST_WA.GEN_DECODE[0].MUXCY_I (plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/dcr_plb_access)
+     LUT3:I2->O           32   0.313   0.933  plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/PLB_dcrDBus<0>11 (plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/N110)
+     LUT3:I0->O            2   0.313   0.473  plb_bus/I_PLB_ARBITER_LOGIC/DCR_GEN.I_DCR/PLB_dcrDBus<14>1 (PLB_dcrDBus<14>)
+     end scope: 'plb_bus'
+     begin scope: 'dcr_bus'
+     end scope: 'dcr_bus'
+     begin scope: 'plb2opb_bridge_i'
+     LUT3:I2->O            0   0.313   0.000  plb2opb_bridge_i/INCLUDE_DCR_GEN.BEAR_BESR_I/BGO_dcrDBus<14>1 (BGO_dcrDBus<14>)
+     end scope: 'plb2opb_bridge_i'
+     begin scope: 'dcr_bus'
+     end scope: 'dcr_bus'
+     begin scope: 'ppc405_i'
+     PPC405:DCRC405DBUSIN14        0.599          ppc405_i/PPC405_i
+    ----------------------------------------
+    Total                      5.876ns (2.975ns logic, 2.901ns route)
+                                       (50.6% logic, 49.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fpga_opb_clk'
+  Clock period: 7.648ns (frequency: 130.760MHz)
+  Total number of paths / destination ports: 40013 / 2601
+-------------------------------------------------------------------------
+Delay:               7.648ns (Levels of Logic = 11)
+  Source:            plb2opb_bridge_i/plb2opb_bridge_i/OPB_IF_I/BGO_select_fdrse (FF)
+  Destination:       plb2opb_bridge_i/plb2opb_bridge_i/OPB_IF_I/bgi_trans_abort_i (FF)
+  Source Clock:      fpga_opb_clk rising
+  Destination Clock: fpga_opb_clk rising
+
+  Data Path: plb2opb_bridge_i/plb2opb_bridge_i/OPB_IF_I/BGO_select_fdrse to plb2opb_bridge_i/plb2opb_bridge_i/OPB_IF_I/bgi_trans_abort_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRSE:C->Q           34   0.374   0.909  plb2opb_bridge_i/OPB_IF_I/BGO_select_fdrse (BGO_select)
+     end scope: 'plb2opb_bridge_i'
+     begin scope: 'opb_bus'
+     end scope: 'opb_bus'
+     begin scope: 'opb_gpio_0'
+     LUT2:I1->O            1   0.313   0.533  opb_gpio_0/OPB_IPIF_I/OPB_BAM_I/Sln_xferAck1 (Sln_xferAck)
+     end scope: 'opb_gpio_0'
+     begin scope: 'opb_bus'
+     LUT4:I0->O            1   0.313   0.000  opb_bus/ARBITER_HAS_PROC_INTF.OPB_xferAck_I/Y_0_or00001 (N152)
+     MUXF5:I0->O          15   0.340   0.849  opb_bus/ARBITER_HAS_PROC_INTF.OPB_xferAck_I/Y_0_or0000_f5 (OPB_xferAck)
+     end scope: 'opb_bus'
+     begin scope: 'plb2opb_bridge_i'
+     LUT2_D:I1->O          1   0.313   0.440  plb2opb_bridge_i/OPB_IF_I/BGO_select_ce_and000011 (plb2opb_bridge_i/OPB_IF_I/OPB_xfer_rd_addr_and0000)
+     LUT4:I3->O           72   0.313   0.857  plb2opb_bridge_i/OPB_IF_I/OPB_xfer_rd_addr<1>1 (plb2opb_bridge_i/opb_xfer_rd_addr<1>)
+     RAM16X1D:DPRA2->DPO    2   0.313   0.495  plb2opb_bridge_i/XFER_IF_I/DUALPORT_RAM_GEN.RAM_FF_LOOP_GEN[68].DPRAM_I (plb2opb_bridge_i/dout_XFER_RNW)
+     LUT4:I3->O            1   0.313   0.390  plb2opb_bridge_i/OPB_IF_I/bgi_trans_abort_i_or0000 (plb2opb_bridge_i/OPB_IF_I/bgi_trans_abort_i_or0000)
+     FDR:R                     0.583          plb2opb_bridge_i/OPB_IF_I/bgi_trans_abort_i
+    ----------------------------------------
+    Total                      7.648ns (3.175ns logic, 4.473ns route)
+                                       (41.5% logic, 58.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ddr1_clk_fb'
+  Clock period: 3.383ns (frequency: 295.552MHz)
+  Total number of paths / destination ports: 1204 / 628
+-------------------------------------------------------------------------
+Delay:               3.383ns (Levels of Logic = 6)
+  Source:            plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU237 (FF)
+  Destination:       plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU292 (FF)
+  Source Clock:      ddr1_clk_fb rising
+  Destination Clock: ddr1_clk_fb rising
+
+  Data Path: plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU237 to plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[3].V2_ASYNCH_FIFO_I/BU292
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.374   0.610  BU237 (N812)
+     LUT4:I0->O            1   0.313   0.000  BU278 (N1797)
+     MUXCY:S->O            1   0.377   0.000  BU279 (N1801)
+     MUXCY:CI->O           1   0.041   0.000  BU282 (N1800)
+     MUXCY:CI->O           1   0.041   0.000  BU285 (N1799)
+     MUXCY_D:CI->LO        0   0.525   0.000  BU288 (N1798)
+     XORCY:CI->O           1   0.868   0.000  BU291 (N1804)
+     FDPE:D                    0.234          BU292
+    ----------------------------------------
+    Total                      3.383ns (2.773ns logic, 0.610ns route)
+                                       (82.0% logic, 18.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ddr1_clk_fb'
+  Total number of paths / destination ports: 68 / 68
+-------------------------------------------------------------------------
+Offset:              1.598ns (Levels of Logic = 2)
+  Source:            ddr1_dq<0> (PAD)
+  Destination:       plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/IO_REG_I/INPUT_DDR_REGS_GEN[31].RDDATA_LOREG (FF)
+  Destination Clock: ddr1_clk_fb falling
+
+  Data Path: ddr1_dq<0> to plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/IO_REG_I/INPUT_DDR_REGS_GEN[31].RDDATA_LOREG
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           2   0.919   0.445  iobuf_87 (ddr1_dq_I<0>)
+     begin scope: 'plb_ddr_controller_i'
+     FDCE:D                    0.234          plb_ddr_controller_i/DDR_CTRL_I/IO_REG_I/INPUT_DDR_REGS_GEN[31].RDDATA_LOREG
+    ----------------------------------------
+    Total                      1.598ns (1.153ns logic, 0.445ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fpga_opb_clk'
+  Total number of paths / destination ports: 54 / 54
+-------------------------------------------------------------------------
+Offset:              2.873ns (Levels of Logic = 4)
+  Source:            fpga_test_switch_0 (PAD)
+  Destination:       opbslave_ext_bridge_i/opbslave_ext_bridge_i/bridge/opb_out_read_data_23 (FF)
+  Destination Clock: fpga_opb_clk rising
+
+  Data Path: fpga_test_switch_0 to opbslave_ext_bridge_i/opbslave_ext_bridge_i/bridge/opb_out_read_data_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.919   0.588  fpga_test_switch_0_IBUF (fpga_test_switch_0_IBUF)
+     begin scope: 'opbslave_ext_bridge_i'
+     LUT4:I0->O            1   0.313   0.506  opbslave_ext_bridge_i/bridge/opb_out_read_data_23_mux00007 (opbslave_ext_bridge_i/bridge/opb_out_read_data_23_mux0000_map3)
+     LUT4:I1->O            1   0.313   0.000  opbslave_ext_bridge_i/bridge/opb_out_read_data_23_mux000018 (opbslave_ext_bridge_i/bridge/opb_out_read_data_23_mux0000)
+     FDC:D                     0.234          opbslave_ext_bridge_i/bridge/opb_out_read_data_23
+    ----------------------------------------
+    Total                      2.873ns (1.779ns logic, 1.094ns route)
+                                       (61.9% logic, 38.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fpga_plb_clk'
+  Total number of paths / destination ports: 1293 / 404
+-------------------------------------------------------------------------
+Offset:              5.920ns (Levels of Logic = 7)
+  Source:            psb_ta_n (PAD)
+  Destination:       plb_psb_bridge_i/plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_ta_unreg_cnt_0 (FF)
+  Destination Clock: fpga_plb_clk rising
+
+  Data Path: psb_ta_n to plb_psb_bridge_i/plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_ta_unreg_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O         259   0.919   1.285  iobuf_126 (psb_ta_n_I)
+     begin scope: 'plb_psb_bridge_i'
+     LUT2:I1->O            1   0.313   0.418  plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/deassert_dbb_no_error_or0000_SW0 (N7347)
+     LUT4:I2->O            3   0.313   0.495  plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/deassert_dbb_no_error_or0000 (debug_bus<3>)
+     LUT3_D:I2->O          5   0.313   0.531  plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_dbb_n_en_or00001 (plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_dbb_n_en_or0000)
+     LUT3:I2->O            2   0.313   0.473  plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_dbb_n_o1 (debug_bus<4>)
+     LUT3:I2->O            1   0.313   0.000  plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/Mcount_PSBma_ta_unreg_cnt_eqn_11 (plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/Mcount_PSBma_ta_unreg_cnt_eqn_1)
+     FDCE:D                    0.234          plb_psb_bridge_i/plb2psb_bridge/plb2psb_psbside/PSBma_ta_unreg_cnt_0
+    ----------------------------------------
+    Total                      5.920ns (2.718ns logic, 3.202ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_plb_clk'
+  Total number of paths / destination ports: 320 / 175
+-------------------------------------------------------------------------
+Offset:              3.615ns (Levels of Logic = 2)
+  Source:            plb_psb_bridge_i/plb_psb_bridge_i/PSB_abb_n_O (FF)
+  Destination:       psb_abb_n (PAD)
+  Source Clock:      fpga_plb_clk rising
+
+  Data Path: plb_psb_bridge_i/plb_psb_bridge_i/PSB_abb_n_O to psb_abb_n
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.374   0.390  plb_psb_bridge_i/PSB_abb_n_O (PSB_abb_n_O)
+     end scope: 'plb_psb_bridge_i'
+     IOBUF:I->IO               2.851          iobuf_120 (psb_abb_n)
+    ----------------------------------------
+    Total                      3.615ns (3.225ns logic, 0.390ns route)
+                                       (89.2% logic, 10.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_opb_clk'
+  Total number of paths / destination ports: 109 / 57
+-------------------------------------------------------------------------
+Offset:              4.706ns (Levels of Logic = 3)
+  Source:            opbslave_ext_bridge_i/opbslave_ext_bridge_i/bridge/opb_master_en (FF)
+  Destination:       lbus_oe_n (PAD)
+  Source Clock:      fpga_opb_clk rising
+
+  Data Path: opbslave_ext_bridge_i/opbslave_ext_bridge_i/bridge/opb_master_en to lbus_oe_n
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.374   0.445  opbslave_ext_bridge_i/bridge/opb_master_en (opbslave_ext_bridge_i/bridge/opb_master_en)
+     INV:I->O             27   0.313   0.781  opbslave_ext_bridge_i/bridge/EXTt_oe_n1_INV_0 (opb_ext_bridge_debug_bus<25>)
+     end scope: 'opbslave_ext_bridge_i'
+     IOBUF:T->IO               2.793          iobuf_8 (lbus_addr<0>)
+    ----------------------------------------
+    Total                      4.706ns (3.480ns logic, 1.226ns route)
+                                       (73.9% logic, 26.1% route)
+
+=========================================================================
+CPU : 83.52 / 83.59 s | Elapsed : 84.00 / 84.00 s
+ 
+--> 
+
+Total memory usage is 329588 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  203 (   0 filtered)
+Number of infos    :   95 (   0 filtered)
+

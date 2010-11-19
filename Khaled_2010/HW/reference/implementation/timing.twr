@@ -1,0 +1,254 @@
+Number of Timing Constraints that were not applied: 6
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+* COMP "psb_ta_n" OFFSET = IN 7.3 ns BEFORE | SETUP   |    -1.014ns|     8.314ns|       2|        1843
+   COMP "fpga_plb_clk"                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "psb_tea_n" OFFSET = IN 7.3 ns BEFOR | SETUP   |    -0.985ns|     8.285ns|       2|        1785
+  E COMP "fpga_plb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* TS_clock_reset_block_clock_reset_block_ap | SETUP   |    -0.888ns|    13.388ns|      66|       32871
+  1000_bp_clock_generation_clkplb_i =       | HOLD    |     0.224ns|            |       0|           0
+     PERIOD TIMEGRP         "clock_reset_bl |         |            |            |        |            
+  ock_clock_reset_block_ap1000_bp_clock_gen |         |            |            |        |            
+  eration_clkplb_i"         TS_fpga_plb_clk |         |            |            |        |            
+   HIGH 50%                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "psb_dbb_n" OFFSET = IN 7.3 ns BEFOR | SETUP   |     0.034ns|     7.266ns|       0|           0
+  E COMP "fpga_plb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_DCR1 = MAXDELAY FROM TIMEGRP "FFS" THR | SETUP   |     0.034ns|     7.966ns|       0|           0
+  U TIMEGRP "DCR_DATA_GRP" TO TIMEGRP       |         |            |            |        |            
+     "CPUS" 8 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "psb_bg_n" OFFSET = IN 7.3 ns BEFORE | SETUP   |     0.083ns|     7.217ns|       0|           0
+   COMP "fpga_plb_clk"                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TSCLK2CLK90 = MAXDELAY FROM TIMEGRP "clkp | SETUP   |     0.202ns|     2.673ns|       0|           0
+  lb" TO TIMEGRP "ddr_clkplb_90" 2.875      |         |            |            |        |            
+      ns                                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "psb_dbg_n" OFFSET = IN 7.3 ns BEFOR | SETUP   |     0.207ns|     7.093ns|       0|           0
+  E COMP "fpga_plb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_DCR2 = MAXDELAY FROM TIMEGRP "CPUS" TH | SETUP   |     0.323ns|     7.677ns|       0|           0
+  RU TIMEGRP "DCR_DATA_GRP" TO TIMEGRP      |         |            |            |        |            
+      "CPUS" 8 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "psb_abb_n" OFFSET = IN 7.3 ns BEFOR | SETUP   |     0.536ns|     6.764ns|       0|           0
+  E COMP "fpga_plb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_clock_reset_block_clock_reset_block_ap | SETUP   |     0.561ns|     3.605ns|       0|           0
+  1000_bp_clock_generation_clkcpu_i =       | HOLD    |     1.872ns|            |       0|           0
+     PERIOD TIMEGRP         "clock_reset_bl |         |            |            |        |            
+  ock_clock_reset_block_ap1000_bp_clock_gen |         |            |            |        |            
+  eration_clkcpu_i"         TS_fpga_plb_clk |         |            |            |        |            
+   / 3 HIGH 50%                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "psb_artry_n" OFFSET = IN 7.3 ns BEF | SETUP   |     0.666ns|     6.634ns|       0|           0
+  ORE COMP "fpga_plb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "psb_aack_n" OFFSET = IN 7.3 ns BEFO | SETUP   |     0.866ns|     6.434ns|       0|           0
+  RE COMP "fpga_plb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<1>" OFFSET = OUT 9 ns AFT | MAXDELAY|     0.924ns|     8.076ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<0>" OFFSET = OUT 9 ns AFT | MAXDELAY|     0.924ns|     8.076ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<3>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.135ns|     7.865ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<2>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.135ns|     7.865ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<0>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.166ns|     7.834ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<1>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.166ns|     7.834ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_oe_n" OFFSET = OUT 9 ns AFTER  | MAXDELAY|     1.458ns|     7.542ns|       0|           0
+  COMP "fpga_opb_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_we_n" OFFSET = OUT 9 ns AFTER  | MAXDELAY|     1.458ns|     7.542ns|       0|           0
+  COMP "fpga_opb_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<4>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.602ns|     7.398ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<5>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.602ns|     7.398ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_DCR3 = MAXDELAY FROM TIMEGRP "CPUS" TH | SETUP   |     1.678ns|     6.322ns|       0|           0
+  RU TIMEGRP "DCR_DATA_GRP" TO TIMEGRP      |         |            |            |        |            
+      "FFS" 8 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "cpld_cs_n" OFFSET = OUT 9 ns AFTER  | MAXDELAY|     1.822ns|     7.178ns|       0|           0
+  COMP "fpga_opb_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<6>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.826ns|     7.174ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<7>" OFFSET = OUT 9 ns AFT | MAXDELAY|     1.826ns|     7.174ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<9>" OFFSET = OUT 9 ns AFT | MAXDELAY|     2.450ns|     6.550ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<8>" OFFSET = OUT 9 ns AFT | MAXDELAY|     2.669ns|     6.331ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_clock_reset_block_clock_reset_block_ap | SETUP   |     2.701ns|     4.640ns|       0|           0
+  1000_bp_clock_generation_ddr_clk_fb_i     | HOLD    |     0.544ns|            |       0|           0
+       = PERIOD TIMEGRP         "clock_rese |         |            |            |        |            
+  t_block_clock_reset_block_ap1000_bp_clock |         |            |            |        |            
+  _generation_ddr_clk_fb_i"         TS_ddr1 |         |            |            |        |            
+  _clk_fb PHASE -1.562 ns HIGH 50%          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<12>" OFFSET = OUT 9 ns AF | MAXDELAY|     2.733ns|     6.267ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<13>" OFFSET = OUT 9 ns AF | MAXDELAY|     2.967ns|     6.033ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<4>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.009ns|     5.991ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<3>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.009ns|     5.991ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<2>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.009ns|     5.991ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<5>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.009ns|     5.991ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "sysace_cs_n" OFFSET = OUT 9 ns AFTE | MAXDELAY|     3.164ns|     5.836ns|       0|           0
+  R COMP "fpga_opb_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<7>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.234ns|     5.766ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<8>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.234ns|     5.766ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<6>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.234ns|     5.766ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<9>" OFFSET = OUT 9 ns AFT | MAXDELAY|     3.234ns|     5.766ns|       0|           0
+  ER COMP "fpga_opb_clk"                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<24>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.250ns|     5.750ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<23>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.250ns|     5.750ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<15>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.335ns|     5.665ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<15>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.441ns|     5.559ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<16>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.441ns|     5.559ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<17>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.441ns|     5.559ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<18>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.441ns|     5.559ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<14>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.455ns|     5.545ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<10>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.460ns|     5.540ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<11>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.460ns|     5.540ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<12>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.462ns|     5.538ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<13>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.462ns|     5.538ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<14>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.462ns|     5.538ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<10>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.470ns|     5.530ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<19>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.481ns|     5.519ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<20>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.481ns|     5.519ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<22>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.481ns|     5.519ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_addr<21>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.481ns|     5.519ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "flash_cs_n" OFFSET = OUT 9 ns AFTER | MAXDELAY|     3.680ns|     5.320ns|       0|           0
+   COMP "fpga_opb_clk"                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "lbus_data<11>" OFFSET = OUT 9 ns AF | MAXDELAY|     3.732ns|     5.268ns|       0|           0
+  TER COMP "fpga_opb_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "fpga_config_flash_cs_n" OFFSET = OU | MAXDELAY|     3.946ns|     5.054ns|       0|           0
+  T 9 ns AFTER COMP "fpga_opb_clk"          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "cpld_bg_n" OFFSET = OUT 9 ns AFTER  | MAXDELAY|     6.161ns|     2.839ns|       0|           0
+  COMP "fpga_opb_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_clock_reset_block_clock_reset_block_ap | SETUP   |     7.751ns|    17.249ns|       0|           0
+  1000_bp_clock_generation_clkopb_i =       | HOLD    |     0.586ns|            |       0|           0
+     PERIOD TIMEGRP         "clock_reset_bl |         |            |            |        |            
+  ock_clock_reset_block_ap1000_bp_clock_gen |         |            |            |        |            
+  eration_clkopb_i"         TS_fpga_opb_clk |         |            |            |        |            
+   HIGH 50%                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_CPU_2_PLB_ARB_DCR = MAXDELAY FROM TIME | SETUP   |    20.720ns|     4.280ns|       0|           0
+  GRP "CPUS" TO TIMEGRP         "PLB_ARBITE |         |            |            |        |            
+  R_DCR" 25 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_clock_reset_block_clock_reset_block_ap | N/A     |         N/A|         N/A|     N/A|         N/A
+  1000_bp_clock_generation_ddr_clkplb_90_i  |         |            |            |        |            
+          = PERIOD TIMEGRP         "clock_r |         |            |            |        |            
+  eset_block_clock_reset_block_ap1000_bp_cl |         |            |            |        |            
+  ock_generation_ddr_clkplb_90_i"         T |         |            |            |        |            
+  S_fpga_plb_clk PHASE 3.125 ns HIGH 50%    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_fpga_opb_clk = PERIOD TIMEGRP "fpga_op | N/A     |         N/A|         N/A|     N/A|         N/A
+  b_clk" 25 ns HIGH 50%                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ddr1_clk_fb = PERIOD TIMEGRP "ddr1_clk | N/A     |         N/A|         N/A|     N/A|         N/A
+  _fb" 12.5 ns HIGH 50%                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_CLK90 = PERIOD TIMEGRP "ddr_clkplb_90" | N/A     |         N/A|         N/A|     N/A|         N/A
+   12.5 ns HIGH 50%                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_plb_clk = PERIOD TIMEGRP "clkplb" 12.5 | N/A     |         N/A|         N/A|     N/A|         N/A
+   ns HIGH 50%                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_fpga_plb_clk = PERIOD TIMEGRP "fpga_pl | N/A     |         N/A|         N/A|     N/A|         N/A
+  b_clk" 12.5 ns HIGH 50%                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+
+
+3 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+

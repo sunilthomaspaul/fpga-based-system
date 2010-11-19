@@ -1,0 +1,1005 @@
+Release 9.1.02i ngdbuild J.33
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -p xc2vp100ff1704-6 -nt timestamp -bm system.bmm
+C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/system.ngc -uc
+system.ucf system.ngd
+
+Reading NGO file
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/system.ngc"
+...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/clock_reset_b
+lock_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/ppc405_i_wrap
+per.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_bus_wrapp
+er.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_ddr_contr
+oller_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_bram_if_c
+ntlr_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/bram_wrapper.
+ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb2opb_bridg
+e_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opb_bus_wrapp
+er.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/ap1000_interr
+upt_interface_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opb_intc_i_wr
+apper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/rs232_1_wrapp
+er.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opbslave_ext_
+bridge_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_psb_bridg
+e_i_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/dcr_bus_wrapp
+er.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/ppc405_ppcjta
+g_chain_wrapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/jtagppc_0_wra
+pper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/plb_emc_0_wra
+pper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opb_gpio_0_wr
+apper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/opb_timer_0_w
+rapper.ngc"...
+Loading design module
+"C:/Baseline_9_Working_Folder/K-Fall09-Working_Copy/implementation/hwrtos_0_wrap
+per.ngc"...
+
+Applying constraints in "system.ucf" to the design...
+
+Checking timing specifications ...
+INFO:XdmHelpers:851 - TNM "fpga_plb_clk", used in period specification
+   "TS_fpga_plb_clk", was traced into DCM instance
+   "clock_reset_block/clock_reset_block/ap1000_bp_clock_generation/plb_dcm". The
+   following new TNM groups and period specifications were generated at the DCM
+   output(s):
+   CLK0:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkplb_i=PERIO
+D clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkplb_i
+TS_fpga_plb_clk*1 HIGH 50%
+   CLK90:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_ddr_clkplb_90_
+i=PERIOD
+clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_ddr_clkplb_90_i
+TS_fpga_plb_clk*1 PHASE + 3.125 nS HIGH 50%
+   CLKFX:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkcpu_i=PERIO
+D clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkcpu_i
+TS_fpga_plb_clk/3 HIGH 50%
+INFO:XdmHelpers:851 - TNM "ddr1_clk_fb", used in period specification
+   "TS_ddr1_clk_fb", was traced into DCM instance
+   "clock_reset_block/clock_reset_block/ap1000_bp_clock_generation/ddrfb_dcm".
+   The following new TNM groups and period specifications were generated at the
+   DCM output(s):
+   CLK0:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_ddr_clk_fb_i=P
+ERIOD
+clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_ddr_clk_fb_i
+TS_ddr1_clk_fb*1 PHASE - 1.562 nS HIGH 50%
+INFO:XdmHelpers:851 - TNM "fpga_opb_clk", used in period specification
+   "TS_fpga_opb_clk", was traced into DCM instance
+   "clock_reset_block/clock_reset_block/ap1000_bp_clock_generation/opb_dcm". The
+   following new TNM groups and period specifications were generated at the DCM
+   output(s):
+   CLK0:
+TS_clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkopb_i=PERIO
+D clock_reset_block_clock_reset_block_ap1000_bp_clock_generation_clkopb_i
+TS_fpga_opb_clk*1 HIGH 50%
+
+Processing BMM file ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/
+   DQS_OE_SETRST_GEN[3].DQS_SETRST_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/
+   DQS_OE_SETRST_GEN[2].DQS_SETRST_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/
+   DQS_OE_SETRST_GEN[1].DQS_SETRST_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/COMMAND_STATEMACHINE_I/
+   DQS_OE_SETRST_GEN[0].DQS_SETRST_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/DATASM_I/READCNTR_I/CAR
+   RY_OUT_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BURST_SUPPORT/CONTROL_DBEAT_CNTR_I/I_UP_DWN_COUNTER/I_C
+   ARRY_OUT' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BURST_SUPPORT/RESPONSE_DBEAT_CNTR_I/I_UP_DWN_COUNTER/I_
+   CARRY_OUT' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_RE
+   G' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_STEER_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_RE
+   G' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_4to7[7
+   ].I_FDRSE_BE4to7' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_4to7[6
+   ].I_FDRSE_BE4to7' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_4to7[5
+   ].I_FDRSE_BE4to7' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_4to7[4
+   ].I_FDRSE_BE4to7' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[3
+   ].I_FDRSE_BE0to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[2
+   ].I_FDRSE_BE0to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[1
+   ].I_FDRSE_BE0to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/GEN_
+   FAST_MODE_BURSTXFER.I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[0
+   ].I_FDRSE_BE0to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_S_H_ADDR_REG[0].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_S_H_ADDR_REG[1].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_S_H_ADDR_REG[2].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/I_CS_SIZE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/I_CS_SIZE_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/PLB_IPIF_I/I_SLAVE_ATTACHMENT/I_DE
+   CODER/I_CS_SIZE_REG2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU51' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU56' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU61' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU66' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU71' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU76' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU81' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU86' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU173' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   3].V2_ASYNCH_FIFO_I/BU280' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU51' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU56' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU61' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU66' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU71' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU76' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU81' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU86' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU173' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   2].V2_ASYNCH_FIFO_I/BU280' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU51' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU56' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU61' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU66' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU71' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU76' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU81' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU86' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU173' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   1].V2_ASYNCH_FIFO_I/BU280' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU11' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU16' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU21' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU26' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU31' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU36' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU41' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU46' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU51' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU56' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU61' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU66' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU71' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU76' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU81' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU86' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU173' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'plb_ddr_controller_i/plb_ddr_controller_i/DDR_CTRL_I/RDDATA_PATH_I/FIFO_GEN[
+   0].V2_ASYNCH_FIFO_I/BU280' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SL
+   OW_MODE_BURSTXFER.I_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SL
+   OW_MODE_BURSTXFER.I_ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[0].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[1].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_S_H_ADDR_REG[2].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/GEN_BKEND_CE_REGISTERS[0].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_i/plb_bram_if_cntlr_i/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[10].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[9].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[8].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[7].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[6].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[5].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[4].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[3].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[2].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[1].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_DBUS_REG_GEN[0].OPB_DBUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[31].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[30].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[26].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[25].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[24].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[23].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[22].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[21].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[20].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[19].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[18].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[17].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[16].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[15].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[14].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[13].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[12].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[11].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[10].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[9].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[8].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[7].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[6].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[5].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[4].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[3].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[2].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[1].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_intc_i/opb_intc_i/OPB_INTFC_I/OPB_ABUS_REG_GEN[0].OPB_ABUS_REG_BIT_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SLOW_MODE_BURSTXFER.I_
+   ADDRESS_COUNTER/GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG' has unconnected output
+   pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/GEN_SLOW_MODE_BURSTXFER.I_
+   ADDRESS_COUNTER/GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG' has unconnected output
+   pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG
+   [0].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG
+   [1].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_S_H_ADDR_REG
+   [2].I_ADDR_S_H_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1
+   ].I_BKEND_CS_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[2
+   ].I_BKEND_CS_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[3
+   ].I_BKEND_CS_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[0].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[0].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[0].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[1].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[1].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[1].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[2].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[2].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[2].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[3].I_BKEND_CE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[3].I_BKEND_RDCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REG
+   ISTERS[3].I_BKEND_WRCE_REG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG0'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG1'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_emc_0/plb_emc_0/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/I_CS_SIZE_REG2'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[0].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[1].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[2].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[3].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[4].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[5].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[6].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[7].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[8].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[9].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[10].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[11].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[12].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[13].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[14].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[15].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[16].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[17].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[18].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[19].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[20].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[0].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[1].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[2].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[3].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[4].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[5].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[6].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[7].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[8].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[9].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[10].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[11].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[12].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[13].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[14].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[15].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[16].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[17].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[18].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[19].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[20].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'opb_timer_0/opb_timer_0/SEQADDR_FF_I' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[31].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[30].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[25].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[24].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[23].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[22].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[21].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[20].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[19].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[18].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[17].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'opb_timer_0/opb_timer_0/ABUS_FF_GENERATE[16].ABUS_FF_I' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_BURST.I_DTIME_CONTRO
+   LLER/RESPONSE_CYCLE_CNTR_I/I_UP_DWN_COUNTER/I_CARRY_OUT' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_BURST.I_DTIME_CONTRO
+   LLER/CONTROL_CYCLE_CNTR_I/I_UP_DWN_COUNTER/I_CARRY_OUT' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_BURST.I_DTIME_CONTRO
+   LLER/RESPONSE_CNTR_I/I_UP_DWN_COUNTER/I_CARRY_OUT' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_BURST.I_DTIME_CONTRO
+   LLER/CONTROL_CNTR_I/I_UP_DWN_COUNTER/I_CARRY_OUT' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/IP2INTC_I
+   RPT_FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/ERR_FF_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDBTERM_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDWDADDR_
+   FF_GEN[0].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDWDADDR_
+   FF_GEN[1].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDWDADDR_
+   FF_GEN[2].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/RDWDADDR_
+   FF_GEN[3].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/REARB_FF_
+   I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/WRBTERM_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/WRDACK_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SSIZE_FF_
+   GEN[0].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/SSIZE_FF_
+   GEN[1].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/PENDPRI_F
+   F_GEN[0].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/PENDPRI_F
+   F_GEN[1].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/PENDREQ_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/REQPRI_FF
+   _GEN[0].FF_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hwrtos_0/hwrtos_0/PLB_IPIF_I/INCLUDE_MASTER_ATTACH.I_MASTER_ATTACH/REQPRI_FF
+   _GEN[1].FF_I' has unconnected output pin
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "fpga_plb_clk"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "fpga_plb_clk"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "fpga_opb_clk"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "fpga_opb_clk"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "psb_bg_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "psb_bg_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "pmc_inta_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "pmc_inta_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int0_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int0_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "fpga_rst_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "fpga_rst_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "pmc_intb_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "pmc_intb_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int1_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int1_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "psb_dbg_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "psb_dbg_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "uart1_sin" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "uart1_sin" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "pmc_intc_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "pmc_intc_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int2_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int2_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_0" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_0" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_1" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_1" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_2" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_2" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_3" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_3" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_4" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_4" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "pmc_intd_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "pmc_intd_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_5" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_5" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_6" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_6" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol
+   "fpga_test_switch_7" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol
+   "fpga_test_switch_7" of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int3_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int3_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "sysace_irq"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "sysace_irq" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "cpld_br_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "cpld_br_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int4_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int4_n" of
+   type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "DRIVE" is not allowed on symbol "ps2_int5_n"
+   of type "IPAD".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SLEW" is not allowed on symbol "ps2_int5_n" of
+   type "IPAD".  This attribute will be ignored.
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 302
+
+Total memory usage is 207328 kilobytes
+
+Writing NGD file "system.ngd" ...
+
+Writing NGDBUILD log file "system.bld"...

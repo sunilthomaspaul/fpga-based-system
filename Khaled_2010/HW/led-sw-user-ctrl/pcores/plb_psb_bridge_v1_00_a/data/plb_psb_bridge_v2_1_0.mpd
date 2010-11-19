@@ -1,0 +1,481 @@
+###################################################################
+##
+## AMIRIX Systems Inc. 
+## 77 Chain Lake Drive 
+## Halifax, Nova Scotia B3S 1E1 
+## 
+## (C) 2005 AMIRIX Systems Inc. All rights reserved.
+## The information contained herein includes information which is confidential
+## and proprietary to AMIRIX Systems Inc. and may not be used or 
+## disclosed without prior written consent of AMIRIX Systems Inc. 
+##
+## Content of this file:                                                 
+##   This is the MPD file as required by EDK in order to allow
+##   the plb_psb_bridge to be used as a pcore within EDK.
+## 
+## Project #: HW05-030
+## Author:    Jeremy Kuehner
+## Date:      February 21, 2005
+##
+##
+## Filename:                $Source: /usr/cvsroot/ap1000/pcores/plb_psb_bridge_v1_00_a/data/plb_psb_bridge_v2_1_0.mpd,v $                                
+## Current Revision:        $Revision: 1.1 $                                
+## Last Updated:            $Date: 2005/08/23 19:22:56 $                                
+## Last Modified by:        $Author: kuehner $                                
+## Currently Locked by:     $Locker:  $                                
+##                                                                       
+## Change History:                                                       
+## $Log: plb_psb_bridge_v2_1_0.mpd,v $
+## Revision 1.1  2005/08/23 19:22:56  kuehner
+## Initial ap1000 commit (moved from hw05-030).
+##
+## Revision 1.6  2005/07/19 17:35:42  kuehner
+## Bridge now passes 0 - 2FFFFFFF through to PLB bus (for flash/cpld accesses).
+##
+## Revision 1.5  2005/06/21 17:36:31  kuehner
+## Added in chipscope debug bus.
+##
+## Revision 1.4  2005/06/01 12:45:13  labuser
+## Changed reset signal instantiation.
+##
+## Revision 1.3  2005/05/03 18:47:24  kuehner
+## Updated bridge to incorporate all the changes that were made
+## during HW05-019 lab debugging.
+##
+## Revision 1.2  2005/03/08 18:13:04  kuehner
+## Fixed typo.
+##
+## Revision 1.1  2005/02/25 14:09:13  kuehner
+## Initial Revision.
+##
+##
+##
+###################################################################
+BEGIN plb_psb_bridge
+
+## Peripheral Options
+OPTION IPTYPE       = PERIPHERAL
+OPTION IMP_NETLIST  = TRUE
+OPTION HDL          = Verilog
+OPTION CORE_STATE   = ACTIVE
+OPTION IP_GROUP     = PPC:USER
+OPTION ARCH_SUPPORT = virtex2p:virtex4
+
+## Bus Interfaces
+BUS_INTERFACE BUS = SPLB, BUS_STD = PLB, BUS_TYPE = SLAVE
+BUS_INTERFACE BUS = MPLB, BUS_STD = PLB, BUS_TYPE = MASTER
+
+## Tried to create a Virtual Uart bus to reduce clutter in the MHS file,
+## however, EDK Libgen tools choke on the Virtual Uart bus for some reason.
+## Instead, I am combining all UART signals into a single huge bus in
+## toplevel.
+##BUS_INTERFACE BUS = MVUART0, BUS_STD = VUART, BUS_TYPE = MASTER
+##BUS_INTERFACE BUS = MVUART1, BUS_STD = VUART, BUS_TYPE = MASTER
+
+##### Generics for VHDL or Parameters for Verilog #####
+## Parameters for psb2plb_bridge
+PARAMETER PLB_MASTER_BASEADDR1   = 0x00000000, DT = std_logic_vector, BITWIDTH = 32 ## 0x00000000 - 0x1FFFFFFF
+PARAMETER PLB_MASTER_LSB_DECODE1 = 2,          DT = integer
+PARAMETER PLB_MASTER_BASEADDR2   = 0x20000000, DT = std_logic_vector, BITWIDTH = 32 ## 0x20000000 - 0x2FFFFFFF
+PARAMETER PLB_MASTER_LSB_DECODE2 = 3,          DT = integer
+PARAMETER C_PLB_PRIORITY    = 0x0, DT = std_logic_vector, BITWIDTH = 2
+
+## Parameters for plb2psb_bridge
+PARAMETER C_BASEADDR = 0x30000000, DT = std_logic_vector, BITWIDTH = 32 ## 0x30000000 - 0x3FFFFFFF
+PARAMETER C_HIGHADDR = 0x3FFFFFFF, DT = std_logic_vector, BITWIDTH = 32
+PARAMETER PLB_SLAVE_LSB_DECODE = 3, DT = integer, BUS = SPLB
+PARAMETER C_PLB_NUM_MASTERS = 16,  DT = integer, BUS = SPLB
+PARAMETER C_PLB_MID_WIDTH   = 4,   DT = integer, BUS = SPLB
+
+## Parameters for plb2psb_bridge AND psb2plb_bridge
+PARAMETER PLB_PSB_FPGA_REG_BASEADDR	  = 0x30002000, DT = std_logic_vector, BITWIDTH = 32 ## 0x30002000 - 0x30003FFF
+PARAMETER PLB_PSB_FPGA_REG_LSB_DECODE = 18,    DT = integer
+PARAMETER C_PLB_AWIDTH      = 32,       DT = integer, BUS = SPLB
+PARAMETER C_PLB_DWIDTH      = 64,       DT = integer, BUS = SPLB
+
+## Parameters that don't go anywhere (here for the sake of Xilinx EDK)
+PARAMETER C_FAMILY          = virtex2p, DT = string
+
+## Ports
+## Chipscope
+PORT debug_bus         = "",               DIR = OUT, VEC = [254:0]
+
+## Internal System
+PORT clk               = "",               DIR = IN, SIGIS = CLK,                   BUS = SPLB, BUS = MPLB
+PORT reset             = "PLB_Rst",        DIR = IN,                                BUS = SPLB, BUS = MPLB
+
+## PLB Master Signals
+PORT PLBma_RdWdAddr    = PLB_MRdWdAddr,    DIR = IN,  VEC = [0:3],			        BUS = MPLB
+PORT PLBma_RdDBus      = PLB_MRdDBus,      DIR = IN,  VEC = [0:C_PLB_DWIDTH-1],     BUS = MPLB
+PORT PLBma_AddrAck     = PLB_MAddrAck,     DIR = IN,                     		    BUS = MPLB
+PORT PLBma_RdDAck      = PLB_MRdDAck,      DIR = IN,                     		    BUS = MPLB
+PORT PLBma_WrDAck      = PLB_MWrDAck,      DIR = IN,                     		    BUS = MPLB
+PORT PLBma_rearbitrate = PLB_MRearbitrate, DIR = IN,                     		    BUS = MPLB
+PORT PLBma_Busy        = PLB_MBusy,        DIR = IN,                     		    BUS = MPLB
+PORT PLBma_Err         = PLB_MErr,         DIR = IN,                     		    BUS = MPLB
+PORT PLBma_RdBTerm     = PLB_MRdBTerm,     DIR = IN,                     		    BUS = MPLB
+PORT PLBma_WrBTerm     = PLB_MWrBTerm,     DIR = IN,                     		    BUS = MPLB
+PORT PLBma_sSize       = PLB_MSSize,       DIR = IN,  VEC = [0:1],			        BUS = MPLB
+PORT PLBma_pendReq     = PLB_MpendReq,     DIR = IN,                     		    BUS = MPLB
+PORT PLBma_pendPri     = PLB_MpendPri,     DIR = IN,  VEC = [0:1],			        BUS = MPLB
+PORT PLBma_reqPri      = PLB_MreqPri,      DIR = IN,  VEC = [0:1],			        BUS = MPLB
+PORT BGIma_request     = M_request,        DIR = OUT,                        	    BUS = MPLB                  
+PORT BGIma_ABus        = M_ABus,           DIR = OUT, VEC = [0:C_PLB_AWIDTH-1],     BUS = MPLB 
+PORT BGIma_RNW         = M_RNW,            DIR = OUT,                       	    BUS = MPLB
+PORT BGIma_BE          = M_BE,             DIR = OUT, VEC = [0:(C_PLB_DWIDTH/8)-1], BUS = MPLB
+PORT BGIma_size        = M_size,           DIR = OUT, VEC = [0:3],				    BUS = MPLB
+PORT BGIma_type        = M_type,           DIR = OUT, VEC = [0:2],				    BUS = MPLB
+PORT BGIma_priority    = M_priority,       DIR = OUT, VEC = [0:1],				    BUS = MPLB
+PORT BGIma_rdBurst     = M_rdBurst,        DIR = OUT,                       	    BUS = MPLB
+PORT BGIma_wrBurst     = M_wrBurst,        DIR = OUT,                       	    BUS = MPLB
+PORT BGIma_busLock     = M_busLock,        DIR = OUT,                       	    BUS = MPLB
+PORT BGIma_abort       = M_abort,          DIR = OUT,                       	    BUS = MPLB
+PORT BGIma_lockErr     = M_lockErr,        DIR = OUT,                       	    BUS = MPLB
+PORT BGIma_mSize       = M_MSize,          DIR = OUT, VEC = [0:1],                  BUS = MPLB 
+PORT BGIma_ordered     = M_ordered,        DIR = OUT,                       	    BUS = MPLB
+PORT BGIma_compress    = M_compress,       DIR = OUT,                       	    BUS = MPLB
+PORT BGIma_guarded     = M_guarded,        DIR = OUT,                       	    BUS = MPLB
+PORT BGIma_wrDBus	   = M_wrDBus,         DIR = OUT, VEC = [0:C_PLB_DWIDTH-1],	    BUS = MPLB
+
+## PLB Slave Signals
+PORT PLBsl_ABus        = PLB_ABus,         DIR = IN,  VEC = [0:C_PLB_AWIDTH-1],      BUS = SPLB
+PORT PLBsl_PAValid     = PLB_PAValid,      DIR = IN,                       		     BUS = SPLB
+PORT PLBsl_SAValid     = PLB_SAValid,      DIR = IN,                       		     BUS = SPLB
+PORT PLBsl_rdPrim      = PLB_rdPrim,       DIR = IN,                       		     BUS = SPLB
+PORT PLBsl_wrPrim      = PLB_wrPrim,       DIR = IN,                       		     BUS = SPLB
+PORT PLBsl_masterID    = PLB_masterID,     DIR = IN,  VEC = [0:C_PLB_MID_WIDTH-1],   BUS = SPLB
+PORT PLBsl_abort       = PLB_abort,        DIR = IN,                       		     BUS = SPLB
+PORT PLBsl_busLock     = PLB_busLock,      DIR = IN,                       		     BUS = SPLB
+PORT PLBsl_RNW         = PLB_RNW,          DIR = IN,                       		     BUS = SPLB
+PORT PLBsl_BE          = PLB_BE,           DIR = IN,  VEC = [0:C_PLB_DWIDTH/8-1],    BUS = SPLB
+PORT PLBsl_MSize       = PLB_MSize,        DIR = IN,  VEC = [0:1],				     BUS = SPLB
+PORT PLBsl_size        = PLB_size,         DIR = IN,  VEC = [0:3],				     BUS = SPLB
+PORT PLBsl_type        = PLB_type,         DIR = IN,  VEC = [0:2],				     BUS = SPLB
+PORT PLBsl_compress    = PLB_compress,     DIR = IN,                       		     BUS = SPLB
+PORT PLBsl_guarded     = PLB_guarded,      DIR = IN,                      		     BUS = SPLB
+PORT PLBsl_ordered     = PLB_ordered,      DIR = IN,                      		     BUS = SPLB
+PORT PLBsl_lockErr     = PLB_lockErr,      DIR = IN,                      		     BUS = SPLB
+PORT PLBsl_wrDBus      = PLB_wrDBus,       DIR = IN,  VEC = [0:C_PLB_DWIDTH-1],	     BUS = SPLB
+PORT PLBsl_wrBurst     = PLB_wrBurst,      DIR = IN,                       		     BUS = SPLB
+PORT PLBsl_rdBurst     = PLB_rdBurst,      DIR = IN,                       		     BUS = SPLB
+PORT BGOsl_addrAck     = Sl_addrAck ,      DIR = OUT, 							     BUS = SPLB
+PORT BGOsl_SSize       = Sl_SSize,         DIR = OUT, VEC = [0:1],                   BUS = SPLB
+PORT BGOsl_wait        = Sl_wait,          DIR = OUT,                         	     BUS = SPLB
+PORT BGOsl_rearbitrate = Sl_rearbitrate,   DIR = OUT,                         	     BUS = SPLB
+PORT BGOsl_wrDAck      = Sl_wrDAck,        DIR = OUT,                         	     BUS = SPLB
+PORT BGOsl_wrComp      = Sl_wrComp,        DIR = OUT,                         	     BUS = SPLB
+PORT BGOsl_wrBTerm     = Sl_wrBTerm,       DIR = OUT,                         	     BUS = SPLB
+PORT BGOsl_rdDBus      = Sl_rdDBus,        DIR = OUT, VEC = [0:C_PLB_DWIDTH-1],      BUS = SPLB
+PORT BGOsl_rdWdAddr    = Sl_rdWdAddr,      DIR = OUT, VEC = [0:3],                   BUS = SPLB
+PORT BGOsl_rdDAck      = Sl_rdDAck,        DIR = OUT,                         	     BUS = SPLB
+PORT BGOsl_rdComp      = Sl_rdComp,        DIR = OUT,                         	     BUS = SPLB
+PORT BGOsl_rdBTerm     = Sl_rdBTerm,       DIR = OUT,                         	     BUS = SPLB
+PORT BGOsl_MBusy       = Sl_MBusy,         DIR = OUT, VEC = [0:C_PLB_NUM_MASTERS-1], BUS = SPLB
+PORT BGOsl_MErr        = Sl_MErr,          DIR = OUT, VEC = [0:C_PLB_NUM_MASTERS-1], BUS = SPLB
+
+## PSB External Port
+PORT PSB_a       = "", DIR = INOUT, VEC = [0:31], ENABLE = MULTI, THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_abb_n   = "", DIR = INOUT,                               THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_dbb_n	 = "", DIR = INOUT,	   		      				  THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_tbst_n	 = "", DIR = INOUT,	   	      					  THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_tsiz	 = "", DIR = INOUT,	VEC = [0:3],  ENABLE = MULTI, THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_ts_n	 = "", DIR = INOUT,	   		       				  THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_tt		 = "", DIR = INOUT,	VEC = [0:4],  ENABLE = MULTI, THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_aack_n	 = "", DIR = INOUT,	   	     					  THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_artry_n = "", DIR = INOUT,	   	      					  THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_d		 = "", DIR = INOUT,	VEC = [0:63], ENABLE = MULTI, THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_ta_n	 = "", DIR = INOUT,	   		      				  THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_tea_n	 = "", DIR = INOUT,	   		      				  THREE_STATE = TRUE, IOB_STATE = INFER
+PORT PSB_bg_n    = "", DIR = IN,                                                      IOB_STATE = INFER
+PORT PSB_br_n    = "", DIR = OUT,                                                     IOB_STATE = INFER
+PORT PSB_dbg_n   = "", DIR = IN,                                                      IOB_STATE = INFER
+
+## MCSR
+## PCI UART Port 0 Registers
+  ## UART PPC0
+PORT ppc0_uart_to_reg_bus = "", DIR = IN,  VEC = [29:0]
+PORT ppc0_reg_to_uart_bus = "", DIR = OUT, VEC = [75:0]
+
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_rbr_rbr                      = "utor_aout_rbr_rbr                     ", DIR = IN, VEC = [7:0]    , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_iir_fifoen                   = "utor_aout_iir_fifoen                  ", DIR = IN, VEC = [1:0]    , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_iir_intid2                   = "utor_aout_iir_intid2                  ", DIR = IN, VEC = [2:0]    , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_iir_intpend                  = "utor_aout_iir_intpend                 ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_lsr_err_in_rfifo             = "utor_aout_lsr_err_in_rfifo            ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_lsr_temt                     = "utor_aout_lsr_temt                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_lsr_thre                     = "utor_aout_lsr_thre                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_lsr_bi                       = "utor_aout_lsr_bi                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_lsr_fe                       = "utor_aout_lsr_fe                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_lsr_pe                       = "utor_aout_lsr_pe                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_lsr_oe                       = "utor_aout_lsr_oe                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_lsr_dr                       = "utor_aout_lsr_dr                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_msr_dcd                      = "utor_aout_msr_dcd                     ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_msr_ri                       = "utor_aout_msr_ri                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_msr_dsr                      = "utor_aout_msr_dsr                     ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_msr_cts                      = "utor_aout_msr_cts                     ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_msr_ddcd                     = "utor_aout_msr_ddcd                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_msr_teri                     = "utor_aout_msr_teri                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_msr_ddsr                     = "utor_aout_msr_ddsr                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_uart_to_reg_bus" ##  PORT uart_ppc0_msr_dcts                     = "utor_aout_msr_dcts                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_thr_thr                      = "rtou_ain_thr_thr                     ", DIR = OUT, VEC = [7:0]    , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_ier_edssi                    = "rtou_ain_ier_edssi                   ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_ier_elsi                     = "rtou_ain_ier_elsi                    ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_ier_etbei                    = "rtou_ain_ier_etbei                   ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_ier_erbfi                    = "rtou_ain_ier_erbfi                   ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_fcr_rfifo_tlevel             = "rtou_ain_fcr_rfifo_tlevel            ", DIR = OUT, VEC = [1:0]    , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_fcr_dma_mode_sel             = "rtou_ain_fcr_dma_mode_sel            ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_fcr_tfifo_reset              = "rtou_ain_fcr_tfifo_reset             ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_fcr_rfifo_reset              = "rtou_ain_fcr_rfifo_reset             ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_fcr_fifo_en                  = "rtou_ain_fcr_fifo_en                 ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lcr_dlab                     = "rtou_ain_lcr_dlab                    ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lcr_set_break                = "rtou_ain_lcr_set_break               ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lcr_stick_parity             = "rtou_ain_lcr_stick_parity            ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lcr_eps                      = "rtou_ain_lcr_eps                     ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lcr_pen                      = "rtou_ain_lcr_pen                     ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lcr_stb                      = "rtou_ain_lcr_stb                     ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lcr_wls                      = "rtou_ain_lcr_wls                     ", DIR = OUT, VEC = [1:0]    , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_mcr_loop                     = "rtou_ain_mcr_loop                    ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_mcr_out2                     = "rtou_ain_mcr_out2                    ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_mcr_out1                     = "rtou_ain_mcr_out1                    ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_mcr_rts                      = "rtou_ain_mcr_rts                     ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_mcr_dtr                      = "rtou_ain_mcr_dtr                     ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lsr_err_in_rfifo_write_value = "rtou_ain_lsr_err_in_rfifo_write_value", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lsr_temt_write_value         = "rtou_ain_lsr_temt_write_value        ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lsr_thre_write_value         = "rtou_ain_lsr_thre_write_value        ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lsr_bi_write_value           = "rtou_ain_lsr_bi_write_value          ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lsr_fe_write_value           = "rtou_ain_lsr_fe_write_value          ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lsr_pe_write_value           = "rtou_ain_lsr_pe_write_value          ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lsr_oe_write_value           = "rtou_ain_lsr_oe_write_value          ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lsr_dr_write_value           = "rtou_ain_lsr_dr_write_value          ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_dcd_write_value          = "rtou_ain_msr_dcd_write_value         ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_ri_write_value           = "rtou_ain_msr_ri_write_value          ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_dsr_write_value          = "rtou_ain_msr_dsr_write_value         ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_cts_write_value          = "rtou_ain_msr_cts_write_value         ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_ddcd_write_value         = "rtou_ain_msr_ddcd_write_value        ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_teri_write_value         = "rtou_ain_msr_teri_write_value        ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_ddsr_write_value         = "rtou_ain_msr_ddsr_write_value        ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_dcts_write_value         = "rtou_ain_msr_dcts_write_value        ", DIR = OUT				 , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_scr_scr                      = "rtou_ain_scr_scr                     ", DIR = OUT, VEC = [7:0]    , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_dll_dll                      = "rtou_ain_dll_dll                     ", DIR = OUT, VEC = [7:0]    , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_dlm_dlm                      = "rtou_ain_dlm_dlm                     ", DIR = OUT, VEC = [7:0]    , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_thr_write_pulse              = "rtou_ain_thr_write_pulse             ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_lsr_write_pulse              = "rtou_ain_lsr_write_pulse             ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_write_pulse              = "rtou_ain_msr_write_pulse             ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_rbr_read_pulse               = "rtou_ain_rbr_read_pulse              ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "ppc0_reg_to_uart_bus" ##  PORT uart_ppc0_msr_read_pulse               = "rtou_ain_msr_read_pulse              ", DIR = OUT 			     , BUS = MVUART0
+
+  ## UART HOST0
+PORT host0_uart_to_reg_bus = "", DIR = IN,  VEC = [29:0]
+PORT host0_reg_to_uart_bus = "", DIR = OUT, VEC = [75:0]
+
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_rbr_rbr                      = "utor_bout_rbr_rbr                     ", DIR = IN, VEC = [7:0]   , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_iir_fifoen                   = "utor_bout_iir_fifoen                  ", DIR = IN, VEC = [1:0]   , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_iir_intid2                   = "utor_bout_iir_intid2                  ", DIR = IN, VEC = [2:0]   , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_iir_intpend                  = "utor_bout_iir_intpend                 ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_lsr_err_in_rfifo             = "utor_bout_lsr_err_in_rfifo            ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_lsr_temt                     = "utor_bout_lsr_temt                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_lsr_thre                     = "utor_bout_lsr_thre                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_lsr_bi                       = "utor_bout_lsr_bi                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_lsr_fe                       = "utor_bout_lsr_fe                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_lsr_pe                       = "utor_bout_lsr_pe                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_lsr_oe                       = "utor_bout_lsr_oe                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_lsr_dr                       = "utor_bout_lsr_dr                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_msr_dcd                      = "utor_bout_msr_dcd                     ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_msr_ri                       = "utor_bout_msr_ri                      ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_msr_dsr                      = "utor_bout_msr_dsr                     ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_msr_cts                      = "utor_bout_msr_cts                     ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_msr_ddcd                     = "utor_bout_msr_ddcd                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_msr_teri                     = "utor_bout_msr_teri                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_msr_ddsr                     = "utor_bout_msr_ddsr                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_uart_to_reg_bus" ##  PORT uart_host0_msr_dcts                     = "utor_bout_msr_dcts                    ", DIR = IN      		     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_thr_thr                      = "rtou_bin_thr_thr                     ", DIR = OUT, VEC = [7:0]   , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_ier_edssi                    = "rtou_bin_ier_edssi                   ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_ier_elsi                     = "rtou_bin_ier_elsi                    ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_ier_etbei                    = "rtou_bin_ier_etbei                   ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_ier_erbfi                    = "rtou_bin_ier_erbfi                   ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_fcr_rfifo_tlevel             = "rtou_bin_fcr_rfifo_tlevel            ", DIR = OUT, VEC = [1:0]   , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_fcr_dma_mode_sel             = "rtou_bin_fcr_dma_mode_sel            ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_fcr_tfifo_reset              = "rtou_bin_fcr_tfifo_reset             ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_fcr_rfifo_reset              = "rtou_bin_fcr_rfifo_reset             ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_fcr_fifo_en                  = "rtou_bin_fcr_fifo_en                 ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lcr_dlab                     = "rtou_bin_lcr_dlab                    ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lcr_set_break                = "rtou_bin_lcr_set_break               ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lcr_stick_parity             = "rtou_bin_lcr_stick_parity            ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lcr_eps                      = "rtou_bin_lcr_eps                     ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lcr_pen                      = "rtou_bin_lcr_pen                     ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lcr_stb                      = "rtou_bin_lcr_stb                     ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lcr_wls                      = "rtou_bin_lcr_wls                     ", DIR = OUT, VEC = [1:0]   , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_mcr_loop                     = "rtou_bin_mcr_loop                    ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_mcr_out2                     = "rtou_bin_mcr_out2                    ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_mcr_out1                     = "rtou_bin_mcr_out1                    ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_mcr_rts                      = "rtou_bin_mcr_rts                     ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_mcr_dtr                      = "rtou_bin_mcr_dtr                     ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lsr_err_in_rfifo_write_value = "rtou_bin_lsr_err_in_rfifo_write_value", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lsr_temt_write_value         = "rtou_bin_lsr_temt_write_value        ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lsr_thre_write_value         = "rtou_bin_lsr_thre_write_value        ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lsr_bi_write_value           = "rtou_bin_lsr_bi_write_value          ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lsr_fe_write_value           = "rtou_bin_lsr_fe_write_value          ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lsr_pe_write_value           = "rtou_bin_lsr_pe_write_value          ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lsr_oe_write_value           = "rtou_bin_lsr_oe_write_value          ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lsr_dr_write_value           = "rtou_bin_lsr_dr_write_value          ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_dcd_write_value          = "rtou_bin_msr_dcd_write_value         ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_ri_write_value           = "rtou_bin_msr_ri_write_value          ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_dsr_write_value          = "rtou_bin_msr_dsr_write_value         ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_cts_write_value          = "rtou_bin_msr_cts_write_value         ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_ddcd_write_value         = "rtou_bin_msr_ddcd_write_value        ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_teri_write_value         = "rtou_bin_msr_teri_write_value        ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_ddsr_write_value         = "rtou_bin_msr_ddsr_write_value        ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_dcts_write_value         = "rtou_bin_msr_dcts_write_value        ", DIR = OUT			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_scr_scr                      = "rtou_bin_scr_scr                     ", DIR = OUT, VEC = [7:0]   , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_dll_dll                      = "rtou_bin_dll_dll                     ", DIR = OUT, VEC = [7:0]   , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_dlm_dlm                      = "rtou_bin_dlm_dlm                     ", DIR = OUT, VEC = [7:0]   , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_thr_write_pulse              = "rtou_bin_thr_write_pulse             ", DIR = OUT  			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_lsr_write_pulse              = "rtou_bin_lsr_write_pulse             ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_write_pulse              = "rtou_bin_msr_write_pulse             ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_rbr_read_pulse               = "rtou_bin_rbr_read_pulse              ", DIR = OUT 			     , BUS = MVUART0
+## Replaced with "host0_reg_to_uart_bus" ##  PORT uart_host0_msr_read_pulse               = "rtou_bin_msr_read_pulse              ", DIR = OUT 			     , BUS = MVUART0
+
+
+## PCI UART Port 1 Registers
+  ## UART PPC1
+PORT ppc1_uart_to_reg_bus = "", DIR = IN,  VEC = [29:0]
+PORT ppc1_reg_to_uart_bus = "", DIR = OUT, VEC = [75:0]
+
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_rbr_rbr                      = "utor_aout_rbr_rbr                     ", DIR = IN, VEC = [7:0]    , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_iir_fifoen                   = "utor_aout_iir_fifoen                  ", DIR = IN, VEC = [1:0]    , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_iir_intid2                   = "utor_aout_iir_intid2                  ", DIR = IN, VEC = [2:0]    , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_iir_intpend                  = "utor_aout_iir_intpend                 ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_lsr_err_in_rfifo             = "utor_aout_lsr_err_in_rfifo            ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_lsr_temt                     = "utor_aout_lsr_temt                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_lsr_thre                     = "utor_aout_lsr_thre                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_lsr_bi                       = "utor_aout_lsr_bi                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_lsr_fe                       = "utor_aout_lsr_fe                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_lsr_pe                       = "utor_aout_lsr_pe                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_lsr_oe                       = "utor_aout_lsr_oe                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_lsr_dr                       = "utor_aout_lsr_dr                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_msr_dcd                      = "utor_aout_msr_dcd                     ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_msr_ri                       = "utor_aout_msr_ri                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_msr_dsr                      = "utor_aout_msr_dsr                     ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_msr_cts                      = "utor_aout_msr_cts                     ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_msr_ddcd                     = "utor_aout_msr_ddcd                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_msr_teri                     = "utor_aout_msr_teri                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_msr_ddsr                     = "utor_aout_msr_ddsr                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_uart_to_reg_bus" ##  PORT uart_ppc1_msr_dcts                     = "utor_aout_msr_dcts                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_thr_thr                      = "rtou_ain_thr_thr                     ", DIR = OUT, VEC = [7:0]    , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_ier_edssi                    = "rtou_ain_ier_edssi                   ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_ier_elsi                     = "rtou_ain_ier_elsi                    ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_ier_etbei                    = "rtou_ain_ier_etbei                   ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_ier_erbfi                    = "rtou_ain_ier_erbfi                   ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_fcr_rfifo_tlevel             = "rtou_ain_fcr_rfifo_tlevel            ", DIR = OUT, VEC = [1:0]    , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_fcr_dma_mode_sel             = "rtou_ain_fcr_dma_mode_sel            ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_fcr_tfifo_reset              = "rtou_ain_fcr_tfifo_reset             ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_fcr_rfifo_reset              = "rtou_ain_fcr_rfifo_reset             ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_fcr_fifo_en                  = "rtou_ain_fcr_fifo_en                 ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lcr_dlab                     = "rtou_ain_lcr_dlab                    ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lcr_set_break                = "rtou_ain_lcr_set_break               ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lcr_stick_parity             = "rtou_ain_lcr_stick_parity            ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lcr_eps                      = "rtou_ain_lcr_eps                     ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lcr_pen                      = "rtou_ain_lcr_pen                     ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lcr_stb                      = "rtou_ain_lcr_stb                     ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lcr_wls                      = "rtou_ain_lcr_wls                     ", DIR = OUT, VEC = [1:0]    , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_mcr_loop                     = "rtou_ain_mcr_loop                    ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_mcr_out2                     = "rtou_ain_mcr_out2                    ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_mcr_out1                     = "rtou_ain_mcr_out1                    ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_mcr_rts                      = "rtou_ain_mcr_rts                     ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_mcr_dtr                      = "rtou_ain_mcr_dtr                     ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lsr_err_in_rfifo_write_value = "rtou_ain_lsr_err_in_rfifo_write_value", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lsr_temt_write_value         = "rtou_ain_lsr_temt_write_value        ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lsr_thre_write_value         = "rtou_ain_lsr_thre_write_value        ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lsr_bi_write_value           = "rtou_ain_lsr_bi_write_value          ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lsr_fe_write_value           = "rtou_ain_lsr_fe_write_value          ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lsr_pe_write_value           = "rtou_ain_lsr_pe_write_value          ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lsr_oe_write_value           = "rtou_ain_lsr_oe_write_value          ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lsr_dr_write_value           = "rtou_ain_lsr_dr_write_value          ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_dcd_write_value          = "rtou_ain_msr_dcd_write_value         ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_ri_write_value           = "rtou_ain_msr_ri_write_value          ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_dsr_write_value          = "rtou_ain_msr_dsr_write_value         ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_cts_write_value          = "rtou_ain_msr_cts_write_value         ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_ddcd_write_value         = "rtou_ain_msr_ddcd_write_value        ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_teri_write_value         = "rtou_ain_msr_teri_write_value        ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_ddsr_write_value         = "rtou_ain_msr_ddsr_write_value        ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_dcts_write_value         = "rtou_ain_msr_dcts_write_value        ", DIR = OUT				 , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_scr_scr                      = "rtou_ain_scr_scr                     ", DIR = OUT, VEC = [7:0]    , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_dll_dll                      = "rtou_ain_dll_dll                     ", DIR = OUT, VEC = [7:0]    , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_dlm_dlm                      = "rtou_ain_dlm_dlm                     ", DIR = OUT, VEC = [7:0]    , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_thr_write_pulse              = "rtou_ain_thr_write_pulse             ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_lsr_write_pulse              = "rtou_ain_lsr_write_pulse             ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_write_pulse              = "rtou_ain_msr_write_pulse             ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_rbr_read_pulse               = "rtou_ain_rbr_read_pulse              ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "ppc1_reg_to_uart_bus" ##  PORT uart_ppc1_msr_read_pulse               = "rtou_ain_msr_read_pulse              ", DIR = OUT 			     , BUS = MVUART1
+
+  ## UART HOST1
+PORT host1_uart_to_reg_bus = "", DIR = IN,  VEC = [29:0]
+PORT host1_reg_to_uart_bus = "", DIR = OUT, VEC = [75:0]
+
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_rbr_rbr                      = "utor_bout_rbr_rbr                     ", DIR = IN, VEC = [7:0]   , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_iir_fifoen                   = "utor_bout_iir_fifoen                  ", DIR = IN, VEC = [1:0]   , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_iir_intid2                   = "utor_bout_iir_intid2                  ", DIR = IN, VEC = [2:0]   , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_iir_intpend                  = "utor_bout_iir_intpend                 ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_lsr_err_in_rfifo             = "utor_bout_lsr_err_in_rfifo            ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_lsr_temt                     = "utor_bout_lsr_temt                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_lsr_thre                     = "utor_bout_lsr_thre                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_lsr_bi                       = "utor_bout_lsr_bi                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_lsr_fe                       = "utor_bout_lsr_fe                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_lsr_pe                       = "utor_bout_lsr_pe                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_lsr_oe                       = "utor_bout_lsr_oe                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_lsr_dr                       = "utor_bout_lsr_dr                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_msr_dcd                      = "utor_bout_msr_dcd                     ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_msr_ri                       = "utor_bout_msr_ri                      ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_msr_dsr                      = "utor_bout_msr_dsr                     ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_msr_cts                      = "utor_bout_msr_cts                     ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_msr_ddcd                     = "utor_bout_msr_ddcd                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_msr_teri                     = "utor_bout_msr_teri                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_msr_ddsr                     = "utor_bout_msr_ddsr                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_uart_to_reg_bus" ##  PORT uart_host1_msr_dcts                     = "utor_bout_msr_dcts                    ", DIR = IN      		     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_thr_thr                      = "rtou_bin_thr_thr                     ", DIR = OUT, VEC = [7:0]   , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_ier_edssi                    = "rtou_bin_ier_edssi                   ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_ier_elsi                     = "rtou_bin_ier_elsi                    ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_ier_etbei                    = "rtou_bin_ier_etbei                   ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_ier_erbfi                    = "rtou_bin_ier_erbfi                   ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_fcr_rfifo_tlevel             = "rtou_bin_fcr_rfifo_tlevel            ", DIR = OUT, VEC = [1:0]   , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_fcr_dma_mode_sel             = "rtou_bin_fcr_dma_mode_sel            ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_fcr_tfifo_reset              = "rtou_bin_fcr_tfifo_reset             ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_fcr_rfifo_reset              = "rtou_bin_fcr_rfifo_reset             ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_fcr_fifo_en                  = "rtou_bin_fcr_fifo_en                 ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lcr_dlab                     = "rtou_bin_lcr_dlab                    ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lcr_set_break                = "rtou_bin_lcr_set_break               ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lcr_stick_parity             = "rtou_bin_lcr_stick_parity            ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lcr_eps                      = "rtou_bin_lcr_eps                     ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lcr_pen                      = "rtou_bin_lcr_pen                     ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lcr_stb                      = "rtou_bin_lcr_stb                     ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lcr_wls                      = "rtou_bin_lcr_wls                     ", DIR = OUT, VEC = [1:0]   , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_mcr_loop                     = "rtou_bin_mcr_loop                    ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_mcr_out2                     = "rtou_bin_mcr_out2                    ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_mcr_out1                     = "rtou_bin_mcr_out1                    ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_mcr_rts                      = "rtou_bin_mcr_rts                     ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_mcr_dtr                      = "rtou_bin_mcr_dtr                     ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lsr_err_in_rfifo_write_value = "rtou_bin_lsr_err_in_rfifo_write_value", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lsr_temt_write_value         = "rtou_bin_lsr_temt_write_value        ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lsr_thre_write_value         = "rtou_bin_lsr_thre_write_value        ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lsr_bi_write_value           = "rtou_bin_lsr_bi_write_value          ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lsr_fe_write_value           = "rtou_bin_lsr_fe_write_value          ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lsr_pe_write_value           = "rtou_bin_lsr_pe_write_value          ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lsr_oe_write_value           = "rtou_bin_lsr_oe_write_value          ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lsr_dr_write_value           = "rtou_bin_lsr_dr_write_value          ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_dcd_write_value          = "rtou_bin_msr_dcd_write_value         ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_ri_write_value           = "rtou_bin_msr_ri_write_value          ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_dsr_write_value          = "rtou_bin_msr_dsr_write_value         ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_cts_write_value          = "rtou_bin_msr_cts_write_value         ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_ddcd_write_value         = "rtou_bin_msr_ddcd_write_value        ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_teri_write_value         = "rtou_bin_msr_teri_write_value        ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_ddsr_write_value         = "rtou_bin_msr_ddsr_write_value        ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_dcts_write_value         = "rtou_bin_msr_dcts_write_value        ", DIR = OUT			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_scr_scr                      = "rtou_bin_scr_scr                     ", DIR = OUT, VEC = [7:0]   , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_dll_dll                      = "rtou_bin_dll_dll                     ", DIR = OUT, VEC = [7:0]   , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_dlm_dlm                      = "rtou_bin_dlm_dlm                     ", DIR = OUT, VEC = [7:0]   , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_thr_write_pulse              = "rtou_bin_thr_write_pulse             ", DIR = OUT  			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_lsr_write_pulse              = "rtou_bin_lsr_write_pulse             ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_write_pulse              = "rtou_bin_msr_write_pulse             ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_rbr_read_pulse               = "rtou_bin_rbr_read_pulse              ", DIR = OUT 			     , BUS = MVUART1
+## Replaced with "host1_reg_to_uart_bus" ##  PORT uart_host1_msr_read_pulse               = "rtou_bin_msr_read_pulse              ", DIR = OUT 			     , BUS = MVUART1
+
+END

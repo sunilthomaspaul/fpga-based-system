@@ -1,0 +1,11 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn C:\solmaz\CMC\AP1100_design\baseline-ap1100_CMC\pcores\slave_regs4_v1_00_a\devl\synthesis\slave_regs4_xst.prj
+-top slave_regs4
+-p virtex2p
+-ofn C:\solmaz\CMC\AP1100_design\baseline-ap1100_CMC\pcores\slave_regs4_v1_00_a\devl\synthesis\slave_regs4_xst.ngc
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
