@@ -1,0 +1,1 @@
+This is a fourth year engineering project by a group of students from Carleton University. The project aims to partition an RTOS between software and hardware. The HWRTOS will be designed using FPGA technology.
